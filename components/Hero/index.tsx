@@ -1,5 +1,6 @@
 "use client";
 import Image from "next/image";
+import Link from "next/link";
 import { useState } from "react";
 
 const Hero = () => {
@@ -11,28 +12,60 @@ const Hero = () => {
 
   return (
     <>
-      <section className="overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
+      <section className="relative select-none overflow-hidden pb-20 pt-35 md:pt-40 xl:pb-25 xl:pt-46">
+        <div className=" absolute left-0 top-0 -z-30 h-screen w-screen bg-opacity-20 bg-gradient-to-t from-blue-300 via-transparent to-transparent dark:from-sky-950"></div>
+        <Image
+          fill
+          src="/images/shape/shape-dotted-light-02.svg"
+          alt="Dotted"
+          className="absolute left-0 top-0 -z-1 dark:hidden"
+        />
+        <Image
+          fill
+          src="/images/shape/shape-dotted-dark-02.svg"
+          alt="Dotted"
+          className="absolute left-0 top-0 -z-1 hidden dark:block"
+        />
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
-              <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
-                🔥 Solid - A Complete SaaS Web Template
-              </h4>
+              <p className="mb-4.5 text-base font-semibold text-black dark:text-white">
+                🔥 Get{" "}
+                <span className="text-lg text-green-600 dark:text-green-400">
+                  FREE
+                </span>{" "}
+                Consultation{" "}
+                <Link
+                  className="relative rounded-full bg-gradient-to-tr from-amber-400 via-amber-600 to-red-600 px-2 py-1 text-sm text-white"
+                  href={""}
+                >
+                  Coupon
+                  <Image
+                    src="/images/shape/shape-03.svg"
+                    alt="shape"
+                    width={21.64}
+                    height={21.66}
+                    className="absolute -right-1 -top-4 z-1 animate-pulse"
+                  />
+                </Link>{" "}
+                worth 199 INR
+              </p>
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                Free Next.js Template for {"   "}
-                <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  SaaS
+                Your Trusted Partner in this {"   "}
+                <span className="text-blue-700 dark:text-blue-500 ">
+                  Digital
                 </span>
+                {"   "}Age
               </h1>
               <p>
-                Solid Pro - Packed with all the key integrations you need for
-                swift SaaS startup launch, including - Auth, Database, Sanity
-                Blog, Essential Components, Pages and More. Built-winth -
-                Next.js 13, React 18 and TypeScript.
+                Your trusted partner for premium websites and business tools.
+                Whether crafting a stunning website from scratch or transforming
+                your existing one into a premium masterpiece, we're here to
+                elevate your online presence and empower your business success
               </p>
 
-              <div className="mt-10">
-                <form onSubmit={handleSubmit}>
+              <div className="mt-5">
+                {/* <form onSubmit={handleSubmit}>
                   <div className="flex flex-wrap gap-5">
                     <input
                       value={email}
@@ -48,11 +81,14 @@ const Hero = () => {
                       Get Started
                     </button>
                   </div>
-                </form>
+                </form> */}
 
-                <p className="mt-5 text-black dark:text-white">
-                  Try for free no credit card required.
-                </p>
+                <Link
+                  href="https://nextjstemplates.com/templates/solid"
+                  className="mb-5 flex w-fit items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-blue-800"
+                >
+                  Get Started
+                </Link>
               </div>
             </div>
 
