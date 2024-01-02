@@ -131,15 +131,88 @@ module.exports = {
         "solid-13": "0px 2px 19px rgba(0, 0, 0, 0.05)",
       },
       keyframes: {
+        typewriter: {
+          '0%': { width: '0ch' },
+          '5%, 10%': { width: '1ch' },
+          '15%, 20%': { width: '2ch' },
+          '25%, 30%': { width: '3ch' },
+          '35%, 40%': { width: '4ch' },
+          '45%, 50%': { width: '5ch' },
+          '55%, 60%': { width: '6ch' },
+          '65%, 70%': { width: '7ch' },
+          '75%, 80%': { width: '8ch' },
+          '85%, 90%': { width: '9ch' },
+          '95%': { width: '10ch' },
+        },
         line: {
           "0%, 100%": { transform: "translateY(100%)" },
           "50%": { transform: "translateY(0)" },
+        },
+        floatingAnimationY: { // Add this object wrapper
+          "0%": {
+            transform: "translate(0, 0)"
+          },
+          "25%": {
+            transform: "translate(-5px, 20px)"
+          },
+          "50%": {
+            transform: "translate(0, 0px)"
+          },
+          "75%": {
+            transform: "translate(-5px, 20px)"
+          },
+          "100%": {
+            transform: "translate(0, 0px)"
+          },
+        },
+        floatingAnimationYR: { // Add this object wrapper
+          "0%": {
+            transform: "translate(5px, 20px)"
+
+          },
+          "25%": {
+            transform: "translate(0, 0)"
+
+          },
+          "50%": {
+            transform: "translate(5px, 20px)"
+
+          },
+          "75%": {
+            transform: "translate(0, 0)"
+
+          },
+          "100%": {
+            transform: "translate(5px, 20px)"
+
+          },
+        },
+        floatingAnimationX: { // Add this object wrapper
+          "0%": {
+            transform: "translate(10px, -2px)"
+          },
+          "25%": {
+            
+            transform: "translate(0, 0)"
+          },
+          "50%": {
+            transform: "translate(10px, -2px)"
+          },
+          "75%": {
+            transform: "translate(0, 0)"
+          },
+          "100%": {
+            transform: "translate(10px, -2px)"
+          },
         },
       },
       animation: {
         line1: "line 3s linear infinite",
         line2: "line 6s linear infinite",
         line3: "line 9s linear infinite",
+        floatY: "floatingAnimationY 20s infinite",
+        floatYR: "floatingAnimationYR 20s infinite",
+        floatX: "floatingAnimationX 20s infinite",
       },
     },
   },
