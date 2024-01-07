@@ -12,9 +12,9 @@ const FunFact = () => {
           <Image
             width={335}
             height={384}
-            src="/images/shape/shape-04.png"
+            src="/images/shape/shape-07.png"
             alt="Man"
-            className="absolute -left-15 -top-25 -z-1 lg:left-0"
+            className="absolute -left-15 -top-25 lg:left-0"
           />
           <Image
             width={132}
