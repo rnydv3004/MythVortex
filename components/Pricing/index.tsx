@@ -41,7 +41,7 @@ const Pricing = () => {
                 <p></p>
               </h3>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                 Start-Up Plan
+                 Website Enhancement
               </h4>
               <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
 
@@ -96,7 +96,7 @@ const Pricing = () => {
                 </span>
               </h3>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Premium Plan
+                Website Development
               </h4>
               <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
 
@@ -147,7 +147,7 @@ const Pricing = () => {
                 </span>
               </h3>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Pro Plan
+                Web Application Development
               </h4>
               <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
 
