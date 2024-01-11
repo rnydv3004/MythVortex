@@ -160,18 +160,18 @@ const Header = () => {
           </nav>
 
           <div className=" mt-7 flex items-center gap-6 xl:mt-0">
-            <Link
+            {/* <Link
               href="https://github.com/NextJSTemplates/solid-nextjs"
               className="flex items-center justify-center rounded-full bg-zinc-500 px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out "
             >
               Track Status
-            </Link>
+            </Link> */}
 
             <Link
-              href="https://nextjstemplates.com/templates/solid"
+              href="/support"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out"
             >
-              Get Quote
+              Free Consultation
             </Link>
           </div>
         </div>
