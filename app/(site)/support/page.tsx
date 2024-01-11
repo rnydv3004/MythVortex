@@ -3,14 +3,14 @@ import Contact from "@/components/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Support Page - Solid SaaS Boilerplate",
+  title: "Support | MythVortex",
   description: "This is Support page for Solid Pro",
   // other metadata
 };
 
 const SupportPage = () => {
   return (
-    <div className="pb-20 pt-40">
+    <div className="pb-10 pt-20">
       <Contact />
     </div>
   );

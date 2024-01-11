@@ -28,30 +28,29 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed select-none left-0 top-0 z-99999 w-full bg-opacity-70 py-4 dark:bg-opacity-70 ${
+      onClick={() => setNavigationOpen(!navigationOpen)}
+      className={`fixed left-0 top-0 z-99999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 lg:h-fit ${
         stickyMenu
           ? "bg-white !py-4 shadow transition duration-100  dark:bg-black"
           : ""
       }`}
     >
-      <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
-        <div className="flex w-fit items-center justify-between mr-10">
+      <div
+        onClick={(e) => {
+          e.stopPropagation();
+        }}
+        className="relative mx-auto max-w-c-1390 items-center justify-between px-4 lg:px-8 xl:flex 2xl:px-0"
+      >
+        <div className="mr-10 flex w-full items-center justify-between lg:w-fit">
           <a href="/">
-            {/* <Image
-              src="/images/logo/logo-dark.svg"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="hidden w-full dark:block"
-            />
-            <Image
-              src="/images/logo/logo-light.svg"
-              alt="logo"
-              width={119.03}
-              height={30}
-              className="w-full dark:hidden"
-            /> */}
-            <h6 className="uppercase text-2xl font-semibold text-slate-700 dark:text-white">Myth<span className="text-primary">Vortex</span></h6>
+            <h6 className="text-2xl font-semibold uppercase text-slate-700 dark:text-white">
+              <span className="bg-gradient-to-tr from-black via-slate-600 to-slate-900 bg-clip-text text-transparent dark:from-slate-500 dark:via-gray-200 dark:to-slate-400 ">
+                Myth
+              </span>
+              <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text font-extrabold text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
+                Vortex
+              </span>
+            </h6>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
@@ -99,11 +98,11 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-4 h-auto max-h-[400px] rounded-md bg-white p-7.5 shadow-solid-5 dark:bg-blacksection xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-0 h-auto max-h-[400px] rounded-md bg-white bg-opacity-100 p-7.5 shadow-solid-5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
-          <nav>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10">
+          <nav className={`relative`}>
+            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10 ">
               {menuData.map((menuItem, key) => (
                 <li key={key} className={menuItem.submenu && "group relative"}>
                   {menuItem.submenu ? (
@@ -149,20 +148,22 @@ const Header = () => {
                 </li>
               ))}
             </ul>
+            <div className="absolute right-0 top-0 md:hidden">
+              <ThemeToggler />
+            </div>
           </nav>
 
-          <div className="mt-7 flex items-center gap-6 xl:mt-0">
-            
+          <div className=" mt-7 flex items-center gap-6 xl:mt-0">
             <Link
               href="https://github.com/NextJSTemplates/solid-nextjs"
-              className="flex items-center justify-center rounded-full bg-zinc-500 px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-blue-800"
+              className="flex items-center justify-center rounded-full bg-zinc-500 px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out "
             >
               Track Status
             </Link>
 
             <Link
               href="https://nextjstemplates.com/templates/solid"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-blue-800"
+              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out"
             >
               Get Quote
             </Link>

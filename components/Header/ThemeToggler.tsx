@@ -8,7 +8,7 @@ const ThemeToggler = () => {
     <button
       aria-label="theme toggler"
       onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="w-fit self-center rounded-full animate-floatY bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-base font-medium text-white active:scale-95 shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105"
+      className="w-fit self-center rounded-full md:animate-floatY bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-base font-medium text-white active:scale-95 shadow-2xl shadow-slate-600 md:duration-300 md:ease-in-out hover:scale-105"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,5 +46,6 @@ const ThemeToggler = () => {
     </button>
   );
 };
+
 
 export default ThemeToggler;

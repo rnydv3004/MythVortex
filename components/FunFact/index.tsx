@@ -14,16 +14,15 @@ const FunFact = () => {
             height={384}
             src="/images/shape/shape-07.png"
             alt="Man"
-            className="absolute -left-15 -top-25 lg:left-0"
+            className="absolute -left-15 -top-25 lg:left-0 -z-1 hidden md:block"
           />
           <Image
-            width={132}
-            height={132}
-            src="/images/shape/shape-05.png"
-            alt="Doodle"
-            className="absolute bottom-0 right-0 -z-1"
+            width={280}
+            height={284}
+            src="/images/shape/shape-07.png"
+            alt="Man"
+            className="absolute -left-15 -top-25 lg:left-0 -z-1 md:hidden"
           />
-
           <Image
             fill
             src="/images/shape/shape-dotted-light-02.svg"
@@ -55,8 +54,8 @@ const FunFact = () => {
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
           >
-            <h2 className="mb-4 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-              Trusted by Global Companies.
+            <h2 className="mb-4 text-xl font-semibold text-black dark:text-white xl:text-sectiontitle3">
+              Nationally Recognized Expertise
             </h2>
             <p className="mx-auto lg:w-11/12">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. In
