@@ -29,7 +29,9 @@ const Header = () => {
   return (
     <header
       onClick={() => setNavigationOpen(!navigationOpen)}
-      className={`fixed left-0 top-0 z-99999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 lg:h-fit ${
+      className={`fixed left-0 top-0 z-9999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 lg:h-fit ${
+        navigationOpen && "h-full"
+      } ${
         stickyMenu
           ? "bg-white !py-4 shadow transition duration-100  dark:bg-black"
           : ""
@@ -104,11 +106,15 @@ const Header = () => {
           <nav className={`relative`}>
             <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10 ">
               {menuData.map((menuItem, key) => (
-                <li key={key} className={menuItem.submenu && "group relative"}>
+                <li
+                  onClick={() => setNavigationOpen(!navigationOpen)}
+                  key={key}
+                  className={menuItem.submenu && "group relative"}
+                >
                   {menuItem.submenu ? (
                     <>
                       <button
-                        onClick={() => setDropdownToggler(!dropdownToggler)}
+                        onClick={() => setNavigationOpen(!navigationOpen)}
                         className="flex cursor-pointer items-center justify-between gap-3 hover:text-primary"
                       >
                         {menuItem.title}

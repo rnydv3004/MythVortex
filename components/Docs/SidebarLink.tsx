@@ -1,16 +1,15 @@
 "use client";
 
-import Link from "next/link";
 
-const SidebarLink = ({ changePage, page }) => {
+const Sidebarbutton = ({ changePage, page }) => {
   return (
     <>
       <li className="block">
-        <Link href={"/workflow#Overview"}
+        <button 
           onClick={() => {
             changePage(0);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm bg-stroke px-3 py-2 text-base text-black dark:bg-blackho dark:text-whiteh`}
+          className={`${page === 0? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -28,12 +27,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Overview
-        </Link>
-        <Link href={"/workflow#Consultation Call"}
+        </button>
+        <button 
           onClick={() => {
             changePage(1);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white`}
+          className={`${page === 1? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -51,12 +50,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Consultation Call
-        </Link>
-        <Link href={"/workflow#Choose Plan"}
+        </button>
+        <button 
           onClick={() => {
             changePage(2);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          className={`${page === 2? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -74,12 +73,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Choose Plan
-        </Link>
-        <Link href={"/workflow#Pay the Fees"}
+        </button>
+        <button 
           onClick={() => {
             changePage(3);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          className={`${page === 3? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -97,12 +96,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Pay the Fees
-        </Link>
-        <Link href={"/workflow#Choose Templates"}
+        </button>
+        <button 
           onClick={() => {
             changePage(4);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          className={`${page === 4? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -120,12 +119,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Choose Templates
-        </Link>
-        <Link href={"/workflow#Development Period"}
+        </button>
+        <button 
           onClick={() => {
             changePage(5);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white`}
+          className={`${page === 5? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -143,12 +142,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Development Period
-        </Link>
-        <Link href={"/workflow#Debugging Period"}
+        </button>
+        <button 
           onClick={() => {
             changePage(6);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          className={`${page === 6? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -166,12 +165,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Debugging Period
-        </Link>
-        <Link href={"/workflow#Final Deployment"}
+        </button>
+        <button 
           onClick={() => {
             changePage(7);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          className={`${page === 7? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -189,12 +188,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Final Deployment
-        </Link>
-        <Link href={"/workflow#Support Period Starts"}
+        </button>
+        <button
           onClick={() => {
             changePage(8);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          className={`${page === 8? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -212,12 +211,12 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Support Period Starts
-        </Link>
-        <Link href={"/workflow#Change Period Starts"}
+        </button>
+        <button
           onClick={() => {
             changePage(9);
           }}
-          className={`flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-black dark:text-white `}
+          className={`${page === 9? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -235,10 +234,10 @@ const SidebarLink = ({ changePage, page }) => {
             />
           </svg>
           Change Period Starts
-        </Link>
+        </button>
       </li>
     </>
   );
 };
 
-export default SidebarLink;
+export default Sidebarbutton;

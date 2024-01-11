@@ -65,13 +65,13 @@ const Hero = () => {
             </div>
 
             {/* Mobile */}
-            <div className="md:hidden animate_right h-fit w-full lg:w-1/2">
+            <div className="md:hidden animate_right h-fit w-full ">
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
                 <div className="flex w-full h-full items-center justify-center gap-2">
                   <div className="flex h-[100%] w-full md:w-[60%] flex-col justify-between gap-4 px-2">
                     {/* 4 INDICATORS */}
                     <div className="flex w-full justify-evenly gap-2">
-                      <button className="flex h-fit w-fit  transform animate-floatX items-center justify-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 text-white shadow-2xl shadow-gray-500 p-2 duration-300 ease-in-out hover:scale-105 active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
+                      <button className="flex h-fit w-fit  transform animate-floatX items-center justify-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 text-white dark:shadow-2xl border-zinc-100 p-2 duration-300 ease-in-out hover:scale-105 active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -88,7 +88,7 @@ const Hero = () => {
                           />
                         </svg>
                       </button>
-                      <button className="flex h-fit w-fit transform animate-floatX items-center justify-center rounded-lg bg-white shadow-2xl shadow-gray-500 duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl p-2 hover:text-white active:scale-90 dark:bg-transparent dark:border-2 dark:border-slate-600 dark:shadow-gray-900">
+                      <button className="flex h-fit w-fit transform animate-floatX items-center justify-center rounded-lg bg-white dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl p-2 hover:text-white active:scale-90 dark:bg-transparent dark:border-2 dark:border-slate-600 dark:shadow-gray-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -105,7 +105,7 @@ const Hero = () => {
                           />
                         </svg>
                       </button>
-                      <button className="flex h-fit w-fit transform animate-floatX items-center justify-center rounded-lg bg-white shadow-2xl shadow-gray-500 duration-300 ease-in-out hover:scale-105 dark:bg-transparent p-2 dark:border-2 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
+                      <button className="flex h-fit w-fit transform animate-floatX items-center justify-center rounded-lg bg-white dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 dark:bg-transparent p-2 dark:border-2 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -122,7 +122,7 @@ const Hero = () => {
                           />
                         </svg>
                       </button>
-                      <button className="flex h-fit w-fit transform animate-floatX items-center justify-center rounded-lg bg-white dark:bg-transparent dark:border-2 p-2 shadow-2xl shadow-gray-500 duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
+                      <button className="flex h-fit w-fit transform animate-floatX items-center justify-center rounded-lg bg-white dark:bg-transparent dark:border-2 p-2 dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -147,7 +147,7 @@ const Hero = () => {
                     </div>
                     {/* SLIDER */}
                     <div className="w-full">
-                      <div className="flex w-[90%] mx-auto animate-floatX gap-8 rounded-full border-2 px-8 py-2 bg-white shadow-2xl shadow-gray-500 duration-300 ease-in-out hover:scale-105 dark:border-slate-600 dark:bg-slate-400 dark:bg-opacity-10 dark:bg-transparent dark:border-2 dark:shadow-gray-900">
+                      <div className="flex w-[90%] mx-auto animate-floatX gap-8 rounded-full border-2 px-8 py-2 bg-white dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 dark:border-slate-600 dark:bg-slate-400 dark:bg-opacity-10 dark:bg-transparent dark:border-2 dark:shadow-gray-900">
                         <input
                           type="range"
                           id="slider"
@@ -170,17 +170,17 @@ const Hero = () => {
                     {/*  */}
                     <div className="flex w-[90%] justify-between gap-2">
                       <ThemeToggler />
-                      <button className="w-fit animate-floatX self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2  font-light text-white shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 text-xs">
+                      <button className="w-fit animate-floatX self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2  font-light text-white dark:shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 text-xs">
                         Button
                       </button>
-                      <button className="w-fit animate-floatY self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
+                      <button className="w-fit animate-floatY self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white dark:shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
                         Button
                       </button>
-                      <button className="w-fit animate-floatX self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
+                      <button className="w-fit animate-floatX self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white dark:shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
                         Button
                       </button>
                     </div>
-                    <div className="flex w-[90%] mx-auto items-center min-h-[50px] gap-2 animate-floatX rounded-full border-2 bg-white shadow-2xl shadow-slate-600 outline-none duration-300 ease-in-out  hover:scale-105 dark:border-slate-600 dark:bg-slate-400 dark:bg-opacity-10 dark:text-white dark:shadow-gray-900 dark:bg-transparent dark:border-2">
+                    <div className="flex w-[90%] mx-auto items-center min-h-[50px] gap-2 animate-floatX rounded-full border-2 bg-white dark:shadow-2xl shadow-slate-600 outline-none duration-300 ease-in-out  hover:scale-105 dark:border-slate-600 dark:bg-slate-400 dark:bg-opacity-10 dark:text-white dark:shadow-gray-900 dark:bg-transparent dark:border-2">
                       <input
                         placeholder="Type Here..."
                         spellCheck={false}
@@ -188,7 +188,7 @@ const Hero = () => {
                         className="w-full px-6 bg-transparent outline-none text-base font-light "
                       />
                       <button
-                        className="bg-gray-2 h-[40px] min-w-[40px] dark:bg-dark-bg hover:dar:text-white mr-1.5 flex cursor-pointer items-center justify-center rounded-full p-1 text-white shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105
+                        className="bg-gray-2 h-[40px] min-w-[40px] dark:bg-dark-bg hover:dar:text-white mr-1.5 flex cursor-pointer items-center justify-center rounded-full p-1 text-white dark:shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105
                       bg-blue-700 dark:bg-blue-700 
                       hover:text-white dark:text-white dark:shadow-gray-900 hover:dark:bg-blue-700 lg:static"
                       >
@@ -218,8 +218,8 @@ const Hero = () => {
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
                 <div className="flex w-full h-full items-center justify-center gap-2">
                   {/* LOGIN PANEL */}
-                  <div className=" md:flex h-full w-[40%] transform  animate-floatY flex-col gap-6 rounded-3xl  border-2 p-6 pt-8 shadow-2xl shadow-gray-500 backdrop-filter duration-300 ease-in-out border-zinc-300 hover:scale-105 bg-white  dark:border-slate-600 dark:bg-transparent dark:shadow-gray-900">
-                    <p className="text-lg font-light dark:text-white">Login</p>
+                  <div className=" md:flex h-full w-[40%] transform  animate-floatY flex-col gap-6 rounded-3xl border-2 p-6 pt-8 dark:shadow-2xl dark:dark:shadow-2xl shadow-zinc-300 backdrop-filter duration-300 ease-in-out border-zinc-100 hover:scale-105 bg-white  dark:border-slate-600 dark:bg-transparent dark:shadow-gray-900">
+                    <p className="text-lg font-medium dark:text-white">Login</p>
                     <div className="flex w-full items-center justify-between">
                       <input
                         placeholder="user@gmail.com"
@@ -274,7 +274,7 @@ const Hero = () => {
                   <div className="flex h-[100%] w-full md:w-[60%] flex-col justify-between gap-7 px-2">
                     {/* 4 INDICATORS */}
                     <div className="flex w-full justify-evenly gap-2">
-                      <button className="flex  w-full transform animate-floatX items-center justify-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 py-4 text-white shadow-2xl shadow-gray-500 border-zinc-300 duration-300 ease-in-out hover:scale-105 active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
+                      <button className="flex  w-full transform animate-floatX items-center justify-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 py-4 text-white dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -291,7 +291,7 @@ const Hero = () => {
                           />
                         </svg>
                       </button>
-                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg bg-white py-4 border-zinc-300 shadow-2xl shadow-gray-500 duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:bg-transparent dark:border-2 dark:border-slate-600 dark:shadow-gray-900">
+                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg bg-white py-4 dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:bg-transparent dark:border-2 dark:border-slate-600 dark:shadow-gray-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -308,7 +308,7 @@ const Hero = () => {
                           />
                         </svg>
                       </button>
-                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg bg-white border-zinc-300 py-4 shadow-2xl shadow-gray-500 duration-300 ease-in-out hover:scale-105 dark:bg-transparent dark:border-2 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
+                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg bg-white py-4 dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 dark:bg-transparent dark:border-2 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -325,7 +325,7 @@ const Hero = () => {
                           />
                         </svg>
                       </button>
-                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg bg-white dark:bg-transparent dark:border-2 py-4 shadow-2xl shadow-gray-500 duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
+                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg bg-white dark:bg-transparent dark:border-2 py-4 dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-white active:scale-90 dark:border-slate-600 dark:shadow-gray-900">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -350,7 +350,7 @@ const Hero = () => {
                     </div>
                     {/* SLIDER */}
                     <div className="w-full">
-                      <div className="flex w-full animate-floatX gap-8 rounded-full border-2 px-8 pb-[17px] pt-4 bg-white shadow-2xl shadow-gray-500 duration-300 ease-in-out hover:scale-105 dark:border-slate-600 dark:bg-slate-400 dark:bg-opacity-10 dark:bg-transparent dark:border-2 dark:shadow-gray-900">
+                      <div className="flex w-full animate-floatX gap-8 rounded-full border-2 px-8 pb-[17px] pt-4 bg-white dark:shadow-2xl border-zinc-100 duration-300 ease-in-out hover:scale-105 dark:border-slate-600 dark:bg-slate-400 dark:bg-opacity-10 dark:bg-transparent dark:border-2 dark:shadow-gray-900">
                         <input
                           type="range"
                           id="slider"
@@ -373,17 +373,17 @@ const Hero = () => {
                     {/*  */}
                     <div className="flex w-full justify-between">
                       <ThemeToggler />
-                      <button className="w-fit animate-floatX self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-base font-light text-white shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
+                      <button className="w-fit animate-floatX self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-base font-light text-white dark:shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
                         Button
                       </button>
-                      <button className="w-fit animate-floatY self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-base font-light text-white shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
+                      <button className="w-fit animate-floatY self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-base font-light text-white dark:shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
                         Button
                       </button>
-                      <button className="w-fit animate-floatX self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-base font-light text-white shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
+                      <button className="w-fit animate-floatX self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-base font-light text-white dark:shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95">
                         Button
                       </button>
                     </div>
-                    <div className="flex items-center min-h-[65px] gap-2 animate-floatX rounded-full border-2 bg-white shadow-2xl shadow-slate-600 outline-none duration-300 ease-in-out  hover:scale-105 dark:border-slate-600 dark:bg-slate-400 dark:bg-opacity-10 dark:text-white dark:shadow-gray-900 dark:bg-transparent dark:border-2">
+                    <div className="flex items-center min-h-[65px] gap-2 animate-floatX rounded-full border-2 bg-white dark:shadow-2xl shadow-slate-600 outline-none duration-300 ease-in-out  hover:scale-105 dark:border-slate-600 dark:bg-slate-400 dark:bg-opacity-10 dark:text-white dark:shadow-gray-900 dark:bg-transparent dark:border-2">
                       <input
                         placeholder="Type Here..."
                         spellCheck={false}
@@ -391,7 +391,7 @@ const Hero = () => {
                         className="w-full px-6 bg-transparent outline-none text-base font-light "
                       />
                       <button
-                        className="bg-gray-2 h-[50px] min-w-[50px] dark:bg-dark-bg hover:dar:text-white mr-1.5 flex cursor-pointer items-center justify-center rounded-full p-1 text-white shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105
+                        className="bg-gray-2 h-[50px] min-w-[50px] dark:bg-dark-bg hover:dar:text-white mr-1.5 flex cursor-pointer items-center justify-center rounded-full p-1 text-white dark:shadow-2xl shadow-slate-600 duration-300 ease-in-out hover:scale-105
                       bg-blue-700 dark:bg-blue-700 
                       hover:text-white dark:text-white dark:shadow-gray-900 hover:dark:bg-blue-700 lg:static"
                       >

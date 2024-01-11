@@ -61,7 +61,7 @@ export default function DocsPage() {
     <>
       <section className="pb-16 pt-24 md:pb-20 md:pt-28 lg:pb-24 lg:pt-32">
         <div className="container mx-auto">
-          <div className="mx-4 flex flex-wrap gap-10 md:gap-0">
+          <div className="mx-4 flex flex-col lg:flex-row gap-10 lg:gap-0">
             <div className="w-full px-4 lg:w-1/4">
               <div className="sticky top-[74px] rounded-lg border border-white p-4 shadow-solid-4  transition-all  dark:border-strokedark dark:bg-blacksection">
                 <ul className="space-y-2">
