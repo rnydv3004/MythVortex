@@ -1,19 +1,40 @@
 "use client";
+import axios from "axios";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React from "react";
+import React, { useState } from "react";
+import toast from "react-hot-toast";
 
 const Contact = () => {
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
-  const [hasMounted, setHasMounted] = React.useState(false);
-  React.useEffect(() => {
-    setHasMounted(true);
-  }, []);
-  if (!hasMounted) {
-    return null;
+  const [formData, setFormData] = useState({
+    fullName: "",
+    email: "",
+    subject: "",
+    phone: "",
+    message: "",
+  });
+
+  function sendMail() {
+    if (formData.fullName === "") {
+      toast.error("Please Fill Your Name");
+    } else if (formData.email === "") {
+      toast.error("Please Fill Email");
+    } else if (formData.subject === "") {
+      toast.error("Please Fill Subject");
+    } else if (formData.phone === "") {
+      toast.error("Please Fill Phone");
+    } else if (formData.message === "") {
+      toast.error("Please Fill Message");
+    } else {
+      axios
+        .post("/api/mailer", formData)
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((error) => {
+          console.log(error);
+        });
+    }
   }
 
   return (
@@ -37,9 +58,7 @@ const Contact = () => {
             />
           </div>
 
-          
-
-          <div className="w-full flex justify-center">
+          <div className="flex w-full justify-center">
             <motion.div
               variants={{
                 hidden: {
@@ -62,17 +81,31 @@ const Contact = () => {
                 Send a message
               </h2>
 
-              <form action="/" method="POST">
+              <div>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
                     placeholder="Full name"
+                    value={formData.fullName}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        fullName: e.target.value,
+                      });
+                    }}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="email"
                     placeholder="Email address"
+                    value={formData.email}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        email: e.target.value,
+                      });
+                    }}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
                 </div>
@@ -81,12 +114,26 @@ const Contact = () => {
                   <input
                     type="text"
                     placeholder="Subject"
+                    value={formData.subject}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        subject: e.target.value,
+                      });
+                    }}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="text"
                     placeholder="Phone number"
+                    value={formData.phone}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        phone: e.target.value,
+                      });
+                    }}
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
                 </div>
@@ -95,21 +142,23 @@ const Contact = () => {
                   <textarea
                     placeholder="Message"
                     rows={4}
+                    value={formData.message}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        message: e.target.value,
+                      });
+                    }}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                   ></textarea>
                 </div>
 
                 <div className="flex flex-wrap gap-4 xl:justify-between ">
-                  <div className="mb-4 flex md:mb-0">
-                    <input
-                      id="default-checkbox"
-                      type="checkbox"
-                      className="peer sr-only"
-                    />
-                  </div>
-
                   <button
                     aria-label="send message"
+                    onClick={() => {
+                      sendMail();
+                    }}
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white shadow-md shadow-slate-900 duration-300 ease-in-out hover:bg-primary dark:bg-btndark dark:hover:bg-primary"
                   >
                     Send
@@ -117,20 +166,20 @@ const Contact = () => {
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 24 24"
-                      stroke-width="1.5"
+                      strokeWidth="1.5"
                       stroke="currentColor"
                       height={"16"}
                       width={"16"}
                     >
                       <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
                         d="M6 12 3.269 3.125A59.769 59.769 0 0 1 21.485 12 59.768 59.768 0 0 1 3.27 20.875L5.999 12Zm0 0h7.5"
                       />
                     </svg>
                   </button>
                 </div>
-              </form>
+              </div>
             </motion.div>
           </div>
         </div>

@@ -5,7 +5,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <>
-      <footer className="border-t border-stroke bg-white dark:border-strokedark dark:bg-blacksection">
+      <footer className="border-t-2 border-stroke bg-stroke dark:border-strokedark dark:bg-blacksection">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
           <div className="py-10 lg:py-25">
@@ -77,7 +77,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top md:w-full"
                 >
-                  <h4 className="mb-4 text-lg font-medium text-black dark:text-white md:mb-9">
+                  <h4 className="mb-4 text-lg font-medium text-slate-500 dark:text-slate-400 md:mb-9">
                     Navigation
                   </h4>
 
@@ -136,7 +136,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top md:w-full"
                 >
-                  <h4 className="mb-4 text-lg font-medium text-black dark:text-white md:mb-9 ">
+                  <h4 className="mb-4 text-lg font-medium text-slate-500 dark:text-slate-400 md:mb-9 ">
                     Products
                   </h4>
 
@@ -196,7 +196,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top md:w-full"
                 >
-                  <h4 className="mb-4 text-lg font-medium text-black dark:text-white md:mb-9 ">
+                  <h4 className="mb-4 text-lg font-medium text-slate-500 dark:text-slate-400 md:mb-9 ">
                     Resources
                   </h4>
 
@@ -255,7 +255,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top md:w-full"
                 >
-                  <h4 className="mb-4 text-lg font-medium text-black dark:text-white md:mb-9 ">
+                  <h4 className="mb-4 text-lg font-medium text-slate-500 dark:text-slate-400 md:mb-9 ">
                     Others
                   </h4>
 
