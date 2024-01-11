@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header
       onClick={() => setNavigationOpen(!navigationOpen)}
-      className={`fixed left-0 top-0 z-9999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 lg:h-fit ${
+      className={`fixed left-0 top-0 z-99999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 lg:h-fit ${
         navigationOpen && "h-full"
       } ${
         stickyMenu
@@ -100,7 +100,7 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-0 h-auto max-h-[400px] rounded-md bg-white bg-opacity-100 p-7.5 shadow-solid-5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-0 h-auto max-h-[400px] rounded-md bg-slate-100 bg-opacity-100 p-7.5 shadow-solid-5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav className={`relative`}>

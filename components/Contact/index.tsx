@@ -2,7 +2,7 @@
 import axios from "axios";
 import { motion } from "framer-motion";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 
 const Contact = () => {
@@ -14,34 +14,75 @@ const Contact = () => {
     message: "",
   });
 
+  const [status, SetStatus] = useState(false);
+
   function sendMail() {
-    if (formData.fullName === "") {
-      toast.error("Please Fill Your Name");
-    } else if (formData.email === "") {
-      toast.error("Please Fill Email");
+    if (
+      (formData.fullName === "")
+    ) {
+      toast.error("Please Fill Your Name", {
+        position: "bottom-center",
+      });
+    } else if (
+      (formData.email === "")
+    ) {
+      toast.error("Please Fill Email", {
+        position: "bottom-center",
+      });
     } else if (formData.subject === "") {
-      toast.error("Please Fill Subject");
+      toast.error("Please Fill Subject", {
+        position: "bottom-center",
+      });
     } else if (formData.phone === "") {
-      toast.error("Please Fill Phone");
-    } else if (formData.message === "") {
-      toast.error("Please Fill Message");
+      toast.error("Please Fill Phone", {
+        position: "bottom-center",
+      });
+    } else if (
+      (formData.message === "")
+    ) {
+      toast.error("Please Fill Message", {
+        position: "bottom-center",
+      });
     } else {
       axios
         .post("/api/mailer", formData)
         .then((res) => {
-          console.log(res.data);
+          toast.success("Mail Sent!", {
+            position: "bottom-center",
+          });
+          if (res.status === 200) {
+            console.log("Message sent");
+            setFormData({
+              fullName: "",
+              email: "",
+              subject: "",
+              phone: "",
+              message: "",
+            });
+          }
         })
         .catch((error) => {
           console.log(error);
+          toast.error("Some Error Occured!", {
+            position: "bottom-center",
+          });
         });
     }
+    SetStatus(false);
+
   }
 
   return (
     <>
+      {/* Your main component JSX */}
+      {status && (
+        <div className="fixed left-0 top-0 z-99999 flex h-screen w-screen items-center justify-center bg-white bg-opacity-30">
+          <div className="h-12 w-12 animate-spin rounded-full border-t-4 border-blue-700 dark:border-t-white"></div>
+        </div>
+      )}
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="px-2 md:px-8 2xl:px-0">
-        <div className="relative mx-auto flex max-w-c-1390 flex-col items-center justify-center gap-10 px-2 pt-2 md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pt-10">
+        <div className="relative mx-auto flex max-w-c-1390 flex-col items-center justify-center gap-10 px-2 pt-2 md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pt-10 xl:pb-10 bg-slate-300 dark:bg-slate-900 pb-2">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42] "></div>
           <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
             <Image
@@ -77,7 +118,7 @@ const Contact = () => {
               viewport={{ once: true }}
               className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
             >
-              <h2 className="mb-15 text-2xl font-medium text-black dark:text-white xl:text-itemtitle">
+              <h2 className="mb-15 text-2xl font-medium text-slate-700 dark:text-white xl:text-itemtitle">
                 Send a message
               </h2>
 
@@ -93,7 +134,7 @@ const Contact = () => {
                         fullName: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b border-slate-500 bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black  focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
@@ -106,7 +147,7 @@ const Contact = () => {
                         email: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b border-slate-500 bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
                 </div>
 
@@ -121,7 +162,7 @@ const Contact = () => {
                         subject: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b border-slate-500 bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
@@ -134,7 +175,7 @@ const Contact = () => {
                         phone: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b border-slate-500 bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
                 </div>
 
@@ -149,7 +190,7 @@ const Contact = () => {
                         message: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                    className="w-full border-b border-slate-500 bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                   ></textarea>
                 </div>
 
@@ -157,9 +198,10 @@ const Contact = () => {
                   <button
                     aria-label="send message"
                     onClick={() => {
+                      SetStatus(true);
                       sendMail();
                     }}
-                    className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white shadow-md shadow-slate-900 duration-300 ease-in-out hover:bg-primary dark:bg-btndark dark:hover:bg-primary"
+                    className={`inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-white bg-slate-400 duration-300 ease-in-out hover:bg-primary dark:bg-btndark dark:hover:bg-primary`}
                   >
                     Send
                     <svg

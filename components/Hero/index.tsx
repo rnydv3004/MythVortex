@@ -14,8 +14,8 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative h-screen select-none overflow-hidden bg-gradient-to-br from-[#f5f7fa] via-blue-100 to-[#c3cfe2] dark:from-slate-900 dark:via-black dark:to-slate-800 pb-0 pt-17">
-        <div className=" absolute left-0 top-0 -z-30 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
+      <section className="relative h-screen select-none overflow-hidden bg-gradient-to-br z-0 from-[#f5f7fa] via-blue-100 to-[#c3cfe2] dark:from-slate-900 dark:via-black dark:to-slate-800 pb-0 pt-17">
+        <div className=" absolute left-0 top-0 -z-10 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
         <Image
           fill
           src="/images/shape/shape-dotted-light-02.svg"
