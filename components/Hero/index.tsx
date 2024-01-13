@@ -14,8 +14,8 @@ const Hero = () => {
 
   return (
     <>
-      <section className="relative h-screen select-none overflow-hidden bg-gradient-to-br from-[#f5f7fa] via-blue-100 to-[#c3cfe2] dark:from-slate-900 dark:via-black dark:to-slate-800 pb-0 pt-17">
-        <div className=" absolute left-0 top-0 -z-30 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
+      <section className="relative h-screen select-none overflow-hidden bg-gradient-to-br -z-0 from-[#f5f7fa] via-blue-100 to-[#c3cfe2] dark:from-slate-900 dark:via-black dark:to-slate-800 pb-0 pt-17">
+        <div className=" absolute left-0 top-0 -z-10 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
         <Image
           fill
           src="/images/shape/shape-dotted-light-02.svg"
@@ -218,13 +218,13 @@ const Hero = () => {
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
                 <div className="flex w-full h-full items-center justify-center gap-2">
                   {/* LOGIN PANEL */}
-                  <div className=" md:flex h-full w-[40%] transform  animate-floatY flex-col gap-6 rounded-3xl border-2 p-6 pt-8 dark:shadow-2xl dark:dark:shadow-2xl shadow-zinc-300 backdrop-filter duration-300 ease-in-out border-zinc-100 hover:scale-105 bg-white  dark:border-slate-600 dark:bg-transparent dark:shadow-gray-900">
+                  <div className=" md:flex h-full w-[40%] transform  animate-floatY flex-col gap-6 rounded-3xl border-2 p-6 pt-8 dark:shadow-2xl dark:dark:shadow-2xl shadow-zinc-300 backdrop-filter duration-300 ease-in-out border-zinc-300 hover:scale-105 bg-white  dark:border-slate-600 dark:bg-transparent dark:shadow-gray-900 ">
                     <p className="text-lg font-medium dark:text-white">Login</p>
                     <div className="flex w-full items-center justify-between">
                       <input
                         placeholder="user@gmail.com"
                         type="text"
-                        className="dark:text-white w-[80%] h-full border-b-2 border-slate-500 bg-transparent text-sm font-light outline-none"
+                        className="dark:text-white w-[80%] h-full border-b-2 border-slate-300 dark:border-slate-500 bg-transparent text-sm font-light outline-none"
                       />
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -245,7 +245,7 @@ const Hero = () => {
                     <div className="flex w-full items-center justify-between">
                       <input
                         type="password"
-                        className="dar:text-white w-[80%] border-b-2 border-slate-500 bg-transparent text-sm font-light outline-none"
+                        className="dar:text-white w-[80%] border-b-2 border-slate-300 dark:border-slate-500 bg-transparent text-sm font-light outline-none"
                         placeholder="**************"
                       />
                       <svg

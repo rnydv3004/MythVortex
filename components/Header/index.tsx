@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header
       onClick={() => setNavigationOpen(!navigationOpen)}
-      className={`fixed left-0 top-0 z-9999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 lg:h-fit ${
+      className={`fixed left-0 top-0 z-99999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 lg:h-fit ${
         navigationOpen && "h-full"
       } ${
         stickyMenu
@@ -100,7 +100,7 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-0 h-auto max-h-[400px] rounded-md bg-white bg-opacity-100 p-7.5 shadow-solid-5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-0 h-auto max-h-[400px] rounded-md bg-slate-100 bg-opacity-100 p-7.5 shadow-solid-5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav className={`relative`}>
@@ -160,18 +160,18 @@ const Header = () => {
           </nav>
 
           <div className=" mt-7 flex items-center gap-6 xl:mt-0">
-            <Link
+            {/* <Link
               href="https://github.com/NextJSTemplates/solid-nextjs"
               className="flex items-center justify-center rounded-full bg-zinc-500 px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out "
             >
               Track Status
-            </Link>
+            </Link> */}
 
             <Link
-              href="https://nextjstemplates.com/templates/solid"
+              href="/support"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out"
             >
-              Get Quote
+              Free Consultation
             </Link>
           </div>
         </div>
