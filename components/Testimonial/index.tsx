@@ -22,7 +22,7 @@ const Testimonial = () => {
               headerInfo={{
                 title: `TESTIMONIALS`,
                 subtitle: `Client’s Testimonials`,
-                description: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In convallis tortor eros. Donec vitae tortor lacus. Phasellus aliquam ante in maximus.`,
+                description: `Discover success stories from delighted clients. Our testimonials showcase the transformative impact of MythVortex's unparalleled web services. Satisfaction guaranteed!`,
               }}
             />
           </div>

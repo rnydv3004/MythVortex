@@ -34,7 +34,7 @@ const Pricing = () => {
             {/* <!-- Pricing Item --> */}
             <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
               <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                6999{" "}
+                6999*{" "}
                 <span className="text-regular text-waterloo dark:text-manatee">
                   INR
                 </span>
@@ -43,21 +43,21 @@ const Pricing = () => {
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
                  Website Enhancement
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p>Elevate UI, optimize performance, and transform your website's appearance.</p>
 
               <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
                 <ul>
                   <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    300 GB Storage
+                  Modernized UI enhancements
                   </li>
                   <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Unlimited Photos and Videos
+                  Performance optimization
                   </li>
                   <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                    Exclusive Support
+                  Tailored visual improvements
                   </li>
                   <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                    Custom Branding Strategy
+                  Responsive design implementation
                   </li>
                 </ul>
               </div>
@@ -90,29 +90,30 @@ const Pricing = () => {
               </div>
 
               <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                8999{" "}
+                9499*{" "}
                 <span className="text-regular text-waterloo dark:text-manatee">
-                  /month
+                  INR
                 </span>
               </h3>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
                 Website Development
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p>Ignite your online journey with a feature-rich website and essential perks.</p>
 
               <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
                 <ul>
                   <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    300 GB Storage
+                  1-year free domain
                   </li>
                   <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Unlimited Photos and Videos
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Exclusive Support
+                  1-year free hosting
+
                   </li>
                   <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                    Custom Branding Strategy
+                  Free SSL certificate
+                  </li>
+                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
+                  Professional WordPress/Shopify setup
                   </li>
                 </ul>
               </div>
@@ -141,29 +142,29 @@ const Pricing = () => {
             {/* <!-- Pricing Item --> */}
             <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
               <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                18999{" "}
+                18999*{" "}
                 <span className="text-regular text-waterloo dark:text-manatee">
                   INR
                 </span>
               </h3>
               <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Web Application Development
+                WebApp Development
               </h4>
-              <p>Lorem ipsum dolor sit amet, consec adipisicing elit.</p>
+              <p>Customized web solutions with cutting-edge technology and API integration.</p>
 
               <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
                 <ul>
                   <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    300 GB Storage
+                  Fully customized web application
                   </li>
                   <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Unlimited Photos and Videos
+                  Seamless API integrations
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Exclusive Support
+                  <li className="mb-4 text-black  opacity-40 last:mb-0 dark:text-manatee">
+                  Tailored Functionality
                   </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                    Custom Branding Strategy
+                  <li className="mb-4 text-black  opacity-40 last:mb-0 dark:text-manatee">
+                  Optimized User Experience
                   </li>
                 </ul>
               </div>

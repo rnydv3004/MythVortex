@@ -12,14 +12,15 @@ const FAQItem = ({ faqData }: { faqData: FaqData }) => {
   return (
     <>
       <div className="flex flex-col border-b border-stroke last-of-type:border-none dark:border-strokedark">
-        <button
+       <button
           onClick={() => {
             handleFaqToggle(id);
           }}
-          className="flex cursor-pointer items-center justify-between px-6 py-5 text-metatitle3 font-medium text-black dark:text-white lg:px-9 lg:py-7.5"
+          className="flex gap-4 cursor-pointer justify-between px-6 py-5 text-metatitle3 font-medium text-black dark:text-white lg:px-9 lg:py-7.5"
         >
-          {quest}
+          <span className="text-left w-full">{quest}</span>
 
+          
           {activeFaq === id ? (
             <svg
               width="18"
