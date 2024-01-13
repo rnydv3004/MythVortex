@@ -82,7 +82,7 @@ const Contact = () => {
       )}
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="px-2 md:px-8 2xl:px-0">
-        <div className="relative mx-auto flex max-w-c-1390 flex-col items-center justify-center gap-10 px-2 pt-2 md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pt-10 xl:pb-10 bg-slate-300 dark:bg-slate-900 pb-2">
+        <div className="relative mx-auto flex max-w-c-1390 flex-col items-center justify-center gap-10 px-2 pt-2 md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pt-10 xl:pb-10 bg-sky-50 dark:bg-slate-900 pb-2 mb-25">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42] "></div>
           <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
             <Image
@@ -119,7 +119,7 @@ const Contact = () => {
               className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
             >
               <h2 className="mb-15 text-2xl font-medium text-slate-700 dark:text-white xl:text-itemtitle">
-                Send a message
+              Reach Out for Web Excellence
               </h2>
 
               <div>
@@ -201,7 +201,7 @@ const Contact = () => {
                       SetStatus(true);
                       sendMail();
                     }}
-                    className={`inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-white bg-slate-400 duration-300 ease-in-out hover:bg-primary dark:bg-btndark dark:hover:bg-primary`}
+                    className={`inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-white bg-primary duration-300 ease-in-out hover:bg-primaryho dark:bg-primary dark:hover:bg-primaryho`}
                   >
                     Send
                     <svg
