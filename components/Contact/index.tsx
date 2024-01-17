@@ -198,7 +198,6 @@ const Contact = () => {
                   <button
                     aria-label="send message"
                     onClick={() => {
-                      SetStatus(true);
                       sendMail();
                     }}
                     className={`inline-flex items-center gap-2.5 rounded-full px-6 py-3 font-medium text-white bg-primary duration-300 ease-in-out hover:bg-primaryho dark:bg-primary dark:hover:bg-primaryho`}
