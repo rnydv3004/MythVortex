@@ -100,7 +100,7 @@ const Header = () => {
         <div
           className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-0 h-auto max-h-[400px] rounded-md bg-slate-100 bg-opacity-100 p-7.5 shadow-solid-5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            "navbar !visible mt-0 h-auto max-h-[400px] rounded-md bg-slate-100 lg:bg-transparent bg-opacity-100 p-7.5 shadow-solid-5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav className={`relative`}>
@@ -120,7 +120,7 @@ const Header = () => {
                         {menuItem.title}
                         <span>
                           <svg
-                            className="h-3 w-3 cursor-pointer fill-waterloo group-hover:fill-primary"
+                            className="h-3 w-3 cursor-pointer sm:fill-waterloo lg:fill-transparent group-hover:fill-primary"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
                           >
@@ -154,9 +154,6 @@ const Header = () => {
                 </li>
               ))}
             </ul>
-            <div className="absolute right-0 top-0 md:hidden">
-              <ThemeToggler />
-            </div>
           </nav>
 
           <div className=" mt-7 flex items-center gap-6 xl:mt-0">
@@ -166,12 +163,13 @@ const Header = () => {
             >
               Track Status
             </Link> */}
+            <ThemeToggler/>
 
             <Link
-              href="/support"
+              href="/contact"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out"
             >
-              Free Consultation
+              Get Started
             </Link>
           </div>
         </div>

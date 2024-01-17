@@ -26,7 +26,7 @@ export default function RootLayout({
           {/* <Lines /> */}
           <Header />
           <ToasterContext />
-          {children}
+          <div className="overflow-hidden">{children}</div>
           <Footer />
           <ScrollToTop />
         </ThemeProvider>

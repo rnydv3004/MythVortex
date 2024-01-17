@@ -1,6 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
-import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -30,7 +30,7 @@ const Footer = () => {
                   viewport={{ once: true }}
                   className="animate_top w-full md:mr-25"
                 >
-                  <a href="/">
+                  <Link href="/">
                     <h6 className="text-2xl font-semibold uppercase text-slate-700 dark:text-white">
                       <span className="bg-gradient-to-tr from-black via-slate-600 to-slate-900 bg-clip-text text-transparent dark:from-slate-500 dark:via-gray-200 dark:to-slate-400 ">
                         Myth
@@ -39,7 +39,7 @@ const Footer = () => {
                         Vortex
                       </span>
                     </h6>
-                  </a>
+                  </Link>
 
                   <p className="mb-0 mt-0 font-light text-slate-700 dark:text-slate-200">
                     Where Myth Meet Innovation
@@ -83,41 +83,41 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Home
-                      </a>
+                      </Link>
                     </li>
-                    <li>
-                      <a
+                    {/* <li>
+                      <Link
                         href="#"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Company
-                      </a>
-                    </li>
+                      </Link>
+                    </li> */}
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/careers"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Careers
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/contact"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Contact Us
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>
 
-                {/* PRODUCTS */}
+                {/* SERVICES */}
                 <motion.div
                   variants={{
                     hidden: {
@@ -137,41 +137,49 @@ const Footer = () => {
                   className="animate_top md:w-full"
                 >
                   <h4 className="mb-4 text-lg font-medium text-slate-500 dark:text-slate-400 md:mb-9 ">
-                    Products
+                    Services
                   </h4>
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/#service"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Services
-                      </a>
+                        Website Development 
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/#service"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Products
-                      </a>
+                        WebApp Development 
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/#service"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Templates
-                      </a>
+                        Website Enhancement
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/#web-hosting"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Components
-                      </a>
+                        Web Hosting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/#email-hosting"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Email Hosting
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>
@@ -202,36 +210,36 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/workflow"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Workflow
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/contact"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Support
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/under-development"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Research
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/under-development"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Newsletter
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>
@@ -261,36 +269,36 @@ const Footer = () => {
 
                   <ul>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/#pricing"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Pricing
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/under-development"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Site Map
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/under-development"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Feedback
-                      </a>
+                      </Link>
                     </li>
                     <li>
-                      <a
-                        href="#"
+                      <Link
+                        href="/#faq"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         FAQ
-                      </a>
+                      </Link>
                     </li>
                   </ul>
                 </motion.div>
@@ -386,19 +394,19 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-8 text-sm md:text-base">
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     English
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     Privacy Policy
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="hover:text-primary">
+                  <Link href="#" className="hover:text-primary">
                     Support
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.div>
@@ -447,7 +455,7 @@ const Footer = () => {
             >
               <ul className="flex items-center gap-5">
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <Link href="#" aria-label="social icon">
                     <svg
                       className="fill-[#383838] transition-all duration-300 hover:fill-primary dark:fill-[#878787]"
                       width="24"
@@ -468,10 +476,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <Link href="#" aria-label="social icon">
                     <svg
                       className="fill-[#383838] transition-all duration-300 hover:fill-primary dark:fill-[#878787]"
                       width="24"
@@ -492,10 +500,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <Link href="#" aria-label="social icon">
                     <svg
                       className="fill-[#383838] transition-all duration-300 hover:fill-primary dark:fill-[#878787]"
                       width="24"
@@ -516,10 +524,10 @@ const Footer = () => {
                         </clipPath>
                       </defs>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" aria-label="social icon">
+                  <Link href="#" aria-label="social icon">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -531,7 +539,7 @@ const Footer = () => {
                     >
                       <path d="M 16 3 C 8.83 3 3 8.83 3 16 L 3 34 C 3 41.17 8.83 47 16 47 L 34 47 C 41.17 47 47 41.17 47 34 L 47 16 C 47 8.83 41.17 3 34 3 L 16 3 z M 37 11 C 38.1 11 39 11.9 39 13 C 39 14.1 38.1 15 37 15 C 35.9 15 35 14.1 35 13 C 35 11.9 35.9 11 37 11 z M 25 14 C 31.07 14 36 18.93 36 25 C 36 31.07 31.07 36 25 36 C 18.93 36 14 31.07 14 25 C 14 18.93 18.93 14 25 14 z M 25 16 C 20.04 16 16 20.04 16 25 C 16 29.96 20.04 34 25 34 C 29.96 34 34 29.96 34 25 C 34 20.04 29.96 16 25 16 z"></path>
                     </svg>
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </motion.div>

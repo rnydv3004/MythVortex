@@ -9,7 +9,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(0);
           }}
-          className={`${page === 0? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 0? 'text-black bg-slate-200 dark:bg-blackho font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(1);
           }}
-          className={`${page === 1? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 1? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(2);
           }}
-          className={`${page === 2? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 2? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(3);
           }}
-          className={`${page === 3? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 3? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -101,7 +101,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(4);
           }}
-          className={`${page === 4? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 4? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -124,7 +124,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(5);
           }}
-          className={`${page === 5? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 5? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -147,7 +147,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(6);
           }}
-          className={`${page === 6? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 6? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -170,7 +170,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(7);
           }}
-          className={`${page === 7? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 7? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +193,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(8);
           }}
-          className={`${page === 8? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 8? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +216,7 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(9);
           }}
-          className={`${page === 9? 'text-black dark:bg-blackho ':''} flex w-full items-center gap-2 rounded-sm text-white px-3 py-2 text-base `}
+          className={`${page === 9? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
