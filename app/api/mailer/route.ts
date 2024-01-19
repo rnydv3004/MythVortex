@@ -38,7 +38,7 @@ Where Myths Meet The Innovation`
             from: process.env.NODEMAILER_EMAIL,
             to: email,
             bcc: process.env.NODEMAILER_EMAIL,
-            subject: "MythVertex: Inquiry Acknowledged",
+            subject: "MythVortex: Inquiry Acknowledged",
             text: clientCopy,
         };
 
@@ -57,13 +57,13 @@ MythVortex`
 
         var companyMailoptions = {
             from: process.env.NODEMAILER_EMAIL,
-            to: 'yaryan3087@gmail.com',
+            to: 'contact@mythvortex.com',
             bcc: process.env.NODEMAILER_EMAIL,
             subject: subject,
             text: companyMessage,
         };
 
-        console.log("Mailoption set successfully to client!")
+        // console.log("Mailoption set successfully to client!")
 
         const sendStatus = await transporter.sendMail(companyMailoptions);
 

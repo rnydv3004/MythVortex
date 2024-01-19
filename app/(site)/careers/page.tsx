@@ -124,7 +124,7 @@ export default function page() {
             </p>
             <p>
               <span className="font-semibold">Email Application:</span> Send your CV and cover letter as
-              attachments to xyz@gmail.com with the subject line: "Application
+              attachments to <span className="font-semibold underline">contact@mythvortex.com</span> with the subject line: "Application
               for [Position Name] - [Your Full Name]".{" "}
             </p>
             <p>
