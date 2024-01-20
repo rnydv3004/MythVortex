@@ -30,9 +30,8 @@ jobs:
 
       - name: Deploy via FTP
         run: |
-          uses: airvzxf/ftp-deployment-action@latest
+          uses: SamKirkland/FTP-Deploy-Action@3.1.1
           with:
-          server: ${{ secrets.FTP_HOST }}
-          user: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local_dir: "./public_html"
+          ftp-server: ${{ secrets.FTP_HOST }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
