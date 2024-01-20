@@ -1,7 +1,8 @@
 "use client";
 import SectionHeader from "../Common/SectionHeader";
 
-import { Autoplay, Pagination } from "swiper";
+import Autoplay from "swiper";
+import Pagination from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
