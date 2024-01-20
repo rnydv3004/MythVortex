@@ -1,4 +1,4 @@
-name: Deploy to FTP
+vername: Deploy to FTP
 
 on:
   push:
@@ -34,5 +34,5 @@ jobs:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          remote-dir: /home/zwbdoehh/public_html/
+          server-dir: /home/zwbdoehh/public_html/
           
