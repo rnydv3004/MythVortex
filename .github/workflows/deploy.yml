@@ -29,7 +29,7 @@ jobs:
           sudo apt-get install -y lftp
 
       - name: Sync files to hosting
-        uses: michaelw90/ftp-upload-action@v2
+        uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
