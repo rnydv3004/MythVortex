@@ -15,7 +15,7 @@ jobs:
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: ftp.mythvortex.com
-        username: zwbdoehh
+        username: admin@mythvortex.com
         password: ${{ secrets.FTP_PASSWORD }}
         protocol: ftps
         port: 21
