@@ -30,5 +30,9 @@ jobs:
 
       - name: Deploy via FTP
         run: |
-          lftp -e "open -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ${{ secrets.FTP_HOST }}; set ssl:verify-certificate no; mirror -R -e -x .git/ -x .github/ -x .next/ -x node_modules/
-          . /public_html/; bye"
+          uses: airvzxf/ftp-deployment-action@latest
+          with:
+          server: ${{ secrets.FTP_HOST }}
+          user: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local_dir: "./public_html"
