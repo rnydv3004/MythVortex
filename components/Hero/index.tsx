@@ -3,10 +3,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import ThemeToggler from "../Header/ThemeToggler";
-import DanceImage from "../../public/images/dance.png";
-import Avatar1 from "../../public/images/avatar1.png";
-import Avatar2 from "../../public/images/avatar2.png";
-import Avatar3 from "../../public/images/avatar3.png";
 import toast from "react-hot-toast";
 
 const Hero = () => {
@@ -254,19 +250,19 @@ const Hero = () => {
                     <div className="h-full w-[40%]">
                       {/* TAGS */}
                       <div className="flex animate-floatX gap-2">
-                        <button className="rounded-full border border-blue-600 px-2 py-1 text-xs font-medium text-blue-600 bg-blue-600 bg-opacity-10">
+                        <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-1 text-xs font-medium text-blue-600">
                           Development
                         </button>
-                        <button className="rounded-full border border-red-600 px-2 py-1 text-xs font-medium text-red-600 bg-red-600 bg-opacity-10">
+                        <button className="rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-1 text-xs font-medium text-red-600">
                           SEO
                         </button>
-                        <button className="rounded-full border border-green-600 px-2 py-1 text-xs font-medium text-green-600 bg-green-600 bg-opacity-10">
+                        <button className="rounded-full border border-green-600 bg-green-600 bg-opacity-10 px-2 py-1 text-xs font-medium text-green-600">
                           Enhancement
                         </button>
                       </div>
 
                       {/* LOGIN PANEL */}
-                      <div className="h-fit w-fit transform animate-floatY flex-col gap-4 rounded-lg border border-zinc-300 bg-primary p-6 pt-8 text-white shadow-zinc-300 backdrop-filter duration-300 ease-in-out hover:scale-105 dark:border-slate-900 dark:bg-gradient-to-tr dark:from-blue-800 dark:via-blue-700 dark:to-blue-800 dark:bg-transparent dark:dark:shadow-2xl dark:shadow-2xl dark:shadow-gray-900 dark:outline-black md:flex">
+                      <div className="h-fit w-fit transform animate-floatY flex-col gap-4 rounded-lg border border-zinc-300 bg-primary p-6 pt-8 text-white shadow-zinc-300 backdrop-filter duration-300 ease-in-out hover:scale-105 dark:border-slate-900 dark:bg-transparent dark:bg-gradient-to-tr dark:from-blue-800 dark:via-blue-700 dark:to-blue-800 dark:dark:shadow-2xl dark:shadow-2xl dark:shadow-gray-900 dark:outline-black md:flex">
                         <p className="text-xs font-medium text-white">Login</p>
                         <div className="flex w-full items-center justify-between">
                           <input
@@ -342,10 +338,16 @@ const Hero = () => {
                         </div>
                       </div>
 
-                      <div className="mt-4 h-full w-full animate-floatYR rounded-lg border bg-white p-4 dark:bg-black dark:bg-opacity-30  dark:border-slate-600 dark:outline-black">
+                      <div className="mt-4 h-full w-full animate-floatYR rounded-lg border bg-white p-4 dark:border-slate-600 dark:bg-black  dark:bg-opacity-30 dark:outline-black">
                         <div className="flex items-center justify-start gap-5 border-b pb-2 dark:border-slate-600  dark:outline-black">
                           <div className="h-10 w-10">
-                            <Image src={Avatar1} alt={"avatar1"} />
+                            <Image
+                              priority
+                              src={"/images/avatar1.png"}
+                              alt={"avatar1"}
+                              width={"35"}
+                              height={"35"}
+                            />
                           </div>
                           <div className="flex flex-col">
                             <p className="text-medium font-medium dark:text-white">
@@ -358,7 +360,12 @@ const Hero = () => {
                         </div>
                         <div className="flex items-center justify-start gap-5 border-b py-2 dark:border-slate-600 dark:outline-black">
                           <div className="h-10 w-10">
-                            <Image src={Avatar2} alt={"avatar2"} />
+                            <Image
+                              src={"/images/avatar2.png"}
+                              alt={"avatar2"}
+                              width={"35"}
+                              height={"35"}
+                            />
                           </div>
                           <div className="flex flex-col">
                             <p className="text-medium font-medium dark:text-white">
@@ -371,7 +378,12 @@ const Hero = () => {
                         </div>
                         <div className="flex items-center justify-start gap-5 border-b py-2 dark:border-slate-600  dark:outline-black">
                           <div className="h-10 w-10">
-                            <Image src={Avatar3} alt={"avatar3"} />
+                            <Image
+                              width={"35"}
+                              height={"35"}
+                              src={"/images/avatar3.png"}
+                              alt={"avatar3"}
+                            />
                           </div>
                           <div className="flex flex-col">
                             <p className="text-medium font-medium dark:text-white">
@@ -384,7 +396,12 @@ const Hero = () => {
                         </div>
                         <div className="flex items-center justify-start gap-5 border-b pb-2 dark:border-slate-600 dark:outline-black">
                           <div className="h-10 w-10">
-                            <Image src={Avatar1} alt={"avatar1"} />
+                            <Image
+                              width={"35"}
+                              height={"35"}
+                              src={"/images/avatar2.png"}
+                              alt={"avatar1"}
+                            />
                           </div>
                           <div className="flex flex-col">
                             <p className="text-medium font-medium dark:text-white">
@@ -477,12 +494,17 @@ const Hero = () => {
                       </div>
                       {/* Player */}
 
-                      <div className="h-fit w-full animate-floatX rounded-xl border bg-white dark:bg-black dark:border-slate-600 dark:bg-opacity-60 p-2">
+                      <div className="h-fit w-full animate-floatX rounded-xl border bg-white p-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-60">
                         <div className="flex w-full">
-                          <div className="min-w-16 h-16 w-20 rounded-xl bg-slate-100 dark:bg-slate-700 p-2">
-                            <Image src={DanceImage} alt={"dance"} />
+                          <div className="h-16 w-20 min-w-16 rounded-xl bg-slate-100 p-2 dark:bg-slate-700">
+                            <Image
+                              width={"50"}
+                              height={"50"}
+                              src={"/images/dance.png"}
+                              alt={"dance"}
+                            />
                           </div>
-                          <div className="flex dark:text-slate-300 w-full flex-col items-center justify-center gap-1">
+                          <div className="flex w-full flex-col items-center justify-center gap-1 dark:text-slate-300">
                             <div className="flex h-fit w-full items-center justify-evenly gap-2 px-8">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
@@ -514,7 +536,7 @@ const Hero = () => {
                                   d="M15.75 19.5 8.25 12l7.5-7.5"
                                 />
                               </svg>
-                              <div className="flex h-8 w-8 items-center justify-center rounded-full dark:bg-slate-600 dark:text-white cursor-pointer bg-slate-200">
+                              <div className="flex h-8 w-8 cursor-pointer items-center justify-center rounded-full bg-slate-200 dark:bg-slate-600 dark:text-white">
                                 <svg
                                   xmlns="http://www.w3.org/2000/svg"
                                   fill="none"
@@ -563,7 +585,10 @@ const Hero = () => {
                               </svg>
                             </div>
                             <div className="w-full px-10">
-                              <input className="w-full accent-blue-600" type="range" />
+                              <input
+                                className="w-full accent-blue-600"
+                                type="range"
+                              />
                             </div>
                           </div>
                         </div>
@@ -584,7 +609,7 @@ const Hero = () => {
                       </div>
 
                       <div className="h-full w-full animate-floatY text-black">
-                        <div className="mx-auto max-w-md scale-90 rounded-xl border bg-white dark:bg-black dark:bg-opacity-60 dark:text-white dark:border-slate-600 p-5 py-10 shadow-md">
+                        <div className="mx-auto max-w-md scale-90 rounded-xl border bg-white p-5 py-10 shadow-md dark:border-slate-600 dark:bg-black dark:bg-opacity-60 dark:text-white">
                           <h1 className="mb-2 flex justify-between text-lg font-medium">
                             <span className="pb-2 text-xl">Calender</span>
                             <span className="flex items-center justify-center gap-1 text-base">

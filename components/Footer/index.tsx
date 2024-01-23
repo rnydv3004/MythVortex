@@ -117,75 +117,7 @@ const Footer = () => {
                   </ul>
                 </motion.div>
 
-                {/* SERVICES */}
-                <motion.div
-                  variants={{
-                    hidden: {
-                      opacity: 0,
-                      y: -20,
-                    },
-
-                    visible: {
-                      opacity: 1,
-                      y: 0,
-                    },
-                  }}
-                  initial="hidden"
-                  whileInView="visible"
-                  transition={{ duration: 1, delay: 0.1 }}
-                  viewport={{ once: true }}
-                  className="animate_top md:w-full"
-                >
-                  <h4 className="mb-4 text-lg font-medium text-slate-500 dark:text-slate-400 md:mb-9 ">
-                    Services
-                  </h4>
-
-                  <ul>
-                    <li>
-                      <Link
-                        href="/#service"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Website Development 
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/#service"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        WebApp Development 
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/#service"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Website Enhancement
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/#web-hosting"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Web Hosting
-                      </Link>
-                    </li>
-                    <li>
-                      <Link
-                        href="/#email-hosting"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Email Hosting
-                      </Link>
-                    </li>
-                  </ul>
-                </motion.div>
-
-                {/* RESOURCES */}
-
+                {/* Resources */}
                 <motion.div
                   variants={{
                     hidden: {
@@ -243,6 +175,75 @@ const Footer = () => {
                     </li>
                   </ul>
                 </motion.div>
+
+                {/* SERVICES */}
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: -20,
+                    },
+
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 1, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="animate_top md:w-full"
+                >
+                  <h4 className="mb-4 text-lg font-medium text-slate-500 dark:text-slate-400 md:mb-9 ">
+                    Services
+                  </h4>
+
+                  <ul>
+                    <li>
+                      <Link
+                        href="/#service"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Website Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/#service"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        WebApp Development
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/#service"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Website Enhancement
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/#web-hosting"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Web Hosting
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/#email-hosting"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Email Hosting
+                      </Link>
+                    </li>
+                  </ul>
+                </motion.div>
+
+                {/* RESOURCES */}
 
                 {/* OTHERS */}
                 <motion.div
@@ -302,6 +303,7 @@ const Footer = () => {
                     </li>
                   </ul>
                 </motion.div>
+
               </div>
             </div>
           </div>
@@ -373,7 +375,7 @@ const Footer = () => {
           {/* <!-- Footer Top --> */}
 
           {/* <!-- Footer Bottom --> */}
-          <div className="flex flex-col md:px-20 flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 dark:border-strokedark lg:flex-row lg:justify-between lg:gap-0">
+          <div className="flex flex-col flex-wrap items-center justify-center gap-5 border-t border-stroke py-7 dark:border-strokedark md:px-20 lg:flex-row lg:justify-between lg:gap-0">
             <motion.div
               variants={{
                 hidden: {
