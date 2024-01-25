@@ -8,7 +8,7 @@ const About = () => {
     <>
       {/* <!-- ===== About Start ===== --> */}
       <section
-        id="service"
+        id="services"
         className="overflow-hidden pb-20 lg:pb-25 lg:pt-25 xl:pb-30 xl:pt-30"
       >
         <div className="mx-auto max-w-c-1235 px-6  md:px-8 xl:px-0 ">
@@ -29,7 +29,7 @@ const About = () => {
               whileInView="visible"
               transition={{ duration: 0.5, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left relative mx-auto aspect-[588/526.5] block md:w-1/2 bg-slate-900 bg-opacity-40 rounded-xl"
+              className="animate_left relative mx-auto block aspect-[588/526.5] rounded-xl bg-slate-900 bg-opacity-40 md:w-1/2"
             >
               <Image
                 src="/images/about/about-light-01.png"
@@ -62,8 +62,8 @@ const About = () => {
               viewport={{ once: true }}
               className="animate_right md:w-1/2 "
             >
-              <h2 className="relative mb-6 mt-20 lg:mt-0 font-bold text-black dark:text-white text-2xl md:text-3xl xl:text-sectiontitle4">
-                Revolutionize the Presence of Your {" "}
+              <h2 className="relative mb-6 mt-20 text-2xl font-bold text-black dark:text-white md:text-3xl lg:mt-0 xl:text-sectiontitle4">
+                Revolutionize the Presence of Your{" "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark">
                   Business
                 </span>
@@ -82,7 +82,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="mb-0.5 text-lg md:text-metatitle2 text-black dark:text-white">
+                  <h3 className="mb-0.5 text-lg text-black dark:text-white md:text-metatitle2">
                     Website
                   </h3>
                   <p>
@@ -98,7 +98,7 @@ const About = () => {
                   </p>
                 </div>
                 <div className="w-3/4">
-                  <h3 className="mb-0.5 text-lg md:text-metatitle2 text-black dark:text-white">
+                  <h3 className="mb-0.5 text-lg text-black dark:text-white md:text-metatitle2">
                     Web Application
                   </h3>
                   <p>
@@ -116,7 +116,7 @@ const About = () => {
       {/* <!-- ===== About Two Start ===== --> */}
       <section>
         <div className="mx-auto max-w-c-1235 overflow-hidden md:px-8 2xl:px-0">
-          <div className="flex items-center lg:gap-32.5 px-6  md:px-8 xl:px-0 ">
+          <div className="flex items-center px-6 md:px-8  lg:gap-32.5 xl:px-0 ">
             <motion.div
               variants={{
                 hidden: {
@@ -210,7 +210,6 @@ const About = () => {
         </div>
       </section>
       {/* <!-- ===== About Two End ===== --> */}
-
     </>
   );
 };
