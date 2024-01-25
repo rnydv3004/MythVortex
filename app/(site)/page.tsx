@@ -68,7 +68,7 @@ export const metadata: Metadata = {
   applicationName: "MythVortex",
   referrer: "no-referrer",
   verification: {
-    google: "google",
+    google: "x4IMt9j9Jpud7qFCuQ6c1vl3QEMYrdGvDGWbvwFlY9A",
   },
 };
 
