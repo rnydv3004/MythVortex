@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { Inter } from "next/font/google";
 import "../globals.css";
 const inter = Inter({ subsets: ["latin"] });
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 import ToasterContext from "../context/ToastContext";
 
