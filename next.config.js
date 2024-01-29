@@ -14,8 +14,8 @@ const nextConfig = {
     ],
   },
   env: {
-    NODEMAILER_EMAIL: 'taryan3087@gmail.com',
-    NODEMAILER_PW: 'eosn rqfg gavc ormn'
+    NODEMAILER_EMAIL: 'support@mythvortex.com',
+    NODEMAILER_PW: 'ajpe kwxa tstd kpvh'
   },
 };
 
