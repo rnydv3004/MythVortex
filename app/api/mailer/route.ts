@@ -28,7 +28,7 @@ Our team is diligently working on your request, and you can expect a detailed re
         
 We appreciate your patience as we work towards resolving your inquiry. Should you have any immediate concerns or require urgent assistance, please don't hesitate to contact us at [Your Contact Information].
         
-Thank you for choosing [Your Company Name]. We look forward to the opportunity to serve you, and we will do our utmost to exceed your expectations.
+Thank you for choosing Mythvortex. We look forward to the opportunity to serve you, and we will do our utmost to exceed your expectations.
         
 Best regards,
 Team MythVortex
@@ -38,7 +38,7 @@ Where Myths Meet The Innovation`
             from: process.env.NODEMAILER_EMAIL,
             to: email,
             bcc: 'taryan3087@gmail.com',
-            subject: "MythVortex: Inquiry Acknowledged",
+            subject: "Mythvortex: Inquiry Acknowledged",
             text: clientCopy,
         };
 
