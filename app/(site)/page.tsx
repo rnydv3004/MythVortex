@@ -76,10 +76,7 @@ export default function Home() {
   return (
     <main>
       <Head>
-        <meta
-          name="google-site-verification"
-          content="x4IMt9j9Jpud7qFCuQ6c1vl3QEMYrdGvDGWbvwFlY9A"
-        />
+        <link rel="canonical" href={"https://mythvortex.com/"} key="canonical" />
       </Head>
       <Hero />
       {/* <Brands /> */}
