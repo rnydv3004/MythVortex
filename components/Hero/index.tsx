@@ -59,8 +59,8 @@ const Hero = () => {
               </p>
               <div className="mt-5">
                 <Link
-                  href="#service"
-                  className="mb-5 flex w-fit items-center justify-center rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 px-7.5 py-2.5 text-sm text-white duration-300 ease-in-out hover:bg-blue-800 dark:from-blue-600 dark:via-sky-500 dark:to-blue-950 md:text-regular"
+                  href={"/contact"}
+                  className="mb-5 flex w-fit items-center justify-center -full bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 px-7.5 py-2.5 text-sm text-white duration-300 ease-in-out hover:bg-blue-800 dark:from-blue-600 dark:via-sky-500 dark:to-blue-950 md:text-regular"
                 >
                   Get Started
                 </Link>
