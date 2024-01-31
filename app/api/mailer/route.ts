@@ -8,13 +8,13 @@ export async function POST(request: NextRequest) {
         const reqBody = await request.json()
         const { fullName, email, subject, phone, message } = reqBody
 
-        console.log('Fullname:', fullName, "; email:", ";Subject:", subject, "; Phone:", phone, ",Msg:", message)
+        console.log('Fullname:', fullName, "; email:", email, ";Subject:", subject, "; Phone:", phone, ",Msg:", message)
 
         var transporter = await nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: process.env.NODEMAILER_EMAIL,
-                pass: process.env.NODEMAILER_PW,
+                user: 'support@mythvortex.com',
+                pass: 'vnoh hnkj jqba kwrm',
             },
         });
 
@@ -35,7 +35,7 @@ Team MythVortex
 Where Myths Meet The Innovation`
 
         var clientMailOptions = {
-            from: process.env.NODEMAILER_EMAIL,
+            from: 'support@mythvortex.com',
             to: email,
             bcc: 'taryan3087@gmail.com',
             subject: "Mythvortex: Inquiry Acknowledged",
@@ -56,7 +56,7 @@ Thanks,
 MythVortex`
 
         var companyMailoptions = {
-            from: process.env.NODEMAILER_EMAIL,
+            from: 'support@mythvortex.com',
             to: 'contact@mythvortex.com',
             bcc: 'taryan3087@gmail.com',
             subject: subject,
@@ -66,11 +66,14 @@ MythVortex`
         // console.log("Mailoption set successfully to client!")
 
         const sendStatus = await transporter.sendMail(companyMailoptions);
+        console.log("Send status 1:", sendStatus)
+
 
         if (sendStatus.accepted.length > 0) {
             console.log("Email Sent to ", email);
 
             const sendStatus = await transporter.sendMail(clientMailOptions);
+            console.log("Send status 2:", sendStatus)
 
             if (sendStatus.accepted.length > 0) {
 
@@ -79,6 +82,8 @@ MythVortex`
                     status: 200,
                 });
             }
+
+
 
         } else {
             console.error("Email not accepted for delivery.");
