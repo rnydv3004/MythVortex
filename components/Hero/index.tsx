@@ -15,7 +15,6 @@ const Hero = () => {
   };
 
   return (
-    <>
       <section className="relative -z-0 h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
         <div className=" absolute left-0 top-0 -z-10 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
         <Image
@@ -32,9 +31,9 @@ const Hero = () => {
           alt="Dotted"
           className="absolute left-0 top-0 -z-1 hidden animate-pulse dark:block"
         />
-        <div className="mx-auto flex h-full items-center justify-center  px-4 md:px-8 2xl:px-0">
-          <div className="flex h-full flex-col justify-evenly lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5">
-            <div className="flex h-full w-full flex-col justify-center lg:w-1/2 lg:pl-20">
+        <div className="mx-auto flex h-full items-center justify-center md:px-8 2xl:px-0 overflow-hidden">
+          <div className="flex h-full flex-col justify-evenly lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5 overflow-hidden">
+            <div className="flex h-full w-full flex-col justify-center lg:w-1/2 lg:pl-20 px-4 md:px-0">
               <h1 className="mb-5 pr-8 text-3xl font-extrabold text-black dark:text-slate-300 md:text-6xl md:font-extrabold xl:text-6xl ">
                 <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
                   Where
@@ -163,7 +162,7 @@ const Hero = () => {
                     </div>
 
                     {/* Chat Screen */}
-                    <div className="md:mt-4 h-full w-full animate-floatYR rounded-lg border bg-white p-4 dark:border-slate-600 dark:bg-black  dark:bg-opacity-30 dark:outline-black">
+                    <div className="md:mt-4 h-full w-full animate-floatYR rounded-lg border bg-white p-2 md:p-4 dark:border-slate-600 dark:bg-black  dark:bg-opacity-30 dark:outline-black">
                       <div className="flex items-center justify-start gap-5 border-b pb-2 dark:border-slate-600  dark:outline-black">
                         <div className="h-10 w-10">
                           <Image
@@ -175,7 +174,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-sm md:text-medium font-medium dark:text-white">
+                          <p className="text-xs md:text-medium font-medium dark:text-white">
                             Anil Singh
                           </p>
                           <p className="text-xs font-normal">
@@ -193,7 +192,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-sm md:text-medium font-medium dark:text-white">
+                          <p className="text-xs md:text-medium font-medium dark:text-white">
                             Anjali Mishra
                           </p>
                           <p className="text-xs font-normal">
@@ -211,7 +210,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-sm md:text-medium font-medium dark:text-white">
+                          <p className="text-xs md:text-medium font-medium dark:text-white">
                             Nikhil Yadav
                           </p>
                           <p className="text-xs font-normal">
@@ -229,7 +228,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-sm md:text-medium font-medium dark:text-white">
+                          <p className="text-xs md:text-medium font-medium dark:text-white">
                             Anil Singh
                           </p>
                           <p className="text-xs font-normal">
