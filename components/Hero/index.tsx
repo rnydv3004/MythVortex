@@ -15,56 +15,57 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative -z-0 h-[92.7vh] select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800 md:h-screen ">
-      <div className=" absolute left-0 top-0 -z-10 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
-      <Image
-        fill
-        src="/images/shape/shape-dotted-light-02.svg"
-        alt="Dotted"
-        className="absolute left-0 top-0 -z-1 dark:hidden"
-        priority
-      />
-      <Image
-        fill
-        priority
-        src="/images/shape/shape-dotted-dark-02.svg"
-        alt="Dotted"
-        className="absolute left-0 top-0 -z-1 hidden animate-pulse dark:block"
-      />
-      <div className="mx-auto flex h-full items-center justify-center md:px-8 2xl:px-0">
-        <div className="flex h-full flex-col justify-evenly overflow-hidden lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5">
-          <div className="flex h-full w-full flex-col justify-center px-4 lg:w-1/2 lg:pl-20">
-            <h1 className="mb-5 pr-8 text-3xl font-extrabold text-black dark:text-slate-300 md:text-6xl md:font-extrabold xl:text-6xl ">
-              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                Where
-              </span>{" "}
-              <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
-                Myths
-              </span>{" "}
-              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                Meet
-              </span>{" "}
-              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                the
-              </span>{" "}
-              <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
-                Innovation
-              </span>
-            </h1>
-            <p className="text-sm md:text-2xl lg:text-metatitle3">
-              Embark on a journey at MythVortex, where mythical narratives
-              seamlessly intertwine with innovative wonders, crafting a realm of
-              imagination and discovery
-            </p>
-            <div className="mt-5">
-              <Link
-                href="#service"
-                className="mb-5 flex w-fit items-center justify-center rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 px-7.5 py-2.5 text-sm text-white duration-300 ease-in-out hover:bg-blue-800 dark:from-blue-600 dark:via-sky-500 dark:to-blue-950 md:text-regular"
-              >
-                Get Started
-              </Link>
+    <>
+      <section className="relative -z-0 h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
+        <div className=" absolute left-0 top-0 -z-10 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
+        <Image
+          fill
+          src="/images/shape/shape-dotted-light-02.svg"
+          alt="Dotted"
+          className="absolute left-0 top-0 -z-1 dark:hidden"
+          priority
+        />
+        <Image
+          fill
+          priority
+          src="/images/shape/shape-dotted-dark-02.svg"
+          alt="Dotted"
+          className="absolute left-0 top-0 -z-1 hidden animate-pulse dark:block"
+        />
+        <div className="mx-auto flex h-full items-center justify-center  px-4 md:px-8 2xl:px-0">
+          <div className="flex h-full flex-col justify-evenly lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5">
+            <div className="flex h-full w-full flex-col justify-center lg:w-1/2 lg:pl-20">
+              <h1 className="mb-5 pr-8 text-3xl font-extrabold text-black dark:text-slate-300 md:text-6xl md:font-extrabold xl:text-6xl ">
+                <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                  Where
+                </span>{" "}
+                <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
+                  Myths
+                </span>{" "}
+                <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                  Meet
+                </span>{" "}
+                <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                  the
+                </span>{" "}
+                <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
+                  Innovation
+                </span>
+              </h1>
+              <p className="text-sm md:text-2xl lg:text-metatitle3">
+                Embark on a journey at MythVortex, where mythical narratives
+                seamlessly intertwine with innovative wonders, crafting a realm
+                of imagination and discovery
+              </p>
+              <div className="mt-5">
+                <Link
+                  href="#service"
+                  className="mb-5 flex w-fit items-center justify-center rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 px-7.5 py-2.5 text-sm text-white duration-300 ease-in-out hover:bg-blue-800 dark:from-blue-600 dark:via-sky-500 dark:to-blue-950 md:text-regular"
+                >
+                  Get Started
+                </Link>
+              </div>
             </div>
-          </div>
 
           <div className="animate_right h-full w-full items-end justify-center overflow-hidden pl-4 flex lg:w-[70%]">
             <div className="h-[100%] md:h-[90%] w-full overflow-hidden rounded-tl-lg border bg-slate-100 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:p-10">
