@@ -12,9 +12,9 @@ const Pricing = () => {
           <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
-                title: `PRICING PLANS`,
-                subtitle: `Website Pricing`,
-                description: `Explore pricing plans where ancient myths collide with the forefront of innovation.`,
+                title: `3 MONTHS NO-COST EMI`,
+                subtitle: `Pricing`,
+                description: ``,
               }}
             />
           </div>
@@ -62,7 +62,7 @@ const Pricing = () => {
                 </ul>
               </div>
 
-              <button
+              {/* <button
                 aria-label="Get the Plan button"
                 className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
               >
@@ -80,7 +80,7 @@ const Pricing = () => {
                     fill="currentColor"
                   />
                 </svg>
-              </button>
+              </button> */}
             </div>
 
             {/* <!-- Pricing Item --> */}
@@ -118,7 +118,7 @@ const Pricing = () => {
                 </ul>
               </div>
 
-              <button
+              {/* <button
                 aria-label="Get the Plan button"
                 className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
               >
@@ -136,7 +136,7 @@ const Pricing = () => {
                     fill="currentColor"
                   />
                 </svg>
-              </button>
+              </button> */}
             </div>
 
             {/* <!-- Pricing Item --> */}
@@ -169,7 +169,7 @@ const Pricing = () => {
                 </ul>
               </div>
 
-              <button
+              {/* <button
                 aria-label="Get the Plan button"
                 className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
               >
@@ -187,7 +187,7 @@ const Pricing = () => {
                     fill="currentColor"
                   />
                 </svg>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>

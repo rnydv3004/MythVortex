@@ -4,7 +4,7 @@ const faqData: FAQ[] =[
   {
     id: 1,
     quest: "FAQ: What services does MythVortex offer?",
-    ans: "MythVortex specializes in comprehensive web development services, including custom website design, application development, API integration, and ongoing maintenance."
+    ans: "MythVortex excels in web development, offering visually stunning websites, cutting-edge applications for Android and iOS, strategic SEO, and end-to-end e-commerce solutions. Elevate your digital presence with our expert services"
   },
   {
     id: 2,
@@ -14,7 +14,7 @@ const faqData: FAQ[] =[
   {
     id: 3,
     quest: "FAQ: What technologies does MythVortex work with?",
-    ans: "We are proficient in a wide array of technologies, including but not limited to HTML, CSS, JavaScript, PHP, Python, and various popular frameworks, ensuring versatility in crafting tailored solutions."
+    ans: "At MythVortex, our technology stack evolves with time and advancements. We consistently embrace the latest technologies in web development to ensure applications are not only faster but also at the forefront of innovation."
   },
   {
     id: 4,

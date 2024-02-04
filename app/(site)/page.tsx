@@ -60,13 +60,12 @@ export const metadata: Metadata = {
     "digital transformation services",
   ],
   creator: "MythVortex",
-  category: "Technology",
+  category: "Web Development",
   publisher: "MythVortex",
   robots: "index, follow",
   abstract:
     "Explore a world where ancient myths converge with cutting-edge innovation. Welcome to MythVortex, your gateway to a digital realm where timeless stories blend seamlessly with the latest in web development, app solutions, and transformative technologies. Immerse yourself in a journey where creativity meets expertise, and discover how MythVortex is redefining the landscape of digital experiences. Join us on a quest for innovation and excellence, where myths come to life in the realm of technology.",
   applicationName: "MythVortex",
-  referrer: "no-referrer",
   verification: {
     google: "x4IMt9j9Jpud7qFCuQ6c1vl3QEMYrdGvDGWbvwFlY9A",
   },
@@ -79,15 +78,9 @@ export default function Home() {
         <link rel="canonical" href={"https://mythvortex.com/"} key="canonical" />
       </Head>
       <Hero />
-      {/* <Brands /> */}
       <Feature />
-      <About />
-      {/* <FeaturesTab /> */}
       <FunFact />
-      <Integration />
-      <CTA />
       <FAQ />
-      {/* <Testimonial /> */}
       <Pricing />
       <Contact />
     </main>
