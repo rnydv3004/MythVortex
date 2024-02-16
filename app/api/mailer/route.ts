@@ -13,8 +13,8 @@ export async function POST(request: NextRequest) {
         var transporter = await nodemailer.createTransport({
             service: "gmail",
             auth: {
-                user: 'support@mythvortex.com',
-                pass: 'vnoh hnkj jqba kwrm',
+                user: 'yaryanyadav3087@gmail.com',
+                pass: 'oirr dbgs rppx pcjz',
             },
         });
 
@@ -35,7 +35,7 @@ Team MythVortex
 Where Myths Meet The Innovation`
 
         var clientMailOptions = {
-            from: 'support@mythvortex.com',
+            from: 'contact@mythvortex.com',
             to: email,
             bcc: 'taryan3087@gmail.com',
             subject: "Mythvortex: Inquiry Acknowledged",
@@ -56,7 +56,7 @@ Thanks,
 MythVortex`
 
         var companyMailoptions = {
-            from: 'support@mythvortex.com',
+            from: 'contact@mythvortex.com',
             to: 'contact@mythvortex.com',
             bcc: 'taryan3087@gmail.com',
             subject: subject,
