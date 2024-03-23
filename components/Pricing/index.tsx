@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import SectionHeader from "../Common/SectionHeader";
+import { PinContainer } from "../ui/3d-pin";
 
 const Pricing = () => {
   return (
@@ -12,7 +13,7 @@ const Pricing = () => {
           <div className="animate_top mx-auto text-center">
             <SectionHeader
               headerInfo={{
-                title: `3 MONTHS NO-COST EMI`,
+                title: `Discover the Perfect Plan for Your Needs`,
                 subtitle: `Pricing`,
                 description: ``,
               }}
@@ -32,163 +33,60 @@ const Pricing = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-7.5 lg:flex-nowrap xl:gap-12.5">
             {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                6999*{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
-                  INR
-                </span>
-                <p></p>
-              </h3>
-              <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                 Website Enhancement
-              </h4>
-              <p>Elevate UI, optimize performance, and transform your website's appearance.</p>
-
-              <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
-                <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  Modernized UI enhancements
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  Performance optimization
-                  </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                  Tailored visual improvements
-                  </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                  Responsive design implementation
-                  </li>
-                </ul>
+            <PinContainer
+              title="Get Quote"
+              href="mythvortex.com"
+            >
+              <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base dark:text-slate-100 text-black">
+                  Website Enhancement
+                </h3>
+                <div className="text-base !m-0 !p-0 font-normal">
+                  <span className="text-slate-500 ">
+                   Elevate UI, optimize performance, and transform your website's appearance.
+                  </span>
+                </div>
+                <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
               </div>
-
-              {/* <button
-                aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
-              >
-                <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
-                </span>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button> */}
-            </div>
+            </PinContainer>
+            
 
             {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <div className="absolute -right-3.5 top-7.5 -rotate-90 rounded-bl-full rounded-tl-full bg-primary px-4.5 py-1.5 text-metatitle font-medium uppercase text-white">
-                popular
+            <PinContainer
+              title="Get Quote"
+              href="mythvortex.com"
+            >
+              <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base dark:text-slate-100 text-black">
+                  Website Development
+                </h3>
+                <div className="text-base !m-0 !p-0 font-normal">
+                  <span className="text-slate-500 ">
+                  Ignite your online journey with a feature-rich website and essential perks.
+                  </span>
+                </div>
+                <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
               </div>
-
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                9499*{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
-                  INR
-                </span>
-              </h3>
-              <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                Website Development
-              </h4>
-              <p>Ignite your online journey with a feature-rich website and essential perks.</p>
-
-              <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
-                <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  1-year free domain
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  1-year free hosting
-
-                  </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                  Free SSL certificate
-                  </li>
-                  <li className="mb-4 text-black opacity-40 last:mb-0 dark:text-manatee">
-                  Professional WordPress/Shopify setup
-                  </li>
-                </ul>
-              </div>
-
-              {/* <button
-                aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
-              >
-                <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
-                </span>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button> */}
-            </div>
+            </PinContainer>
 
             {/* <!-- Pricing Item --> */}
-            <div className="animate_top group relative rounded-lg border border-stroke bg-white p-7.5 shadow-solid-10 dark:border-strokedark dark:bg-blacksection dark:shadow-none md:w-[45%] lg:w-1/3 xl:p-12.5">
-              <h3 className="mb-7.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
-                18999*{" "}
-                <span className="text-regular text-waterloo dark:text-manatee">
-                  INR
-                </span>
-              </h3>
-              <h4 className="mb-2.5 text-para2 font-medium text-black dark:text-white">
-                WebApp Development
-              </h4>
-              <p>Customized web solutions with cutting-edge technology and API integration.</p>
-
-              <div className="mt-9 border-t border-stroke pb-12.5 pt-9 dark:border-strokedark">
-                <ul>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  Fully customized web application
-                  </li>
-                  <li className="mb-4 text-black last:mb-0 dark:text-manatee">
-                  Seamless API integrations
-                  </li>
-                  <li className="mb-4 text-black  opacity-40 last:mb-0 dark:text-manatee">
-                  Tailored Functionality
-                  </li>
-                  <li className="mb-4 text-black  opacity-40 last:mb-0 dark:text-manatee">
-                  Optimized User Experience
-                  </li>
-                </ul>
+            <PinContainer
+              title="Get Quote"
+              href="mythvortex.com"
+            >
+              <div className="flex basis-full flex-col p-4 tracking-tight text-slate-100/50 sm:basis-1/2 w-[20rem] h-[20rem] ">
+                <h3 className="max-w-xs !pb-2 !m-0 font-bold  text-base dark:text-slate-100 text-black">
+                  WebApp Development
+                </h3>
+                <div className="text-base !m-0 !p-0 font-normal">
+                  <span className="text-slate-500 ">
+                  Customized web solutions with cutting-edge technology and API integration.
+                  </span>
+                </div>
+                <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500" />
               </div>
+            </PinContainer>
 
-              {/* <button
-                aria-label="Get the Plan button"
-                className="group/btn inline-flex items-center gap-2.5 font-medium text-primary transition-all duration-300 dark:text-white dark:hover:text-primary"
-              >
-                <span className="duration-300 group-hover/btn:pr-2">
-                  Get the Plan
-                </span>
-                <svg
-                  width="14"
-                  height="14"
-                  viewBox="0 0 14 14"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M10.4767 6.16701L6.00668 1.69701L7.18501 0.518677L13.6667 7.00034L7.18501 13.482L6.00668 12.3037L10.4767 7.83368H0.333344V6.16701H10.4767Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </button> */}
-            </div>
           </div>
         </div>
       </section>

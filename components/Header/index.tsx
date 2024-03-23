@@ -167,7 +167,7 @@ const Header = () => {
 
             <Link
               href="/contact"
-              className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out"
+              className="rounded-md border-2 border-transparent text-sm bg-gradient-to-r from-blue-800 via-blue-500 to-blue-900 px-4 py-2 text-white active:scale-90"
             >
               Get Started
             </Link>

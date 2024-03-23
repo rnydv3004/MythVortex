@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import ThemeToggler from "../Header/ThemeToggler";
 import toast from "react-hot-toast";
+import { TextGenerateEffect } from "../ui/text-generate-effect";
 
 const Hero = () => {
   const [email, setEmail] = useState("");
@@ -14,80 +15,89 @@ const Hero = () => {
     e.preventDefault();
   };
 
+  const words = `Embark on a journey at MythVortex, where mythical narratives
+  seamlessly intertwine with innovative wonders, crafting a realm
+  of imagination and discovery`;
+
   return (
-      <section className="relative -z-0 h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
-        <div className=" absolute left-0 top-0 -z-10 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
-        <Image
-          fill
-          src="/images/shape/shape-dotted-light-02.svg"
-          alt="Dotted"
-          className="absolute left-0 top-0 -z-1 dark:hidden"
-          priority
-        />
-        <Image
-          fill
-          priority
-          src="/images/shape/shape-dotted-dark-02.svg"
-          alt="Dotted"
-          className="absolute left-0 top-0 -z-1 hidden animate-pulse dark:block"
-        />
-        <div className="mx-auto flex h-full items-center justify-center md:px-8 2xl:px-0 overflow-hidden">
-          <div className="flex h-full flex-col justify-evenly lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5 overflow-hidden">
-            <div className="flex h-full w-full flex-col justify-center lg:w-1/2 lg:pl-20 px-4 md:px-0">
-              <h1 className="mb-5 pr-8 text-3xl font-extrabold text-black dark:text-slate-300 md:text-6xl md:font-extrabold xl:text-6xl ">
-                <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                  Where
-                </span>{" "}
-                <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
-                  Myths
-                </span>{" "}
-                <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                  Meet
-                </span>{" "}
-                <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                  the
-                </span>{" "}
-                <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
-                  Innovation
-                </span>
-              </h1>
-              <p className="text-sm md:text-2xl lg:text-metatitle3">
-                Embark on a journey at MythVortex, where mythical narratives
-                seamlessly intertwine with innovative wonders, crafting a realm
-                of imagination and discovery
-              </p>
-              <div className="mt-5">
-                <Link
-                  href="#service"
-                  className="mb-5 flex w-fit items-center justify-center rounded-full bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 px-7.5 py-2.5 text-sm text-white duration-300 ease-in-out hover:bg-blue-800 dark:from-blue-600 dark:via-sky-500 dark:to-blue-950 md:text-regular"
-                >
-                  Get Started
-                </Link>
-              </div>
+    <section className="relative -z-0 h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
+      <div className=" absolute left-0 top-0 -z-10 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
+      <Image
+        fill
+        src="/images/shape/shape-dotted-light-02.svg"
+        alt="Dotted"
+        className="absolute left-0 top-0 -z-1 dark:hidden"
+        priority
+      />
+      <Image
+        fill
+        priority
+        src="/images/shape/shape-dotted-dark-02.svg"
+        alt="Dotted"
+        className="absolute left-0 top-0 -z-1 hidden animate-pulse dark:block"
+      />
+      <div className="mx-auto flex h-full items-center justify-center overflow-hidden md:px-8 2xl:px-0">
+        <div className="flex h-full flex-col justify-evenly overflow-hidden lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5">
+          <div className="flex h-full w-full flex-col justify-center px-4 md:px-0 lg:w-1/2 lg:pl-20">
+            {/* heading */}
+            <h1 className="mb-0 pr-8 text-[2rem] font-extrabold leading-[42px] text-black dark:text-slate-300 md:text-6xl md:font-extrabold xl:text-5xl ">
+              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                Where
+              </span>{" "}
+              <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
+                Myths
+              </span>{" "}
+              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                Meet
+              </span>{" "}
+              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                the
+              </span>{" "}
+              <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
+                Innovation
+              </span>
+            </h1>
+
+            {/* sub desc */}
+            <div className="text-justify lg:text-left">
+              <TextGenerateEffect words={words} />
             </div>
 
-          <div className="animate_right h-full w-full items-end justify-center overflow-hidden pl-4 flex lg:w-[70%]">
-            <div className="h-[100%] md:h-[90%] w-full overflow-hidden rounded-tl-lg border bg-slate-100 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:p-10">
+            {/* button */}
+            <div className="mt-10 ">
+              <Link
+                href={"/#services"}
+                className="rounded-md border-2 border-transparent bg-gradient-to-r from-blue-800 via-blue-500 to-blue-900 px-4 py-2 text-sm text-white active:scale-90"
+              >
+                Get Started
+              </Link>
+            </div>
+          </div>
+
+          <div className="animate_right flex h-full w-full items-end justify-center overflow-hidden pl-4 lg:w-[70%]">
+            <div className="h-[100%] w-full overflow-hidden rounded-tl-lg border bg-slate-100 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[90%] md:p-10">
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
                 <div className="flex h-full w-full items-center justify-center gap-2">
                   <div className="h-full w-[50%] md:w-[40%]">
                     {/* TAGS */}
                     <div className="flex animate-floatX gap-2">
-                      <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-[0.05rem] md:py-1 text-[0.5rem] md:text-xs font-medium text-blue-600">
+                      <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-blue-600 md:py-1 md:text-xs">
                         Development
                       </button>
-                      <button className="rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] md:py-1 text-[0.5rem] md:text-xs font-medium text-red-600">
+                      <button className="rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-red-600 md:py-1 md:text-xs">
                         SEO
                       </button>
-                      <button className="rounded-full border border-green-600 bg-green-600 bg-opacity-10 px-2 py-[0.05rem] md:py-1 text-[0.5rem] md:text-xs font-medium text-green-600">
+                      <button className="rounded-full border border-green-600 bg-green-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-green-600 md:py-1 md:text-xs">
                         Enhancement
                       </button>
                     </div>
 
                     {/* LOGIN PANEL */}
-                    <div className="h-fit w-fit transform animate-floatY flex-col gap-4 rounded-lg border border-zinc-300 bg-primary p-4 md:p-6 md:pt-8 text-white shadow-zinc-300 backdrop-filter duration-300 ease-in-out hover:scale-105 dark:border-slate-900 dark:bg-transparent dark:bg-gradient-to-tr dark:from-blue-800 dark:via-blue-700 dark:to-blue-800 dark:dark:shadow-2xl dark:shadow-2xl dark:shadow-gray-900 dark:outline-black md:flex">
-                      <p className="text-xs md:text-sm font-medium text-white">Login</p>
-                      <div className="flex w-full items-center justify-between mt-3 md:mt-0">
+                    <div className="h-fit w-fit transform animate-floatY flex-col gap-4 rounded-lg border border-zinc-300 bg-primary p-4 text-white shadow-zinc-300 backdrop-filter duration-300 ease-in-out hover:scale-105 dark:border-slate-900 dark:bg-transparent dark:bg-gradient-to-tr dark:from-blue-800 dark:via-blue-700 dark:to-blue-800 dark:dark:shadow-2xl dark:shadow-2xl dark:shadow-gray-900 dark:outline-black md:flex md:p-6 md:pt-8">
+                      <p className="text-xs font-medium text-white md:text-sm">
+                        Login
+                      </p>
+                      <div className="mt-3 flex w-full items-center justify-between md:mt-0">
                         <input
                           placeholder="user@gmail.com"
                           type="text"
@@ -109,7 +119,7 @@ const Hero = () => {
                           />
                         </svg>
                       </div>
-                      <div className="flex w-full items-center justify-between mt-3 md:mt-0">
+                      <div className="mt-3 flex w-full items-center justify-between md:mt-0">
                         <input
                           type="password"
                           className="dar:text-white w-[80%] border-b-2 border-slate-300 bg-transparent text-xs font-light placeholder-white outline-none dark:border-slate-500"
@@ -131,17 +141,17 @@ const Hero = () => {
                           />
                         </svg>
                       </div>
-                      <p className="cursor-pointer text-[0.5rem] md:text-xs font-light hover:text-blue-700 mt-1 md:mt-0">
+                      <p className="mt-1 cursor-pointer text-[0.5rem] font-light hover:text-blue-700 md:mt-0 md:text-xs">
                         Forget Password?
                       </p>
-                      <button className="w-[50%] md:w-[60%] self-center rounded-full bg-gradient-to-tl from-white via-slate-200  to-white px-2 py-1 md:py-2 text-xs font-medium text-slate-900 outline-none active:scale-95">
+                      <button className="w-[50%] self-center rounded-full bg-gradient-to-tl from-white via-slate-200 to-white  px-2 py-1 text-xs font-medium text-slate-900 outline-none active:scale-95 md:w-[60%] md:py-2">
                         Log in
                       </button>
                     </div>
 
                     {/* Range */}
                     <div className="mt-5 w-full scale-90">
-                      <div className="flex w-full animate-floatX gap-2 md:gap-8 rounded-full border bg-white px-4 md:px-8 md:pb-[17px] md:pt-4 py-2 duration-300 ease-in-out hover:scale-105 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black">
+                      <div className="flex w-full animate-floatX gap-2 rounded-full border bg-white px-4 py-2 duration-300 ease-in-out hover:scale-105 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:gap-8 md:px-8 md:pb-[17px] md:pt-4">
                         <input
                           type="range"
                           id="slider"
@@ -162,7 +172,7 @@ const Hero = () => {
                     </div>
 
                     {/* Chat Screen */}
-                    <div className="md:mt-4 h-full w-full animate-floatYR rounded-lg border bg-white p-2 md:p-4 dark:border-slate-600 dark:bg-black  dark:bg-opacity-30 dark:outline-black">
+                    <div className="h-full w-full animate-floatYR rounded-lg border bg-white p-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black  md:mt-4 md:p-4">
                       <div className="flex items-center justify-start gap-5 border-b pb-2 dark:border-slate-600  dark:outline-black">
                         <div className="h-10 w-10">
                           <Image
@@ -174,7 +184,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-xs md:text-medium font-medium dark:text-white">
+                          <p className="md:text-medium text-xs font-medium dark:text-white">
                             Anil Singh
                           </p>
                           <p className="text-xs font-normal">
@@ -192,7 +202,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-xs md:text-medium font-medium dark:text-white">
+                          <p className="md:text-medium text-xs font-medium dark:text-white">
                             Anjali Mishra
                           </p>
                           <p className="text-xs font-normal">
@@ -210,7 +220,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-xs md:text-medium font-medium dark:text-white">
+                          <p className="md:text-medium text-xs font-medium dark:text-white">
                             Nikhil Yadav
                           </p>
                           <p className="text-xs font-normal">
@@ -228,7 +238,7 @@ const Hero = () => {
                           />
                         </div>
                         <div className="flex flex-col">
-                          <p className="text-xs md:text-medium font-medium dark:text-white">
+                          <p className="md:text-medium text-xs font-medium dark:text-white">
                             Anil Singh
                           </p>
                           <p className="text-xs font-normal">
@@ -336,9 +346,9 @@ const Hero = () => {
                             alt={"dance"}
                           />
                         </div>
-                        <div className="flex w-full flex-col items-center justify-center gap-2 dark:text-slate-300 overflow-hidden">
-                          <div className="flex h-fit w-full items-center justify-evenly gap-1 md:gap-2 px-2 md:px-8">
-                            <div className="h-full flex items-center w-2 md:w-10">
+                        <div className="flex w-full flex-col items-center justify-center gap-2 overflow-hidden dark:text-slate-300">
+                          <div className="flex h-fit w-full items-center justify-evenly gap-1 px-2 md:gap-2 md:px-8">
+                            <div className="flex h-full w-2 items-center md:w-10">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -356,7 +366,7 @@ const Hero = () => {
                               </svg>
                             </div>
 
-                            <div className="h-full flex items-center w-2 md:w-10">
+                            <div className="flex h-full w-2 items-center md:w-10">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -392,7 +402,7 @@ const Hero = () => {
                               </svg>
                             </div>
 
-                            <div className="h-full flex items-center w-2 md:w-10">
+                            <div className="flex h-full w-2 items-center md:w-10">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -410,7 +420,7 @@ const Hero = () => {
                               </svg>
                             </div>
 
-                            <div className="h-full flex items-center w-2 md:w-10">
+                            <div className="flex h-full w-2 items-center md:w-10">
                               <svg
                                 xmlns="http://www.w3.org/2000/svg"
                                 fill="none"
@@ -428,9 +438,9 @@ const Hero = () => {
                               </svg>
                             </div>
                           </div>
-                          <div className="w-full hidden md:block px-2 md:px-10 ">
+                          <div className="hidden w-full px-2 md:block md:px-10 ">
                             <input
-                              className="w-full h-1 md:h-auto accent-blue-600"
+                              className="h-1 w-full accent-blue-600 md:h-auto"
                               type="range"
                             />
                           </div>
@@ -439,24 +449,26 @@ const Hero = () => {
                     </div>
 
                     {/* Buttons */}
-                    <div className="flex flex-wrap gap-y-2 md:flex-nowrap w-full justify-between ">
+                    <div className="flex w-full flex-wrap justify-between gap-y-2 md:flex-nowrap ">
                       <ThemeToggler />
-                      <button className="w-fit self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 md:text-base font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl text-xs">
+                      <button className="w-fit self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
                         Button
                       </button>
-                      <button className="w-fit self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs md:text-base font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl">
+                      <button className="w-fit self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
                         Button
                       </button>
-                      <button className="w-fit self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs md:text-base font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl">
+                      <button className="w-fit self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
                         Button
                       </button>
                     </div>
 
                     {/* Calender */}
                     <div className="h-full w-full animate-floatY text-black">
-                      <div className="mx-auto max-w-md md:scale-90 rounded-xl border md:bg-white p-2 md:p-5 md:py-10 shadow-md dark:border-slate-600 dark:bg-black dark:bg-opacity-60 dark:text-white">
-                        <h1 className="mb-2 flex justify-between text-xs md:text-lg font-medium">
-                          <span className="md:pb-2 text-xs md:text-xl">Calender</span>
+                      <div className="mx-auto max-w-md rounded-xl border p-2 shadow-md dark:border-slate-600 dark:bg-black dark:bg-opacity-60 dark:text-white md:scale-90 md:bg-white md:p-5 md:py-10">
+                        <h1 className="mb-2 flex justify-between text-xs font-medium md:text-lg">
+                          <span className="text-xs md:pb-2 md:text-xl">
+                            Calender
+                          </span>
                           <span className="flex items-center justify-center gap-1 text-xs md:text-base">
                             Jan, 2024{" "}
                             <svg
@@ -479,25 +491,25 @@ const Hero = () => {
                         </h1>
 
                         <div className="grid grid-cols-7 gap-2 md:p-3">
-                          <div className="col-span-1 text-center text-[0.5rem] md:text-sm font-semibold text-slate-400">
+                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
                             Sun
                           </div>
-                          <div className="col-span-1 text-center text-[0.5rem] md:text-sm font-semibold text-slate-400">
+                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
                             Mon
                           </div>
-                          <div className="col-span-1 text-center text-[0.5rem] md:text-sm font-semibold text-slate-400">
+                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
                             Tue
                           </div>
-                          <div className="col-span-1 text-center text-[0.5rem] md:text-sm font-semibold text-slate-400">
+                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
                             Wed
                           </div>
-                          <div className="col-span-1 text-center text-[0.5rem] md:text-sm font-semibold text-slate-400">
+                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
                             Thu
                           </div>
-                          <div className="col-span-1 text-center text-[0.5rem] md:text-sm font-semibold text-slate-400">
+                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
                             Fri
                           </div>
-                          <div className="col-span-1 text-center text-[0.5rem] md:text-sm font-semibold text-slate-400">
+                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
                             Sat
                           </div>
 
