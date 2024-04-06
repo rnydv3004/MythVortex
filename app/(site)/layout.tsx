@@ -9,6 +9,7 @@ import "../globals.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/react';
 import ToasterContext from "../context/ToastContext";
+import { Toaster } from "react-hot-toast";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,6 +29,7 @@ export default function RootLayout({
           {/* <Lines /> */}
           <Header />
           <ToasterContext />
+          <Toaster/>
           <div className="overflow-hidden">{children}</div>
           <Footer />
           <ScrollToTop />

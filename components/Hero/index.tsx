@@ -21,21 +21,22 @@ const Hero = () => {
 
   return (
     <section className="relative -z-0 h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
-      <div className=" absolute left-0 top-0 -z-10 h-screen w-screen bg-opacity-20 dark:from-sky-950"></div>
-      <Image
-        fill
-        src="/images/shape/shape-dotted-light-02.svg"
-        alt="Dotted"
-        className="absolute left-0 top-0 -z-1 dark:hidden"
-        priority
-      />
-      <Image
-        fill
-        priority
-        src="/images/shape/shape-dotted-dark-02.svg"
-        alt="Dotted"
-        className="absolute left-0 top-0 -z-1 hidden animate-pulse dark:block"
-      />
+      <div className="fixed left-0 top-0 -z-10 h-screen w-screen overflow-hidden">
+        {[...Array(2000)].map((_, index) => (
+          <div
+            key={index}
+            className="absolute bg-slate-200 dark:bg-slate-800"
+            style={{
+              width: "4px",
+              height: "4px",
+              borderRadius: "50%",
+              top: `${Math.floor(index / 50) * 25}px`, // Calculate top position based on index
+              left: `${(index % 50) * 25}px`, // Calculate left position based on index
+            }}
+          />
+        ))}
+      </div>
+
       <div className="mx-auto flex h-full items-center justify-center overflow-hidden md:px-8 2xl:px-0">
         <div className="flex h-full flex-col justify-evenly overflow-hidden lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5">
           <div className="flex h-full w-full flex-col justify-center px-4 md:px-0 lg:w-1/2 lg:pl-20">
@@ -59,8 +60,8 @@ const Hero = () => {
             </h1>
 
             {/* sub desc */}
-            <div className="text-justify lg:text-left">
-              <TextGenerateEffect words={words} />
+            <div className="mt-2 text-justify font-medium leading-[22px] text-slate-400 lg:text-left lg:leading-6">
+              {words}
             </div>
 
             {/* button */}
@@ -75,19 +76,19 @@ const Hero = () => {
           </div>
 
           <div className="animate_right flex h-full w-full items-end justify-center overflow-hidden pl-4 lg:w-[70%]">
-            <div className="h-[100%] w-full overflow-hidden rounded-tl-lg border bg-slate-100 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[90%] md:p-10">
+            <div className="h-[100%] w-full overflow-hidden rounded-tl-lg border-2 border-b-0 border-slate-300 bg-slate-200 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[90%] md:p-10">
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
                 <div className="flex h-full w-full items-center justify-center gap-2">
                   <div className="h-full w-[50%] md:w-[40%]">
                     {/* TAGS */}
                     <div className="flex animate-floatX gap-2">
-                      <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-blue-600 md:py-1 md:text-xs">
+                      <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-blue-600 hover:bg-blue-600 hover:text-white md:py-1 md:text-xs">
                         Development
                       </button>
-                      <button className="rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-red-600 md:py-1 md:text-xs">
+                      <button className="rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-red-600 hover:bg-red-600 hover:text-white md:py-1 md:text-xs">
                         SEO
                       </button>
-                      <button className="rounded-full border border-green-600 bg-green-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-green-600 md:py-1 md:text-xs">
+                      <button className="rounded-full border border-green-600 bg-green-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-green-600 hover:bg-green-600 hover:text-white md:py-1 md:text-xs">
                         Enhancement
                       </button>
                     </div>
@@ -141,10 +142,22 @@ const Hero = () => {
                           />
                         </svg>
                       </div>
-                      <p className="mt-1 cursor-pointer text-[0.5rem] font-light hover:text-blue-700 md:mt-0 md:text-xs">
+                      <p className="mt-1 cursor-pointer text-[0.5rem] font-light text-blue-300 hover:text-white md:mt-0 md:text-xs">
                         Forget Password?
                       </p>
-                      <button className="w-[50%] self-center rounded-full bg-gradient-to-tl from-white via-slate-200 to-white  px-2 py-1 text-xs font-medium text-slate-900 outline-none active:scale-95 md:w-[60%] md:py-2">
+                      <button
+                        onClick={() => {
+                          toast.custom(
+                            <div className="rounded-full px-4 py-2 text-sm font-medium shadow-lg dark:bg-slate-700 dark:text-white">
+                              Hi!&#x1F44B; You logged in my heart <span className="text-red-600">&#x2764;</span>
+                            </div>,
+                            {
+                              position: "bottom-left",
+                            },
+                          );
+                        }}
+                        className="w-[50%] self-center rounded-full bg-gradient-to-tl from-white via-slate-200 to-white  px-2 py-1 text-xs font-medium text-slate-900 outline-none active:scale-95 md:w-[60%] md:py-2"
+                      >
                         Log in
                       </button>
                     </div>
@@ -470,7 +483,7 @@ const Hero = () => {
                             Calender
                           </span>
                           <span className="flex items-center justify-center gap-1 text-xs md:text-base">
-                            Jan, 2024{" "}
+                            Apr, 2024{" "}
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
@@ -513,131 +526,131 @@ const Hero = () => {
                             Sat
                           </div>
 
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             1
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             2
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             3
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             4
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             5
                           </div>
 
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             6
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             7
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             8
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             9
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             10
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             11
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             12
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             13
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             14
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             15
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             16
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             17
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             18
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             19
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             20
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             21
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             22
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             23
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             24
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             25
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             26
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             27
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             28
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             29
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             30
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             31
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
-                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm">
+                          <div className="col-span-1 text-center text-[0.3rem] md:text-sm hover:bg-blue-600 hover:text-white hover:rounded-full py-1">
                             -
                           </div>
                         </div>

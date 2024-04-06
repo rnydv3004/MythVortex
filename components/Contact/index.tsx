@@ -66,9 +66,7 @@ const Contact = () => {
           });
           setLoader(false);
         });
-      
     }
-
   }
 
   return (
@@ -83,22 +81,21 @@ const Contact = () => {
 
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="px-2 md:px-8 2xl:px-0">
-        <div className="relative mx-auto mb-25 flex max-w-c-1390 flex-col items-center justify-center gap-10 bg-sky-50 px-2 pb-2 pt-2 dark:bg-slate-900 md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pb-10 xl:pt-10">
-          <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg bg-gradient-to-t from-transparent to-[#dee7ff47] dark:bg-gradient-to-t dark:to-[#252A42] "></div>
-          <div className="absolute bottom-[-255px] left-0 -z-1 h-full w-full">
-            <Image
-              src="./images/shape/shape-dotted-light.svg"
-              alt="Dotted"
-              className="dark:hidden"
-              fill
+        <div className="relative mx-auto mb-25 flex max-w-c-1390 flex-col items-center justify-center gap-10 bg-white px-2 pb-2 pt-2 dark:bg-black md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pb-10 xl:pt-10">
+          <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg "></div>
+          {[...Array(2000)].map((_, index) => (
+            <div
+              key={index}
+              className="absolute bg-slate-200 dark:bg-slate-800"
+              style={{
+                width: "4px",
+                height: "4px",
+                borderRadius: "50%",
+                top: `${Math.floor(index / 50) * 25}px`, // Calculate top position based on index
+                left: `${(index % 50) * 25}px`, // Calculate left position based on index
+              }}
             />
-            <Image
-              src="./images/shape/shape-dotted-dark.svg"
-              alt="Dotted"
-              className="hidden dark:block"
-              fill
-            />
-          </div>
+          ))}
 
           <div className="flex w-full justify-center">
             <motion.div
@@ -117,9 +114,9 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_top w-full rounded-lg bg-white p-7.5 shadow-solid-8 dark:border dark:border-strokedark dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
+              className="animate_top w-full rounded-lg bg-white p-7.5 dark:border dark:border-strokedark dark:bg-blacksection md:w-3/5 lg:w-3/4 xl:p-15 bg-opacity-100 z-10 border-2 shadow-lg text-sm placeholder:text-slate-500 "
             >
-              <h2 className="mb-15 text-2xl font-medium text-slate-700 dark:text-white xl:text-itemtitle">
+              <h2 className="mb-15 text-2xl font-medium text-slate-600 dark:text-white xl:text-itemtitle">
                 Reach Out for Web Excellence
               </h2>
 

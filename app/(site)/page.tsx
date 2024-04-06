@@ -83,7 +83,6 @@ export default function Home() {
         <Feature />
         <FunFact />
         <FAQ />
-        <Pricing />
         <Contact />
       </main>
   );

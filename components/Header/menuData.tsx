@@ -7,11 +7,30 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/",
   },
+  // {
+  //   id: 2,
+  //   title: "Services",
+  //   newTab: false,
+  //   path: "/#services",
+  // },
+
   {
-    id: 2,
-    title: "Services",
+    id: 5,
+    title: "Blogs",
+    newTab: true,
+    path: "https://blog.mythvortex.com/",
+  },
+  {
+    id: 6,
+    title: "Template",
     newTab: false,
-    path: "/#services",
+    path: "/template",
+  },
+  {
+    id: 7,
+    title: "Software",
+    newTab: false,
+    path: "/software",
   },
   {
     id: 4,
@@ -19,15 +38,14 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/careers",
   },
-
   {
-    id: 5,
+    id: 8,
     title: "Workflow",
     newTab: false,
     path: "/workflow",
   },
   {
-    id: 6,
+    id: 9,
     title: "Contact",
     newTab: false,
     path: "/contact",
