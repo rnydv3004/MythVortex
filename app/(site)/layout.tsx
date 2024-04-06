@@ -32,7 +32,7 @@ export default function RootLayout({
           <Toaster/>
           <div className="overflow-hidden">{children}</div>
           <Footer />
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
         </ThemeProvider>
       </body>
     </html>

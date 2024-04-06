@@ -74,16 +74,20 @@ export const metadata: Metadata = {
 
 export default function Home() {
   return (
-
-      <main>
-        <Head>
-          <link rel="canonical" href={"https://mythvortex.com/"} key="canonical" />
-        </Head>
-        <Hero />
-        <Feature />
-        <FunFact />
-        <FAQ />
-        <Contact />
-      </main>
+    <main>
+      <Head>
+        <link
+          rel="canonical"
+          href={"https://mythvortex.com/"}
+          key="canonical"
+        />
+      </Head>
+      <Hero />
+     
+      <Feature />
+      <FunFact />
+      <FAQ />
+      <Contact />
+    </main>
   );
 }

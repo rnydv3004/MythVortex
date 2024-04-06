@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="border-t-2 border-stroke bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:border-strokedark dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent">
+      <footer className="border-t-2 z-50 border-stroke bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:border-strokedark dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
           <div className="py-10 lg:py-25">
