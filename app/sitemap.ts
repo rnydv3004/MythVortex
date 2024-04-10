@@ -12,7 +12,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
         // Generate URLs for blogs and add them to the sitemap
         const sitemap = blogs.map((blog) => {
-            const url = `https://mythvortex.com/blog/${blog.blog_id}`;
+            const url = `https://mythvortex.com/blog/${blog.id}`;
             const lastModified = new Date(blog.updated); // Assuming you have a last_modified field in your database
             return {
                 url,
