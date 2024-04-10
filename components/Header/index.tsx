@@ -98,9 +98,9 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`invisible h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
+          className={`invisible  h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            "navbar !visible mt-0 h-auto max-h-[400px] rounded-md bg-slate-100 lg:bg-transparent bg-opacity-100 p-7.5 shadow-solid-5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            " !visible mt-3 md:mt-0 border-2 md:border-0 shadow-md h-[90%] rounded-md bg-slate-100 lg:bg-transparent bg-opacity-100 p-7.5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav className={`relative`}>
@@ -167,7 +167,7 @@ const Header = () => {
 
             <Link
               href="/contact"
-              className="rounded-md border-2 border-transparent text-sm bg-gradient-to-r from-blue-800 via-blue-500 to-blue-900 px-4 py-2 text-white active:scale-90"
+              className="rounded-md border-2 border-transparent text-sm bg-primary px-4 py-2 text-white active:scale-90"
             >
               Get Started
             </Link>

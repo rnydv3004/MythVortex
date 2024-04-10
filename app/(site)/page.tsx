@@ -10,6 +10,7 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Head from "next/head";
 import { TracingBeam } from "@/components/ui/tracing-beam";
+import LatestBlog from "@/components/Blog/LatestBlog";
 
 export const metadata: Metadata = {
   title: "MythVortex",
@@ -83,9 +84,9 @@ export default function Home() {
         />
       </Head>
       <Hero />
-     
       <Feature />
       <FunFact />
+      <LatestBlog/>
       <FAQ />
       <Contact />
     </main>

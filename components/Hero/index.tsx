@@ -68,7 +68,7 @@ const Hero = () => {
             <div className="mt-10 ">
               <Link
                 href={"/#services"}
-                className="rounded-md border-2 border-transparent bg-gradient-to-r from-blue-800 via-blue-500 to-blue-900 px-4 py-2 text-sm text-white active:scale-90"
+                className="rounded-md border-2 border-transparent bg-primary px-4 py-2 text-sm text-white active:scale-90"
               >
                 Get Started
               </Link>

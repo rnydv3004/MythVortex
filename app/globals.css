@@ -132,3 +132,7 @@ input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
     transition:  5000s ease-in-out 0s; /* Adjust the transition duration as needed */
   }
+
+::-webkit-scrollbar{
+  height: 0px;
+}

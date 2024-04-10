@@ -16,9 +16,9 @@ const menuData: Menu[] = [
 
   {
     id: 5,
-    title: "Blogs",
+    title: "Blog",
     newTab: true,
-    path: "https://blog.mythvortex.com/",
+    path: "/blog",
   },
   {
     id: 6,
