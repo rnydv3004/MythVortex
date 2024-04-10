@@ -19,9 +19,7 @@ export async function POST(request: Request) {
 
             // Append the condition to the SQL query
             sqlQuery += ` AND category IN (${placeholders})`;
-
         }
-
 
         console.log("Query:", sqlQuery)
         const result: any =

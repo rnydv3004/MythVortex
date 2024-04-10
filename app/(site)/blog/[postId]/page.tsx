@@ -60,7 +60,7 @@ const SingleBlogPage = ({ params }) => {
                 <div className="animate_top rounded-md border border-stroke bg-white p-4 shadow-solid-13 dark:border-strokedark dark:bg-blacksection md:p-10">
                   {blogData && (
                     <div
-                      className="markdown-content text-slate-800 dark:text-slate-200"
+                      className="markdown-content text-slate-800 dark:text-slate-300"
                       dangerouslySetInnerHTML={{
                         __html: getMarkdownText(blogData.markdown),
                       }}

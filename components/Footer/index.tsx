@@ -106,14 +106,6 @@ const Footer = () => {
                         Careers
                       </Link>
                     </li>
-                    <li>
-                      <Link
-                        href="/contact"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Contact Us
-                      </Link>
-                    </li>
                   </ul>
                 </motion.div>
 
@@ -271,10 +263,10 @@ const Footer = () => {
                   <ul>
                     <li>
                       <Link
-                        href="/#pricing"
+                        href="/blog"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Pricing
+                        Blog
                       </Link>
                     </li>
                     {/* <li>

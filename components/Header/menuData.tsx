@@ -20,18 +20,18 @@ const menuData: Menu[] = [
     newTab: true,
     path: "/blog",
   },
-  {
-    id: 6,
-    title: "Template",
-    newTab: false,
-    path: "/template",
-  },
-  {
-    id: 7,
-    title: "Software",
-    newTab: false,
-    path: "/software",
-  },
+  // {
+  //   id: 6,
+  //   title: "Template",
+  //   newTab: false,
+  //   path: "/template",
+  // },
+  // {
+  //   id: 7,
+  //   title: "Software",
+  //   newTab: false,
+  //   path: "/software",
+  // },
   {
     id: 4,
     title: "Careers",

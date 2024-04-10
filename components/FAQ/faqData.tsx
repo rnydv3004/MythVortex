@@ -4,7 +4,7 @@ const faqData: FAQ[] =[
   {
     id: 1,
     quest: "FAQ: What services does MythVortex offer?",
-    ans: "MythVortex excels in web development, offering visually stunning websites, cutting-edge applications for Android and iOS, strategic SEO, and end-to-end e-commerce solutions. Elevate your digital presence with our expert services"
+    ans: "MythVortex excels in web app development, offering visually stunning websites, cutting-edge applications for Android and iOS, strategic SEO, and end-to-end e-commerce solutions. Elevate your digital presence with our expert services"
   },
   {
     id: 2,
