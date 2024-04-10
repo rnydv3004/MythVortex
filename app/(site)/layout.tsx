@@ -28,6 +28,8 @@ export default function RootLayout({
         >
           {/* <Lines /> */}
           <Header />
+          <Analytics/>
+          <SpeedInsights/>
           <ToasterContext />
           <Toaster/>
           <div className="overflow-hidden">{children}</div>
