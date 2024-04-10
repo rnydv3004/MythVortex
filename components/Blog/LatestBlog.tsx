@@ -20,7 +20,7 @@ export default function LatestBlog() {
         <h2 className="relative mb-8 text-3xl font-bold text-black dark:text-white xl:text-4xl ">
           Blogs
         </h2>
-        <div className="flex flex-col lg:flex-row gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:flex-row gap-5">
             {
                 blogList.map((blog, index)=>(
                     <BlogItem key={index} blog={blog}/>

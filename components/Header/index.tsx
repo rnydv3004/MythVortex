@@ -100,7 +100,7 @@ const Header = () => {
         <div
           className={`invisible  h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
             navigationOpen &&
-            " !visible mt-3 md:mt-0 border-2 md:border-0 shadow-md h-[90%] rounded-md bg-slate-100 lg:bg-transparent bg-opacity-100 p-7.5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            " !visible mt-3 md:mt-0 border-2 dark:border-slate-600 md:border-0 shadow-md h-[90%] rounded-md bg-slate-100 lg:bg-transparent bg-opacity-100 p-7.5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
           }`}
         >
           <nav className={`relative`}>
