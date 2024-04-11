@@ -9,7 +9,7 @@ export async function GET(request: Request) {
             await sql.query(sqlQuery);
 
         const data = result.rows
-        console.log('Data:', data)
+        // console.log('Data:', data)
 
         return NextResponse.json({ success: true, result: data }, { status: 200 });
     } catch (error) {
