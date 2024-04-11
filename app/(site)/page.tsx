@@ -11,6 +11,7 @@ import Contact from "@/components/Contact";
 import Head from "next/head";
 import { TracingBeam } from "@/components/ui/tracing-beam";
 import LatestBlog from "@/components/Blog/LatestBlog";
+import Whatsapp from "@/components/Whatsapp";
 
 export const metadata: Metadata = {
   title: "MythVortex",
@@ -76,19 +77,13 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <main>
-      <Head>
-        <link
-          rel="canonical"
-          href={"https://mythvortex.com/"}
-          key="canonical"
-        />
-      </Head>
       <Hero />
       <Feature />
       <FunFact />
       <LatestBlog/>
       <FAQ />
       <Contact />
+      <Whatsapp/>
     </main>
   );
 }
