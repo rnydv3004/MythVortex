@@ -3,7 +3,7 @@ import { NextResponse } from 'next/server';
 
 export async function GET(request: Request) {
     try {
-        var sqlQuery = `select hero, title, id, description from blog  order by created desc limit 4`
+        var sqlQuery = `select hero, title, id, description, author from blog  order by created desc limit 4`
 
         const result: any =
             await sql.query(sqlQuery);
