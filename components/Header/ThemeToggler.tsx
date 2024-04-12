@@ -4,11 +4,26 @@ import Image from "next/image";
 const ThemeToggler = () => {
   const { theme, setTheme } = useTheme();
 
+  const toggleTheme = () => {
+    const currentTheme = window.matchMedia("(prefers-color-scheme: dark)")
+      .matches
+      ? "light"
+      : "dark";
+    const newTheme = currentTheme === "dark" ? "light" : "dark";
+
+    // Update the prefers-color-scheme property of the window object
+    alert(`${currentTheme} : ${newTheme}`)
+    document.documentElement.setAttribute("prefers-color-scheme", newTheme);
+  };
+
   return (
     <button
       aria-label="theme toggler"
-      onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-      className="rounded-full border-2 border-slate-600 dark:border-slate-400  p-1 h-8 flex justify-center items-center w-8 text-sm text-slate-600 dark:text-slate-400 active:scale-90"
+      onClick={() => {
+        setTheme(theme === "dark" ? "light" : "dark");
+        // toggleTheme();
+      }}
+      className="flex h-8 w-8 items-center  justify-center rounded-full border-2 border-slate-600 p-1 text-sm text-slate-600 active:scale-90 dark:border-slate-400 dark:text-slate-400"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
@@ -46,6 +61,5 @@ const ThemeToggler = () => {
     </button>
   );
 };
-
 
 export default ThemeToggler;

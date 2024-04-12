@@ -1,15 +1,22 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ThemeToggler from "../Header/ThemeToggler";
 import toast from "react-hot-toast";
-import { TextGenerateEffect } from "../ui/text-generate-effect";
+import dayjs, { Dayjs } from "dayjs";
+import { DemoContainer, DemoItem } from "@mui/x-date-pickers/internals/demo";
+import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
+import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
+import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
+import { createTheme, ThemeProvider, useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import Calendar from "react-calendar";
+// import "react-calendar/dist/Calendar.css";
+import 'assets/css/MiniCalender.css'
 
 const Hero = () => {
-  const [email, setEmail] = useState("");
   const [sliderValue, setSliderValue] = useState(70);
-  const [dummyMsg, setDummyMsg] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -85,7 +92,7 @@ const Hero = () => {
                       <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-blue-600 hover:bg-blue-600 hover:text-white md:py-1 md:text-xs">
                         Development
                       </button>
-                      <button className="rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-red-600 hover:bg-red-600 hover:text-white md:py-1 md:text-xs">
+                      <button className="rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-red-600 hover:bg-red-600 hover:text-white md:py-1 md:text-xs hidden lg:block">
                         SEO
                       </button>
                       <button className="rounded-full border border-green-600 bg-green-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-green-600 hover:bg-green-600 hover:text-white md:py-1 md:text-xs">
@@ -94,7 +101,7 @@ const Hero = () => {
                     </div>
 
                     {/* LOGIN PANEL */}
-                    <div className="h-fit w-fit transform animate-floatY flex-col gap-4 rounded-lg border border-zinc-300 bg-primary p-4 text-white shadow-zinc-300 backdrop-filter duration-300 ease-in-out hover:scale-105 dark:border-slate-900 dark:bg-transparent dark:bg-gradient-to-tr dark:from-blue-800 dark:via-blue-700 dark:to-blue-800 dark:dark:shadow-2xl dark:shadow-2xl dark:shadow-gray-900 dark:outline-black md:flex md:p-6 md:pt-8">
+                    <div className="hover:scale-10tra5 h-fit w-fit animate-floatY flex-col gap-4 rounded-lg border border-zinc-300 bg-primary p-4 text-white shadow-zinc-300 backdrop-filter dark:border-slate-900 dark:bg-transparent dark:bg-gradient-to-tr dark:from-blue-800 dark:via-blue-700 dark:to-blue-800 dark:dark:shadow-2xl dark:shadow-2xl dark:shadow-gray-900 dark:outline-black md:flex md:p-6 md:pt-8">
                       <p className="text-xs font-medium text-white md:text-sm">
                         Login
                       </p>
@@ -148,7 +155,7 @@ const Hero = () => {
                       <button
                         onClick={() => {
                           toast.custom(
-                            <div className="rounded-full px-4 py-2 text-sm font-medium shadow-lg dark:bg-slate-700 dark:text-white">
+                            <div className="rounded-full px-4 py-2 text-sm font-medium shadow-lg dark:bg-slate-500 dark:text-white">
                               Hi!&#x1F44B; You logged in my heart{" "}
                               <span className="text-red-600">&#x2764;</span>
                             </div>,
@@ -165,7 +172,7 @@ const Hero = () => {
 
                     {/* Range */}
                     <div className="mt-5 w-full scale-90">
-                      <div className="flex w-full animate-floatX gap-2 rounded-full border bg-white px-4 py-2 duration-300 ease-in-out hover:scale-105 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:gap-8 md:px-8 md:pb-[17px] md:pt-4">
+                      <div className="flex w-full animate-floatX gap-2 rounded-full border bg-white px-4 py-2  hover:scale-105 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:gap-8 md:px-8 md:pb-[17px] md:pt-4">
                         <input
                           type="range"
                           id="slider"
@@ -266,7 +273,7 @@ const Hero = () => {
                   <div className="flex h-[100%] w-[50%] flex-col items-end justify-between gap-5 px-2 md:w-[60%]">
                     {/* 4 INDICATORS */}
                     <div className="flex w-full justify-evenly gap-2">
-                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg border bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 text-white duration-300 ease-in-out hover:scale-105 active:scale-90 dark:border-slate-600 dark:shadow-2xl dark:shadow-gray-900 md:py-4">
+                      <button className="flex w-full animate-floatX items-center justify-center rounded-lg border bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 text-white hover:scale-105 active:scale-90 dark:border-slate-600 dark:shadow-2xl dark:shadow-gray-900 md:py-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -285,7 +292,7 @@ const Hero = () => {
                         </svg>
                       </button>
 
-                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg border bg-white duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-primary active:scale-90 dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:py-4">
+                      <button className="flex w-full animate-floatX items-center justify-center rounded-lg border bg-white hover:scale-105 hover:bg-gradient-to-tl hover:text-primary active:scale-90 dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:py-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -304,7 +311,7 @@ const Hero = () => {
                         </svg>
                       </button>
 
-                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg border bg-white duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-primary active:scale-90 dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:py-4">
+                      <button className="flex w-full animate-floatX items-center justify-center rounded-lg border bg-white hover:scale-105 hover:bg-gradient-to-tl hover:text-primary active:scale-90 dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:py-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -323,7 +330,7 @@ const Hero = () => {
                         </svg>
                       </button>
 
-                      <button className="flex w-full transform animate-floatX items-center justify-center rounded-lg border bg-white duration-300 ease-in-out hover:scale-105 hover:bg-gradient-to-tl hover:text-primary active:scale-90 dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:py-4">
+                      <button className="flex w-full animate-floatX items-center justify-center rounded-lg border bg-white hover:scale-105 hover:bg-gradient-to-tl hover:text-primary active:scale-90 dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:py-4">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
@@ -463,21 +470,27 @@ const Hero = () => {
                     </div>
 
                     {/* Buttons */}
-                    <div className="flex w-full flex-wrap justify-between gap-y-2 md:flex-nowrap ">
+                    <div className="hidden lg:flex w-full flex-wrap justify-between gap-y-2 md:flex-nowrap ">
                       <ThemeToggler />
-                      <button className="w-fit self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
+                      <button className="w-fit self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
                         Button
                       </button>
-                      <button className="w-fit self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
+                      <button className="w-fit self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600  hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
                         Button
                       </button>
-                      <button className="w-fit self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 duration-300 ease-in-out hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
+                      <button className="w-fit self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600  hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
                         Button
                       </button>
                     </div>
 
                     {/* Calender */}
-                    <div className="h-full w-full animate-floatY text-black">
+                    <div className="mx-auto max-w-md rounded-xl border p-2 shadow-md dark:border-slate-600 dark:bg-black dark:bg-opacity-60 dark:text-white  md:bg-white md:p-2 text-sm animate-floatYR">
+                      <div className="calendar-container">
+                        <Calendar defaultValue={dayjs().toDate()} />
+                      </div>
+                    </div>
+
+                    {/* <div className="h-full w-full animate-floatY text-black">
                       <div className="mx-auto max-w-md rounded-xl border p-2 shadow-md dark:border-slate-600 dark:bg-black dark:bg-opacity-60 dark:text-white md:scale-90 md:bg-white md:p-5 md:py-10">
                         <h1 className="mb-2 flex justify-between text-xs font-medium md:text-lg">
                           <span className="text-xs md:pb-2 md:text-xl">
@@ -656,7 +669,7 @@ const Hero = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
+                    </div> */}
                   </div>
                 </div>
               </div>
