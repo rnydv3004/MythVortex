@@ -98,7 +98,7 @@ export const products = [
     },
   ];
 
-export default function page() {
+export default function Page() {
   return <div className="min-h-screen pt-14"><HeroParallax products={products} /></div>;
 }
 
