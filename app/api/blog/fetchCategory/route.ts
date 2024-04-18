@@ -5,7 +5,6 @@ export async function POST(request: Request) {
     try {
         const { category } = await request.json()
         
-
         var sqlQuery = `select hero, title, id from blog where category = '${category}' limit 10`
 
         const result: any =

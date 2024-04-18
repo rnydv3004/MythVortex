@@ -1,7 +1,9 @@
+'use client'
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface StudioItemProps {
   item: {
@@ -15,9 +17,14 @@ interface StudioItemProps {
   };
 }
 
-const StudioItem: React.FC<StudioItemProps> = ({ item }) => {
+const StudioItem = ({ item }) => {
+
+  const router = useRouter()
+
   return (
-    <div>
+    <div className="cursor-pointer" onClick={()=>
+      router.push(`/studio/${item.id}`)
+    }>
       <motion.div
         variants={{
           hidden: {
@@ -47,37 +54,16 @@ const StudioItem: React.FC<StudioItemProps> = ({ item }) => {
 
         <div className="px-4">
           <h3 className="mb-0 mt-4 line-clamp-2 inline-block text-lg font-medium text-black duration-300 hover:text-primary dark:text-slate-300 dark:hover:text-white xl:text-sm">
-            {item.title.slice(0, 40)}...
+            {item.title.slice(0, 40)}
+            {item.title.length > 40 && "..."}
           </h3>
           <p className="line-clamp-3 text-justify text-xs">
             {item.description}
           </p>
-          <div className="mt-2 flex justify-between">
-            <Link href={"/studio/67"} className="flex items-center justify-center gap-2 rounded-sm px-4 py-2 text-xs hover:bg-primary text-slate-600 font-semibold hover:text-white bg-slate-200 dark:bg-slate-700 dark:text-white dark:hover:bg-primary" >
-              <svg
-                className="h-4 w-4"
-                aria-hidden="true"
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  stroke="currentColor"
-                  stroke-width="2"
-                  d="M21 12c0 1.2-4.03 6-9 6s-9-4.8-9-6c0-1.2 4.03-6 9-6s9 4.8 9 6Z"
-                />
-                <path
-                  stroke="currentColor"
-                  stroke-width="2"
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-                />
-              </svg>
-              View
-            </Link>
-
-            <button className="flex items-center justify-center gap-2 rounded-sm px-4 py-2 text-xs hover:bg-primary text-slate-600 font-semibold hover:text-white bg-slate-200 dark:bg-slate-700 dark:text-white dark:hover:bg-primary">
+          <div onClick={(e)=>{
+            e.stopPropagation()
+          }} className="mt-4 flex justify-end">
+            <button className="flex items-center justify-center gap-2 rounded-sm bg-slate-200 px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-primary hover:text-white dark:bg-slate-700 dark:text-white dark:hover:bg-primary">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

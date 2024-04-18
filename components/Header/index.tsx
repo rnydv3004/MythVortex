@@ -29,7 +29,7 @@ const Header = () => {
   return (
     <header
       onClick={() => setNavigationOpen(!navigationOpen)}
-      className={`fixed left-0 top-0 z-99999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 lg:h-fit ${
+      className={`fixed left-0 top-0 z-99999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 md:h-fit ${
         navigationOpen && "h-full"
       } ${
         stickyMenu
@@ -41,9 +41,9 @@ const Header = () => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="relative mx-auto max-w-c-1390 items-center justify-between px-4 lg:px-8 xl:flex 2xl:px-0"
+        className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 md:flex 2xl:px-0"
       >
-        <div className="mr-10 flex w-full items-center justify-between lg:w-fit">
+        <div className="mr-10 flex w-full items-center justify-between md:w-fit">
           <a href="/">
             <h6 className="text-2xl font-semibold uppercase text-slate-700 dark:text-white">
               <span className="bg-gradient-to-tr from-black via-slate-600 to-slate-900 bg-clip-text text-transparent dark:from-slate-500 dark:via-gray-200 dark:to-slate-400 ">
@@ -58,7 +58,7 @@ const Header = () => {
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
             aria-label="hamburger Toggler"
-            className="block xl:hidden"
+            className="block md:hidden"
             onClick={() => setNavigationOpen(!navigationOpen)}
           >
             <span className="relative block h-5.5 w-5.5 cursor-pointer">
@@ -98,13 +98,13 @@ const Header = () => {
 
         {/* Nav Menu Start   */}
         <div
-          className={`invisible  h-0 w-full items-center justify-between xl:visible xl:flex xl:h-auto xl:w-full ${
+          className={`invisible  h-0 w-full items-center justify-between md:visible md:flex md:h-auto md:w-full ${
             navigationOpen &&
-            " !visible mt-3 md:mt-0 border-2 dark:border-slate-600 md:border-0 shadow-md h-[90%] rounded-md bg-slate-100 lg:bg-transparent bg-opacity-100 p-7.5 dark:bg-blackho xl:h-auto xl:p-0 xl:shadow-none xl:dark:bg-transparent"
+            " !visible mt-3 md:mt-0 border-2 dark:border-slate-600 md:border-0 shadow-md h-[90%] rounded-md bg-slate-100 md:bg-transparent bg-opacity-100 p-7.5 dark:bg-blackho md:h-auto md:p-0 md:shadow-none md:dark:bg-transparent"
           }`}
         >
           <nav className={`relative`}>
-            <ul className="flex flex-col gap-5 xl:flex-row xl:items-center xl:gap-10 ">
+            <ul className="flex flex-col gap-5 md:flex-row md:items-center md:gap-10 ">
               {menuData.map((menuItem, key) => (
                 <li
                   onClick={() => setNavigationOpen(!navigationOpen)}
@@ -120,7 +120,7 @@ const Header = () => {
                         {menuItem.title}
                         <span>
                           <svg
-                            className="h-3 w-3 cursor-pointer sm:fill-waterloo lg:fill-transparent group-hover:fill-primary"
+                            className="h-3 w-3 cursor-pointer sm:fill-waterloo md:fill-transparent group-hover:fill-primary"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
                           >
@@ -133,7 +133,7 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary">
+                          <li key={key} className="hover:text-primary font-semibold">
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -156,7 +156,7 @@ const Header = () => {
             </ul>
           </nav>
 
-          <div className=" mt-7 flex items-center gap-6 xl:mt-0">
+          <div className=" mt-7 flex items-center gap-6 md:mt-0">
             {/* <Link
               href="https://github.com/NextJSTemplates/solid-nextjs"
               className="flex items-center justify-center rounded-full bg-zinc-500 px-7.5 py-2.5 text-xs text-white hover:bg-blue-800 md:text-regular md:duration-300 md:ease-in-out "

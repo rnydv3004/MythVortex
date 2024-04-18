@@ -486,7 +486,7 @@ const Hero = () => {
 
                     {/* <div className="h-full w-full animate-floatY text-black">
                       <div className="mx-auto max-w-md rounded-xl border p-2 shadow-md dark:border-slate-600 dark:bg-black dark:bg-opacity-60 dark:text-white md:scale-90 md:bg-white md:p-5 md:py-10">
-                        <h1 className="mb-2 flex justify-between text-xs font-medium md:text-lg">
+                        <h2 className="mb-2 flex justify-between text-xs font-medium md:text-lg">
                           <span className="text-xs md:pb-2 md:text-xl">
                             Calender
                           </span>
@@ -509,7 +509,7 @@ const Hero = () => {
                               />
                             </svg>
                           </span>
-                        </h1>
+                        </h2>
 
                         <div className="grid grid-cols-7 gap-2 md:p-3">
                           <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">

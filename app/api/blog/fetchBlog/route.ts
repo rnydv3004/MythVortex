@@ -4,7 +4,7 @@ import { NextResponse } from 'next/server';
 export async function POST(request: Request) {
     try {
         const { categorySearchList, searchText } = await request.json()
-        console.log("CL:", categorySearchList, "ST:", searchText)
+        // console.log("CL:", categorySearchList, "ST:", searchText)
 
         var sqlQuery = 'select * from blog where 1 = 1'
 
@@ -21,7 +21,7 @@ export async function POST(request: Request) {
             sqlQuery += ` AND category IN (${placeholders})`;
         }
 
-        console.log("Query:", sqlQuery)
+        // console.log("Query:", sqlQuery)
         const result: any =
             await sql.query(sqlQuery);
 

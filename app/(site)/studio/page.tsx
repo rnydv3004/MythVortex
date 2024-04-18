@@ -2,9 +2,10 @@
 import { HeroParallax } from "@/components/ui/hero-parallax";
 import { motion } from "framer-motion";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import StudioItem from "@/components/Studio/StudioItem";
+import axios from "axios";
 
 const products = [
   {
@@ -113,74 +114,100 @@ export default function Page() {
   const [searchText, setSearchText] = useState("");
   const [categorySearchList, setCategorySearchList] = useState<string[]>([]);
   const [blogData, setBlogData] = useState<any[]>([]);
+  const [studioList, setStudioList] = useState([]);
+
+  useEffect(() => {
+    axios.post("/api/studio/fetchStudio").then((res) => {
+      if (res.data.success) {
+        setStudioList(res.data.result);
+        console.log(res.data.result);
+      }
+    });
+  }, []);
 
   return (
     <div className="min-h-screen pt-14">
       <HeroParallax products={products} />
-      
+
       <div className="mx-auto max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
-      <div className="relative flex flex-col gap-5 lg:flex-row">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.5"
-          stroke="currentColor"
-          className="absolute left-2 top-2 h-5 w-5 text-slate-400"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+        <div className="relative flex flex-col gap-5 lg:flex-row">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            strokeWidth="1.5"
+            stroke="currentColor"
+            className="absolute left-2 top-2 h-5 w-5 text-slate-400"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"
+            />
+          </svg>
+
+          <input
+            placeholder="Search here..."
+            className="h-fit w-full rounded-full border-2 border-slate-300 px-4 py-2 pl-8 text-sm outline-none hover:shadow-lg dark:border-slate-700 lg:w-[400px]"
+            value={searchText}
+            onChange={(e) => {
+              setSearchText(e.target.value);
+            }}
           />
-        </svg>
 
-        <input
-          placeholder="Search here..."
-          className="h-fit w-full rounded-full border-2 border-slate-300 px-4 py-2 pl-8 text-sm outline-none hover:shadow-lg dark:border-slate-700 lg:w-[400px]"
-          value={searchText}
-          onChange={(e) => {
-            setSearchText(e.target.value);
-          }}
-        />
-
-        <div className="flex gap-2 overflow-x-auto">
-          {CATEGORYLIST.map((category, index) => (
-            <button
-              key={index}
-              onClick={() => {
-                if (categorySearchList.includes(category)) {
-                  setCategorySearchList(
-                    categorySearchList.filter((item) => item != category),
-                  );
-                } else {
-                  setCategorySearchList([...categorySearchList, category]);
-                }
-              }}
-              className={`${categorySearchList.includes(category) ? "border-primary text-primary" : ""} w-fit cursor-pointer text-nowrap rounded-full border-2 px-4 py-2 text-xs font-semibold dark:border-slate-700`}
-            >
-              {category}
-            </button>
-          ))}
+          <div className="flex gap-2 overflow-x-auto">
+            {CATEGORYLIST.map((category, index) => (
+              <button
+                key={index}
+                onClick={() => {
+                  if (categorySearchList.includes(category)) {
+                    setCategorySearchList(
+                      categorySearchList.filter((item) => item != category),
+                    );
+                  } else {
+                    setCategorySearchList([...categorySearchList, category]);
+                  }
+                }}
+                className={`${categorySearchList.includes(category) ? "border-primary text-primary" : ""} w-fit cursor-pointer text-nowrap rounded-full border-2 px-4 py-2 text-xs font-semibold dark:border-slate-700`}
+              >
+                {category}
+              </button>
+            ))}
+          </div>
         </div>
-      </div>
-        <div className="my-15 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-4 xl:gap-10">
+        <div className="mb-20 mt-5">
           {/* {blogData.length === 0 ? <>No Blog Found!</> : <></>} */}
 
-          {Array.from({ length: 20 }).map((post, key) => (
-            <StudioItem
-              item={{
-                title: "string",
-                link: "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
-                thumbnail:
-                  "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
-                description: "string",
-                author: "string",
-                updated: "string",
-                hero: "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
-              }}
-            />
-          ))}
+          {studioList &&
+            studioList.map((categoryData: any, index) => (
+              <div className="flex w-full flex-col">
+                <h2 className="mt-10 text-3xl font-semibold">
+                  {categoryData.categoryName}
+                </h2>
+                <div className="my-5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-4 xl:gap-10">
+                  {categoryData.data.map(
+                    (
+                      data: any,
+                      index: React.Key | null | undefined,
+                    ) => (
+                      <StudioItem
+                        key={index}
+                        item={{
+                          title: data.title,
+                          link: "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
+                          thumbnail:
+                            "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
+                          description: data.shortdesc,
+                          author: "string",
+                          updated: "string",
+                          hero: "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
+                        }}
+                      />
+                    ),
+                  )}
+                </div>
+              </div>
+            ))}
         </div>
       </div>
     </div>

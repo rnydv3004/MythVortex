@@ -3,9 +3,10 @@ import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
     try {
-        const { postId } = await request.json()
+        const { id } = await request.json()
+        console.log("========>", id)
 
-        var sqlQuery = `select category, markdown from blog where id = ${postId}`
+        var sqlQuery = `select title, description, category, tag from blog where id = '${id}'`
 
         const result: any =
             await sql.query(sqlQuery);
@@ -13,7 +14,6 @@ export async function POST(request: Request) {
         const data = result.rows
 
         return NextResponse.json({ success: true, result: data }, { status: 200 });
-
     } catch (error) {
         console.log(error)
         return NextResponse.json({ error }, { status: 500 });

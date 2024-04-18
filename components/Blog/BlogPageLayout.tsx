@@ -47,6 +47,7 @@ export default function BlogPageLayout() {
     <>
       <section className="min-h-screen py-24 lg:py-7 xl:py-10">
         <div className="mx-auto max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
+          <h1 className="text-3xl mf:text-4xl text-white font-semibold mb-5">Blog</h1>
           <div className="relative flex flex-col gap-5 lg:flex-row">
             <svg
               xmlns="http://www.w3.org/2000/svg"
