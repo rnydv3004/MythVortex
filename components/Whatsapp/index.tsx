@@ -152,7 +152,7 @@ const Whatsapp = () => {
                       clip-rule="evenodd"
                     ></path>
                   </svg>
-                  <h2 className="mb-5 mt-4 text-2xl font-medium text-slate-600 dark:text-white lg:mb-10 lg:text-3xl">
+                  <h2 className="mb-5 mt-4 text-2xl font-medium text-slate-100 dark:text-white lg:mb-10 lg:text-3xl">
                     Whatsapp Connect
                   </h2>
                   <p className="text-justify text-sm lg:text-base">

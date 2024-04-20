@@ -81,7 +81,8 @@ const Contact = () => {
 
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="px-2 md:px-8 2xl:px-0">
-        <div className="relative mx-auto mb-25 flex max-w-c-1390 flex-col items-center justify-center gap-10 bg-white px-2 pb-2 pt-2 dark:bg-black md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pb-10 xl:pt-10">
+       
+        <div className="relative mx-auto mb-25 flex max-w-c-1390 flex-col items-center justify-center gap-10  px-2 pb-2 pt-2 dark:bg-black md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pb-10 xl:pt-10">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg "></div>
           {[...Array(2000)].map((_, index) => (
             <div
@@ -114,9 +115,9 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_top w-full rounded-lg bg-white p-7.5 dark:border dark:border-strokedark dark:bg-blacksection md:w-3/5 lg:w-3/4 xl:p-15 bg-opacity-100 z-10 border-2 shadow-lg text-sm placeholder:text-slate-500 "
+              className="animate_top z-10 w-full bg-[#fff] rounded-lg border border-slate-300 p-7.5 text-sm shadow-lg placeholder:text-slate-500 dark:border-slate-700 dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
             >
-              <h2 className="mb-15 text-2xl font-medium text-slate-600 dark:text-white xl:text-itemtitle">
+              <h2 className="mb-15 text-2xl font-medium text-primary dark:text-white xl:text-3xl">
                 Reach Out for Web Excellence
               </h2>
 
@@ -132,7 +133,7 @@ const Contact = () => {
                         fullName: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-slate-500 bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black  focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
                   />
 
                   <input
@@ -145,7 +146,7 @@ const Contact = () => {
                         email: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-slate-500 bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
                   />
                 </div>
 
@@ -160,7 +161,7 @@ const Contact = () => {
                         subject: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-slate-500 bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
                   />
 
                   <input
@@ -173,7 +174,7 @@ const Contact = () => {
                         phone: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-slate-500 bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
                   />
                 </div>
 
@@ -188,7 +189,7 @@ const Contact = () => {
                         message: e.target.value,
                       });
                     }}
-                    className="w-full border-b border-slate-500 bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
+                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
                   ></textarea>
                 </div>
 
@@ -228,6 +229,7 @@ const Contact = () => {
             </motion.div>
           </div>
         </div>
+        
       </section>
       {/* <!-- ===== Contact End ===== --> */}
     </>

@@ -1,21 +1,20 @@
 "use client";
 
-
 const Sidebarbutton = ({ changePage, page }) => {
   return (
     <>
       <li className="block">
-        <button 
+        <button
           onClick={() => {
             changePage(0);
           }}
-          className={`${page === 0? 'text-black bg-slate-200 dark:bg-blackho font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 0 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 0? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -28,17 +27,18 @@ const Sidebarbutton = ({ changePage, page }) => {
           </svg>
           Overview
         </button>
-        <button 
+
+        <button
           onClick={() => {
             changePage(1);
           }}
-          className={`${page === 1? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 1 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            strokeWidth="1.5"
+            strokeWidth={`${page === 1? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -51,17 +51,17 @@ const Sidebarbutton = ({ changePage, page }) => {
           </svg>
           Consultation Call
         </button>
-        <button 
+        <button
           onClick={() => {
             changePage(2);
           }}
-          className={`${page === 2? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 2 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 2? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -74,17 +74,17 @@ const Sidebarbutton = ({ changePage, page }) => {
           </svg>
           Choose Plan
         </button>
-        <button 
+        <button
           onClick={() => {
             changePage(3);
           }}
-          className={`${page === 3? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 3 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 3? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -97,17 +97,17 @@ const Sidebarbutton = ({ changePage, page }) => {
           </svg>
           Pay the Fees
         </button>
-        <button 
+        <button
           onClick={() => {
             changePage(4);
           }}
-          className={`${page === 4? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 4 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 4? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -120,17 +120,17 @@ const Sidebarbutton = ({ changePage, page }) => {
           </svg>
           Choose Templates
         </button>
-        <button 
+        <button
           onClick={() => {
             changePage(5);
           }}
-          className={`${page === 5? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 5 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 5? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -143,17 +143,17 @@ const Sidebarbutton = ({ changePage, page }) => {
           </svg>
           Development Period
         </button>
-        <button 
+        <button
           onClick={() => {
             changePage(6);
           }}
-          className={`${page === 6? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 6 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 6? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -166,17 +166,17 @@ const Sidebarbutton = ({ changePage, page }) => {
           </svg>
           Debugging Period
         </button>
-        <button 
+        <button
           onClick={() => {
             changePage(7);
           }}
-          className={`${page === 7? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 7 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 7? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -193,13 +193,13 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(8);
           }}
-          className={`${page === 8? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 8 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 8? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
@@ -216,13 +216,13 @@ const Sidebarbutton = ({ changePage, page }) => {
           onClick={() => {
             changePage(9);
           }}
-          className={`${page === 9? 'text-black dark:bg-blackho bg-slate-200 font-bold':''} flex w-full items-center gap-2 rounded-sm dark:text-white px-3 py-2 text-base text-slate-700 `}
+          className={`${page === 9 ? "bg-slate-200 font-bold text-slate-600 dark:bg-blackho dark:font-semibold dark:text-slate-200" : "dark:text-slate-400"} flex w-full items-center gap-2 rounded-sm px-3 py-2 text-base text-slate-600  `}
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 24 24"
-            stroke-width="1.5"
+            strokeWidth={`${page === 9? '2.5' : '1.5'}`}
             stroke="currentColor"
             height={"16"}
             width={"16"}
