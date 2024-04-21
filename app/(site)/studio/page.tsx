@@ -130,6 +130,24 @@ export default function Page() {
       <HeroParallax products={products} />
 
       <div className="mx-auto max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
+        <div className=" mb-10 w-full rounded-sm bg-yellow-300 dark:bg-yellow-700 bg-opacity-25 px-4 py-2 text-yellow-600 flex items-center gap-2 border border-yellow-300 font-medium">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            className="h-6 w-6"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126ZM12 15.75h.007v.008H12v-.008Z"
+            />
+          </svg>
+          Hey there! 😊 Don't worry, we won't bother you with calls unless you ask for one. Your peace of mind is our priority.
+        </div>
+
         <div className="relative flex flex-col gap-5 lg:flex-row">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -175,6 +193,7 @@ export default function Page() {
             ))}
           </div>
         </div>
+
         <div className="mb-20 mt-5">
           {/* {blogData.length === 0 ? <>No Blog Found!</> : <></>} */}
 
@@ -186,21 +205,16 @@ export default function Page() {
                 </h2>
                 <div className="my-5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-4 xl:gap-10">
                   {categoryData.data.map(
-                    (
-                      data: any,
-                      index: React.Key | null | undefined,
-                    ) => (
+                    (data: any, index: React.Key | null | undefined) => (
                       <StudioItem
                         key={index}
                         item={{
                           title: data.title,
                           link: "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
-                          thumbnail:
-                            "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
                           description: data.shortdesc,
                           author: "string",
                           updated: "string",
-                          hero: "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
+                          hero: data.image,
                         }}
                       />
                     ),

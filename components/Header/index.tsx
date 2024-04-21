@@ -2,9 +2,11 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
+
+import LogoDark from "../../public/logo_rec.png";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -41,18 +43,19 @@ const Header = () => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 md:flex 2xl:px-0"
+        className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:flex md:px-8 2xl:px-0"
       >
         <div className="mr-10 flex w-full items-center justify-between md:w-fit">
           <a href="/">
-            <h6 className="text-2xl font-semibold uppercase text-slate-700 dark:text-white">
+            {/* <h6 className="text-2xl font-semibold uppercase text-slate-700 dark:text-white">
               <span className="bg-gradient-to-tr from-black via-slate-600 to-slate-900 bg-clip-text text-transparent dark:from-slate-500 dark:via-gray-200 dark:to-slate-400 ">
                 Myth
               </span>
               <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text font-extrabold text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
                 Vortex
               </span>
-            </h6>
+            </h6> */}
+            <Image src={LogoDark} alt={""} className="h-12 w-fit rounded-full"/>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
@@ -100,7 +103,7 @@ const Header = () => {
         <div
           className={`invisible  h-0 w-full items-center justify-between md:visible md:flex md:h-auto md:w-full ${
             navigationOpen &&
-            " !visible mt-3 md:mt-0 border-2 dark:border-slate-600 md:border-0 shadow-md h-[90%] rounded-md bg-slate-100 md:bg-transparent bg-opacity-100 p-7.5 dark:bg-blackho md:h-auto md:p-0 md:shadow-none md:dark:bg-transparent"
+            " !visible mt-3 h-[90%] rounded-md border-2 bg-slate-100 bg-opacity-100 p-7.5 shadow-md dark:border-slate-600 dark:bg-blackho md:mt-0 md:h-auto md:border-0 md:bg-transparent md:p-0 md:shadow-none md:dark:bg-transparent"
           }`}
         >
           <nav className={`relative`}>
@@ -120,7 +123,7 @@ const Header = () => {
                         {menuItem.title}
                         <span>
                           <svg
-                            className="h-3 w-3 cursor-pointer sm:fill-waterloo md:fill-transparent group-hover:fill-primary"
+                            className="h-3 w-3 cursor-pointer group-hover:fill-primary sm:fill-waterloo md:fill-transparent"
                             xmlns="http://www.w3.org/2000/svg"
                             viewBox="0 0 512 512"
                           >
@@ -133,7 +136,10 @@ const Header = () => {
                         className={`dropdown ${dropdownToggler ? "flex" : ""}`}
                       >
                         {menuItem.submenu.map((item, key) => (
-                          <li key={key} className="hover:text-primary font-semibold">
+                          <li
+                            key={key}
+                            className="font-semibold hover:text-primary"
+                          >
                             <Link href={item.path || "#"}>{item.title}</Link>
                           </li>
                         ))}
@@ -144,8 +150,8 @@ const Header = () => {
                       href={`${menuItem.path}`}
                       className={
                         pathUrl === menuItem.path
-                          ? "text-primary hover:text-primary font-semibold"
-                          : "hover:text-primary font-medium"
+                          ? "font-semibold text-primary hover:text-primary"
+                          : "font-medium hover:text-primary"
                       }
                     >
                       {menuItem.title}
@@ -163,11 +169,11 @@ const Header = () => {
             >
               Track Status
             </Link> */}
-            <ThemeToggler/>
+            <ThemeToggler />
 
             <Link
               href="/contact"
-              className="rounded-md border-2 border-transparent text-sm bg-primary px-4 py-2 text-white active:scale-90"
+              className="rounded-md border-2 border-transparent bg-primary px-4 py-2 text-sm text-white active:scale-90"
             >
               Get Started
             </Link>
