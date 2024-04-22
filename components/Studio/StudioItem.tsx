@@ -5,24 +5,27 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-interface StudioItemProps {
-  item: {
-    title: string;
-    link: string;
-    description: string;
-    author: string;
-    updated?: string;
-    hero: string; // Ensure 'hero' property is defined in the item object
-  };
-}
-
-const StudioItem = ({ item }) => {
+const StudioItem = ({ id,
+  title,
+  link,
+  description,
+  author,
+  updated,
+  setDetails,
+  hero }: { id: any,
+    title: any,
+    link: any,
+    description: any,
+    author: any,
+    updated: any,
+    setDetails: any,
+    hero: any }) => {
   const router = useRouter();
 
   return (
     <div
       className="cursor-pointer"
-      onClick={() => router.push(`/studio/${item.id}`)}
+      onClick={() => router.push(`/studio/${id}`)}
     >
       <motion.div
         variants={{
@@ -39,26 +42,28 @@ const StudioItem = ({ item }) => {
         whileInView="visible"
         transition={{ duration: 1, delay: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top h-full rounded-lg border-2 border-slate-200 bg-white p-2 pb-4 shadow-lg dark:border-slate-700 dark:bg-blacksection"
+        className="animate_top h-full rounded-md border-2 border-slate-200 bg-white p-2 pb-4 shadow-lg dark:border-slate-700 dark:bg-blacksection"
       >
-        <div className="relative block aspect-[368/239] animate-pulse bg-slate-200">
-          {item.hero && <Image
-            src={item.hero}
-            alt={item.title}
-            layout="fill"
-            objectFit="cover"
-            className="rounded-lg"
-            loading="lazy"
-          />}
+        <div className="relative block aspect-[368/239] rounded-md bg-slate-200 dark:bg-blackho">
+          {hero && (
+            <Image
+              src={hero}
+              alt={title}
+              layout="fill"
+              objectFit="cover"
+              className="rounded-md"
+              loading="lazy"
+            />
+          )}
         </div>
 
         <div className="px-4">
           <h3 className="mb-0 mt-4 line-clamp-2 inline-block text-lg font-medium text-black duration-300 hover:text-primary dark:text-slate-300 dark:hover:text-white xl:text-sm">
-            {item.title.slice(0, 40)}
-            {item.title.length > 40 && "..."}
+            {title.slice(0, 40)}
+            {title.length > 40 && "..."}
           </h3>
           <p className="line-clamp-3 text-justify text-xs">
-            {item.description}
+            {description}
           </p>
           <div
             onClick={(e) => {
@@ -66,7 +71,15 @@ const StudioItem = ({ item }) => {
             }}
             className="mt-4 flex justify-end"
           >
-            <button className="flex items-center justify-center gap-2 rounded-sm bg-slate-200 px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-primary hover:text-white dark:bg-slate-700 dark:text-white dark:hover:bg-primary">
+            <button
+              onClick={() => {
+                setDetails({
+                  id: id,
+                  title: title,
+                });
+              }}
+              className="flex items-center justify-center gap-2 rounded-sm bg-slate-200 px-4 py-2 text-xs font-semibold text-slate-600 hover:bg-primary hover:text-white dark:bg-slate-700 dark:text-white dark:hover:bg-primary"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"

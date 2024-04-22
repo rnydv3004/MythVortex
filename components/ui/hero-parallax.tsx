@@ -57,7 +57,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="relative flex h-[300vh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex h-[195vh] lg:h-[260vh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
     >
       <Header />
       <motion.div
@@ -104,7 +104,7 @@ export const HeroParallax = ({
 export const Header = () => {
   return (
     <div className="relative left-0 top-0 mx-auto w-full max-w-7xl px-4  py-20 md:py-40">
-      <h1 className="text-2xl font-bold dark:text-white md:text-7xl">
+      <h1 className="text-3xl font-bold dark:text-white md:text-7xl">
         The Ultimate <br /> Business Tool studio
       </h1>
       <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
@@ -134,7 +134,7 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product relative h-96 w-[30rem] flex-shrink-0"
+      className="group/product relative h-40 lg:h-65 aspect-video flex-shrink-0"
     >
       <div
         // href={product.div}
@@ -143,7 +143,7 @@ export const ProductCard = ({
         <Image
           src={product.thumbnail}
           height="600"
-          width="600"
+          width="900"
           className="absolute inset-0 h-full w-full object-cover object-left-top"
           alt={product.title}
         />

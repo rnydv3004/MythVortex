@@ -11,7 +11,8 @@ export async function POST(request: Request) {
         const data = result.rows;
 
         // Organize data by category
-        const groupedData:any = [];
+        const groupedData: any = [];
+
         data.forEach(row => {
             const index = groupedData.findIndex(item => item.categoryName === row.category);
             if (index === -1) {
@@ -19,6 +20,11 @@ export async function POST(request: Request) {
             } else {
                 groupedData[index].data.push(row); // Push the row data into the corresponding category array
             }
+        });
+
+        // Sort the data within each category by ascending order
+        groupedData.forEach(category => {
+            category.data.sort((a, b) => a.id - b.id); // Assuming there's an 'id' property for sorting
         });
 
         return NextResponse.json({ success: true, result: groupedData }, { status: 200 });

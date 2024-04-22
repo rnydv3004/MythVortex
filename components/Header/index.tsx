@@ -55,7 +55,7 @@ const Header = () => {
                 Vortex
               </span>
             </h6> */}
-            <Image src={LogoDark} alt={""} className="h-12 w-fit rounded-full"/>
+            <Image src={LogoDark} alt={""} className="h-12 aspect-square w-fit rounded-full"/>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}

@@ -66,7 +66,7 @@ export default function BlogPageLayout() {
 
             <input
               placeholder="Search here..."
-              className="h-fit w-full rounded-full border-2 border-slate-300 px-4 py-2 pl-8 text-sm outline-none hover:shadow-lg dark:border-slate-700 lg:w-[400px]"
+              className="h-fit w-full rounded-full border-2 border-slate-300 px-4 py-2 pl-8 text-sm outline-none hover:shadow-lg dark:bg-slate-800 dark:border-slate-700 lg:w-[400px]"
               value={searchText}
               onChange={(e) => {
                 setSearchText(e.target.value);

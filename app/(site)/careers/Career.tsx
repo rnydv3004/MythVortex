@@ -26,7 +26,7 @@ export default function Career() {
   ];
   return (
     <div className="w-screen overflow-hidden">
-      <div className="mx-auto flex min-h-screen w-full  flex-col items-center justify-center gap-3 overflow-hidden text-center md:gap-5">
+      <div className="lg:max-w-c-1280 mx-auto flex min-h-screen w-full  flex-col items-center justify-center gap-3 overflow-hidden text-center md:gap-5   ">
         <motion.h1
           key="logo"
           initial={{ opacity: 0 }}
@@ -71,14 +71,14 @@ export default function Career() {
       </div>
       <div
         id="openings"
-        className="flex h-fit min-h-screen w-screen flex-col items-start justify-start overflow-hidden p-5 md:p-10 lg:pt-32"
+        className="lg:max-w-c-1280 mx-auto flex h-fit min-h-screen w-screen flex-col items-start justify-start overflow-hidden p-4 md:p-10 lg:pt-32"
       >
         <motion.label
           key="opening-heading"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.8 }}
-          className="text-2xl md:text-3xl lg:text-4xl"
+          className="text-2xl md:text-3xl lg:text-4xl font-semibold lg:font-medium mb-4"
         >
           Current Openings
         </motion.label>
@@ -87,7 +87,7 @@ export default function Career() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, delay: 0.9 }}
-          className="  flex h-full w-full grid-cols-5 flex-col gap-10 p-5 lg:p-10 "
+          className="  flex h-full w-full grid-cols-5 flex-col gap-5 lg:gap-10 lg:p-10"
         >
           {careerList.map((career, index) => (
             <li
@@ -112,9 +112,9 @@ export default function Career() {
       </div>
       <div
         id="how-to-appy"
-        className="flex h-fit min-h-screen w-screen items-center justify-center pb-20 lg:pb-0"
+        className="lg:max-w-c-1280 mx-auto flex h-fit min-h-screen w-screen items-center justify-center pb-20 lg:pb-0 px-4"
       >
-        <div className="flex flex-col items-center justify-center rounded-lg border border-slate-200 bg-gradient-to-tr from-blue-200 via-white to-blue-50 p-4 pt-32 dark:border-slate-600 dark:from-slate-700 lg:max-w-[50%] lg:flex-row lg:p-10 lg:pt-0">
+        <div className="flex flex-col items-center justify-center rounded-lg border border-slate-200 bg-gradient-to-tr from-blue-200 via-white to-blue-50 p-4 pt-32 dark:border-slate-600 dark:from-slate-700 lg:flex-row lg:p-10 lg:pt-0">
           <h6 className="p-2 text-center text-3xl font-extrabold lg:p-10">
             How <span className="text-xl">to</span> Apply?
           </h6>

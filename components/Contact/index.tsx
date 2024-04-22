@@ -115,7 +115,7 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_top z-10 w-full bg-[#fff] rounded-lg border border-slate-300 p-7.5 text-sm shadow-lg placeholder:text-slate-500 dark:border-slate-700 dark:bg-black md:w-3/5 lg:w-3/4 xl:p-15"
+              className="animate_top z-10 w-full bg-[#fff] rounded-lg border border-slate-300 p-7.5 text-sm shadow-lg placeholder:text-slate-500 dark:border-slate-700 dark:bg-blackho md:w-3/5 lg:w-3/4 xl:p-15"
             >
               <h2 className="mb-15 text-2xl font-medium text-primary dark:text-white xl:text-3xl">
                 Reach Out for Web Excellence

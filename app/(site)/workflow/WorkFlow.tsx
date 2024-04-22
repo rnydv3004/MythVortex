@@ -71,9 +71,9 @@ export default function WorkFlow() {
             </div>
           </div>
 
-          <div className="flex flex-col lg:w-3/4">
+          <div className="flex flex-col lg:w-3/4 ">
             <div id={workFlow[workFlowPage].title} className="w-full px-4">
-              <div className="dark:bg-gray-dark rounded-sm border bg-white px-6 py-5 shadow-md dark:border-slate-700 dark:bg-blacksection sm:p-[55px] lg:mb-5 lg:px-8 lg:py-11 lg:pt-10 xl:p-[45px] xl:py-10">
+              <div className="dark:bg-gray-dark rounded-sm border bg-white px-6 py-5 shadow-md dark:border-slate-700 dark:bg-blacksection sm:p-[55px] lg:mb-5 lg:px-8 lg:py-11 lg:pt-10 xl:p-[45px] xl:py-10 min-h-[60vh]">
                 <div className="mb-5 hidden justify-between md:flex">
                   <button
                     disabled={workFlowPage === 0}
@@ -105,7 +105,7 @@ export default function WorkFlow() {
               </div>
             </div>
 
-            <div className="mx-4 flex justify-between md:hidden">
+            <div className="mx-4 flex justify-between md:hidden mt-5">
               <button
                 disabled={workFlowPage === 0}
                 onClick={() => {

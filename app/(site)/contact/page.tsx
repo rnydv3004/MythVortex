@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 const SupportPage = () => {
   return (
     <div className="pt-25 bg-slate-50 dark:bg-black">
-      <div className="max-w-c-1280 mx-auto ">
+      <div className="px-6 lg:max-w-c-1280 mx-auto ">
         <h1 className="font-bold text-3xl md:text-4xl text-slate-600 dark:text-slate-300">Contact Us</h1>
         <p className="text-sm md:text-base mt-4 text-justify mb-5 text-slate-500 dark:text-slate-400 font-medium">We welcome the opportunity to connect with you. Whether you're seeking assistance with web development, web app development, or have inquiries regarding our services, we're here to assist you. Please don't hesitate to reach out to us via the contact form provided below, or feel free to contact us directly via email or phone. Your satisfaction and success are our priorities, and we eagerly anticipate the opportunity to discuss how we can best meet your needs.</p>
       </div>
