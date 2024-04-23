@@ -123,7 +123,7 @@ export default function page() {
           </h2>
         </motion.div>
 
-        <div className="mb-10 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-4 xl:gap-10">
+        {/* <div className="mb-10 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-4 xl:gap-10">
           {StudioItem &&
             studioList.map((post: any, index) => (
               <StudioItem
@@ -137,7 +137,7 @@ export default function page() {
                 }
               />
             ))}
-        </div>
+        </div> */}
 
         <FAQ />
       </div>

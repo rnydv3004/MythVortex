@@ -14,24 +14,32 @@ interface DetailsInterface {
 
 export async function POST(request: Request) {
     try {
-        const { details }: { details: DetailsInterface } = await request.json()
+        const { details }: { details: DetailsInterface } = await request.json();
 
-        const sqlQuery = `INSERT INTO studiolead (changeid, short_description, mode, name, phone, email, medium, itemid) 
-                  VALUES (${details.changeNumber === '' ? null : `'${details.changeNumber}'`}, 
-                          '${details.itemTitle}', 
-                          ${details.mode}, 
-                          '${details.name}', 
-                          '${details.phone}', 
-                          '${details.email}', 
-                          '${details.medium}', 
-                          ${details.itemId}) 
-                  RETURNING changeid, sctask;`;
+        // Using parameterized queries to prevent SQL injection
+        const sqlQuery = `
+            INSERT INTO studiolead (changeid, short_description, mode, name, phone, email, medium, itemid) 
+            VALUES ($1, $2, $3, $4, $5, $6, $7, $8) 
+            RETURNING id, changeid, sctask;`;
 
+        const result: any = await sql.query(sqlQuery, [
+            details.changeNumber || null,
+            details.itemTitle,
+            details.mode,
+            details.name,
+            details.phone,
+            details.email,
+            details.medium,
+            details.itemId
+        ]);
 
-        console.log("Query:", sqlQuery);
+        const data: any = result.rows[0];
 
-        const result: any = await sql.query(sqlQuery);
-        const data = result.rows[0];
+        // Escaping backticks in the SQL query
+        const sqlQuery2 = `INSERT INTO worklogs (studioleadid, note) VALUES ($1, 'Task: ' || $2 || ' created with change number: ' || $3 || ': ' || $4);`;
+
+        await sql.query(sqlQuery2, [data.id, data.sctask, data.changeid, details.itemTitle]);
+
 
         // Organize data by category
         return NextResponse.json({ success: true, data }, { status: 200 });

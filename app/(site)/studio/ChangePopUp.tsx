@@ -393,7 +393,7 @@ export default function ChangePopUp({
             Thank you for choosing us! Track updates on our '
             <Link
               className="font-semibold text-blue-400 underline"
-              href={"/track"}
+              href={"/track"} target="_blank"
             >
               Track
             </Link>

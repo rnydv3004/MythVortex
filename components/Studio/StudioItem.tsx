@@ -23,7 +23,7 @@ const StudioItem = ({
   return (
     <div
       className="cursor-pointer"
-      onClick={() => router.push(`/studio/${id}`)}
+      // onClick={() => router.push(`/studio/${id}`)}
     >
       <motion.div
         variants={{

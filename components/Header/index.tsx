@@ -31,7 +31,7 @@ const Header = () => {
   return (
     <header
       onClick={() => setNavigationOpen(!navigationOpen)}
-      className={`fixed left-0 top-0 z-99999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 md:h-fit ${
+      className={`fixed left-0 top-0 z-999 w-full select-none bg-opacity-70 py-4 dark:bg-opacity-70 md:h-fit ${
         navigationOpen && "h-full"
       } ${
         stickyMenu
