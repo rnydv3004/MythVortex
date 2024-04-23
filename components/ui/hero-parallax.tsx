@@ -57,7 +57,7 @@ export const HeroParallax = ({
   return (
     <div
       ref={ref}
-      className="relative flex h-[195vh] lg:h-[260vh]  flex-col self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d]"
+      className="relative flex h-[195vh] flex-col  self-auto overflow-hidden py-40 antialiased [perspective:1000px] [transform-style:preserve-3d] lg:h-[260vh]"
     >
       <Header />
       <motion.div
@@ -108,7 +108,9 @@ export const Header = () => {
         The Ultimate <br /> Business Tool studio
       </h1>
       <p className="mt-8 max-w-2xl text-base dark:text-neutral-200 md:text-xl">
-      At our studio, we engineer applications and tools to streamline business operations, empowering with innovative solutions, enhancing efficiency, and driving success. Join us in revolutionizing business operations.
+        At our studio, we engineer applications and tools to streamline business
+        operations, empowering with innovative solutions, enhancing efficiency,
+        and driving success. Join us in revolutionizing business operations.
       </p>
     </div>
   );
@@ -134,10 +136,11 @@ export const ProductCard = ({
         y: -20,
       }}
       key={product.title}
-      className="group/product relative h-40 lg:h-65 aspect-video flex-shrink-0"
+      className="group/product relative aspect-video h-40 flex-shrink-0 lg:h-65"
     >
-      <div
-        // href={product.div}
+      <Link
+        href={product.link}
+        target="_blank"
         className="block group-hover/product:shadow-2xl "
       >
         <Image
@@ -147,7 +150,7 @@ export const ProductCard = ({
           className="absolute inset-0 h-full w-full object-cover object-left-top"
           alt={product.title}
         />
-      </div>
+      </Link>
       <div className="pointer-events-none absolute inset-0 h-full w-full bg-black opacity-0 group-hover/product:opacity-80"></div>
       <h2 className="absolute bottom-4 left-4 text-white opacity-0 group-hover/product:opacity-100">
         {product.title}
