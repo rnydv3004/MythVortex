@@ -196,12 +196,7 @@ export default function Page() {
                           key={index}
                           id={data.id}
                           title={data.title}
-                          link={
-                            "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996"
-                          }
                           description={data.shortdesc}
-                          author={"string"}
-                          updated={"string"}
                           setDetails={setPopUp}
                           hero={data.image}
                         />

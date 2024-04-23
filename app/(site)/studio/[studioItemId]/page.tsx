@@ -125,18 +125,16 @@ export default function page() {
 
         <div className="mb-10 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:grid-cols-4 xl:gap-10">
           {StudioItem &&
-            studioList.map((post, key) => (
+            studioList.map((post: any, index) => (
               <StudioItem
-                item={{
-                  title: "string",
-                  link: "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
-                  thumbnail:
-                    "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
-                  description: "string",
-                  author: "string",
-                  updated: "string",
-                  hero: "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996",
-                }}
+                key={index}
+                id={post.id}
+                title={post.title}
+                description={post.shortdesc}
+                setDetails={() => {}}
+                hero={
+                  "https://img.freepik.com/free-vector/contact-us-concept-landing-page_23-2148270076.jpg?t=st=1713013018~exp=1713016618~hmac=b452c177a4f434a9f128c9556340f2d2309c54b04ef44536407a2702940a3a8f&w=996"
+                }
               />
             ))}
         </div>

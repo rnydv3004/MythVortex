@@ -5,21 +5,19 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 
-const StudioItem = ({ id,
+const StudioItem = ({
+  id,
   title,
-  link,
   description,
-  author,
-  updated,
   setDetails,
-  hero }: { id: any,
-    title: any,
-    link: any,
-    description: any,
-    author: any,
-    updated: any,
-    setDetails: any,
-    hero: any }) => {
+  hero
+}: {
+  id: any;
+  title: any;
+  description: any;
+  setDetails: any;
+  hero: any;
+}) => {
   const router = useRouter();
 
   return (
@@ -62,9 +60,7 @@ const StudioItem = ({ id,
             {title.slice(0, 40)}
             {title.length > 40 && "..."}
           </h3>
-          <p className="line-clamp-3 text-justify text-xs">
-            {description}
-          </p>
+          <p className="line-clamp-3 text-justify text-xs">{description}</p>
           <div
             onClick={(e) => {
               e.stopPropagation();
