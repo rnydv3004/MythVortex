@@ -13,49 +13,49 @@ const products = [
     title: "Mythvortex Contact Dark",
     link: "https://mythvortex.com/contact",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/contact_dk-WIQPs4PMgBVVu7hgjJSirtnvWR1vGA.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Fcontact_dk.png?alt=media&token=6011344d-bb3b-4a54-b995-8a27eb62641b",
   },
   {
     title: "Mythvorte Blog Light",
     link: "https://mythvortex.com/blog",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/blog_wh-pfpv3s1U1AhSeGpmv9dBfcYl82qDgv.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Fblog_wh.png?alt=media&token=abf46f4f-cd78-47ab-8d4e-f8a77355d83a",
   },
   {
     title: "Mythvortex Dark",
     link: "https://mythvortex.com",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/hero_dk-uwpJR7ZpQGQALg34W6tl95uUDAgHbH.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Fhero_dk.png?alt=media&token=b68cf85f-f811-4f32-a579-a5617c578f3d",
   },
   {
     title: "Mythvortex Workflow Light",
     link: "https://mythvortex.com/workflow",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/overview_wh-ds31Bly6oaS4ClfADVZPBNjtTLPecu.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Foverview_wh.png?alt=media&token=a97f2840-fa71-4772-8200-7cd602deee82",
   },
   {
-    title: "Mythvortex Workflow",
+    title: "Mythvortex Workflow Dark",
     link: "https://mythvortex.com/workflow",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/contact_wh-BwuCxRFr4W9VKRZaiKJBNclHLAqa8F.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Foverview_dk.png?alt=media&token=e8531ca1-e9fe-4f7c-94a6-cca0174549ee",
   },
   {
     title: "Mythvortex Contact Light",
     link: "https://mythvortex.com/contact",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/contact_wh-BwuCxRFr4W9VKRZaiKJBNclHLAqa8F.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Fcontact_wh.png?alt=media&token=2f15fa30-5629-4b75-a130-491636ac6607",
   },
   {
     title: "Mythvortex Blog Dark",
     link: "https://mythvortex.com/blog",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/blog_dk-0lSWsD3VOASWxAl47x8grlQiwtUT8S.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Fblog_dk.png?alt=media&token=959dbec7-0ce0-4e82-a822-07c346aa9622",
   },
   {
     title: "Mythvortex Light",
     link: "https://mythvortex.com",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/hero_wh-Ig5CC3zUlgwjN6GGuwtwiAOQsKAdxG.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Fhero_wh.png?alt=media&token=124c3b00-674a-45d7-970c-a1dfb91e8ecc",
   },
   {
     title: "Mythvortex Workflow Dark",
