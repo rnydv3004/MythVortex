@@ -61,7 +61,7 @@ const products = [
     title: "Mythvortex Workflow Dark",
     link: "https://mythvortex.com/workflow",
     thumbnail:
-      "https://0j7iyo97i70hf3er.public.blob.vercel-storage.com/studio-parallax/overview_dk-NLeTqDsIisc3sestq5bv5JCvIfIThz.png",
+      "https://firebasestorage.googleapis.com/v0/b/sc-man.appspot.com/o/studio%2Foverview_dk.png?alt=media&token=e8531ca1-e9fe-4f7c-94a6-cca0174549ee",
   },
 ];
 

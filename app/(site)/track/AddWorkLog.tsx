@@ -16,7 +16,7 @@ export default function AddWorkLog({ sctask }) {
         note,
         docLink,
         admin,
-        sctaskid: sctask
+        sctaskid: sctask,
       })
       .then((res) => {
         if (res.data.success) {
@@ -25,21 +25,21 @@ export default function AddWorkLog({ sctask }) {
           setDocLink("");
           toast("Log Added!", {
             icon: "✅",
-            position: "top-center",
+            position: "bottom-center",
             style: {
               borderRadius: "10px",
-              background: "#333",
-              color: "#fff",
+              background: "inherit",
+              color: "inherit",
             },
           });
         } else {
           toast("Try Again Later!", {
             icon: "❌",
-            position: "top-center",
+            position: "bottom-center",
             style: {
               borderRadius: "10px",
-              background: "#333",
-              color: "#fff",
+              background: "inherit",
+              color: "inherit",
             },
           });
         }
@@ -51,7 +51,9 @@ export default function AddWorkLog({ sctask }) {
 
   return (
     <>
-      <h6 className="text-sm font-semibold">Add Log for <span className="text-green-600">{sctask}</span></h6>
+      <h6 className="text-sm font-semibold">
+        Add Log for <span className="text-green-600">{sctask}</span>
+      </h6>
       <div className="mt-5 flex flex-col gap-1">
         <label className="text-xs font-medium">Your Message</label>
         <textarea
@@ -97,11 +99,11 @@ export default function AddWorkLog({ sctask }) {
           } else {
             toast("Please enter notes!", {
               icon: "❌",
-              position: "top-center",
+              position: "bottom-center",
               style: {
                 borderRadius: "10px",
-                background: "#333",
-                color: "#fff",
+                background: "inherit",
+                color: "inherit",
               },
             });
           }

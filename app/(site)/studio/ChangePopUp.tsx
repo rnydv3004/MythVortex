@@ -70,14 +70,14 @@ export default function ChangePopUp({
       onClick={() => {
         close(-1);
       }}
-      className="fixed left-0 top-0 z-40 flex h-screen w-screen items-start justify-center bg-black bg-opacity-75 p-2 pt-20 md:items-center md:pt-0"
+      className="fixed left-0 top-0 z-40 flex h-screen w-screen items-start justify-center bg-slate-100 bg-opacity-75 p-2 pt-20 dark:bg-black md:items-center md:pt-0"
     >
       {task.changeReq === "" ? (
         <div
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className="relative z-99999 h-fit w-full rounded-md border border-slate-700 p-5 shadow-xl shadow-black dark:bg-slate-800 md:w-[450px]"
+          className="relative z-99999 h-fit w-full rounded-md border p-5 shadow-xl dark:border-slate-700  dark:shadow-black md:w-[450px] bg-white dark:bg-black"
         >
           <button className="absolute right-4 top-4">
             <svg
@@ -105,23 +105,24 @@ export default function ChangePopUp({
               spellCheck={false}
               disabled
               value={itemData.title}
-              className="w-full border-b-2 bg-transparent px-4 py-2  pb-0 pl-1 outline-none dark:border-slate-600 dark:text-slate-300 lg:text-sm"
+              className="w-full border-b-2 bg-transparent px-4 py-2  pb-0 pl-1 outline-none dark:border-slate-600 dark:text-slate-300 lg:text-sm text-slate-600 font-medium"
             />
           </div>
 
           <div className=" grid grid-cols-2 gap-x-5">
-            <div className="mt-4 bg-btndark p-2">
+            <div className="mt-4 bg-slate-50 p-2 dark:bg-btndark">
               <label className="text-xs">Name</label>
               <input
+                spellCheck={false}
                 value={details.name}
                 onChange={(e) => {
                   setDetails({ ...details, name: e.target.value });
                 }}
-                className="w-full border-b-2 bg-transparent px-4 py-2  pb-0 pl-1 outline-none dark:border-slate-600 dark:text-slate-300 lg:text-sm"
+                className="w-full border-b-2 bg-transparent px-4 py-2  pb-0 pl-1 outline-none dark:border-slate-600 dark:text-slate-300 lg:text-sm text-slate-600 font-medium"
               />
             </div>
 
-            <div className="relative mt-4 bg-btndark p-2">
+            <div className="relative mt-4 bg-slate-50 p-2 dark:bg-btndark">
               <label className="text-xs">Change Number</label>
               <label className="absolute left-2 top-7.5 text-nowrap text-xs text-slate-500">
                 (If already have)
@@ -131,12 +132,12 @@ export default function ChangePopUp({
                 onChange={(e) => {
                   setDetails({ ...details, changeNumber: e.target.value });
                 }}
-                className="w-full border-b-2 bg-transparent px-4 py-2  pb-0 pl-1 outline-none dark:border-slate-600 dark:text-slate-300 lg:text-sm"
+                className="w-full border-b-2 bg-transparent px-4 py-2  pb-0 pl-1 outline-none dark:border-slate-600 dark:text-slate-300 lg:text-sm text-slate-600 font-medium"
               />
             </div>
           </div>
 
-          <div className="mt-4 bg-btndark p-2">
+          <div className="mt-4 bg-slate-50 p-2 dark:bg-btndark">
             <label className="text-xs">Mode of Communication: </label>
 
             <div className="flex items-end gap-2">
@@ -193,7 +194,7 @@ export default function ChangePopUp({
             </div>
           </div>
 
-          <div className="mt-4 bg-btndark p-2">
+          <div className="mt-4 bg-slate-50 p-2 dark:bg-btndark">
             <label className="text-xs">How do you know about us?</label>
 
             <div className="mt-1 flex items-end gap-2">
@@ -298,8 +299,8 @@ export default function ChangePopUp({
                     position: "bottom-center",
                     style: {
                       borderRadius: "10px",
-                      background: "#333",
-                      color: "#fff",
+                      background: "inherit",
+                      color: "inherit",
                     },
                   });
                 } else if (details.mode === "2" && details.phone === "") {
@@ -308,8 +309,8 @@ export default function ChangePopUp({
                     position: "bottom-center",
                     style: {
                       borderRadius: "10px",
-                      background: "#333",
-                      color: "#fff",
+                      background: "inherit",
+                      color: "inherit",
                     },
                   });
                 } else if (
@@ -322,8 +323,8 @@ export default function ChangePopUp({
                       position: "bottom-center",
                       style: {
                         borderRadius: "10px",
-                        background: "#333",
-                        color: "#fff",
+                        background: "inherit",
+                        color: "inherit",
                       },
                     });
                   }
@@ -334,8 +335,8 @@ export default function ChangePopUp({
                       position: "bottom-center",
                       style: {
                         borderRadius: "10px",
-                        background: "#333",
-                        color: "#fff",
+                        background: "inherit",
+                        color: "inherit",
                       },
                     });
                   }
@@ -348,8 +349,8 @@ export default function ChangePopUp({
                   position: "bottom-center",
                   style: {
                     borderRadius: "10px",
-                    background: "#333",
-                    color: "#fff",
+                    background: "inherit",
+                    color: "inherit",
                   },
                 });
               }
@@ -393,7 +394,8 @@ export default function ChangePopUp({
             Thank you for choosing us! Track updates on our '
             <Link
               className="font-semibold text-blue-400 underline"
-              href={"/track"} target="_blank"
+              href={"/track"}
+              target="_blank"
             >
               Track
             </Link>

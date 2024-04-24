@@ -80,22 +80,26 @@ export default function page() {
               } else {
                 toast("Please enter either change num or stask!", {
                   icon: "❌",
-                  position: "top-center",
+                  position: "bottom-center",
                   style: {
                     borderRadius: "10px",
-                    background: "#333",
-                    color: "#fff",
+                    background: "inherit",
+                    color: "inherit",
                   },
                 });
               }
             }}
             disabled={loader}
-            className="mt-5 w-fit min-w-[100px] rounded-sm bg-primary px-4 py-2 text-sm font-medium text-white flex justify-center"
+            className="mt-5 flex w-fit min-w-[100px] justify-center rounded-sm bg-primary px-4 py-2 text-sm font-medium text-white"
           >
             {loader ? (
               <div className="mx-auto h-5  w-5 animate-spin rounded-full border-t-2 border-white"></div>
+            ) : (changeId || sctask) &&
+              finalData &&
+              Object.keys(finalData).length > 0 ? (
+              "Refresh"
             ) : (
-              (changeId || sctask) && finalData && Object.keys(finalData).length > 0 ?  "Refresh" : "Track"
+              "Track"
             )}
           </button>
 
@@ -154,7 +158,9 @@ export default function page() {
                 <div className="w-full rounded-sm  ">
                   <div className="flex justify-between text-xs font-normal italic text-slate-600 dark:text-slate-400">
                     <label>{!item.sender ? "System" : item.sender}</label>
-                    <label>{item.createddate.replace("T", " ").slice(0,16)}</label>
+                    <label>
+                      {item.createddate.replace("T", " ").slice(0, 16)}
+                    </label>
                   </div>
                   <p className="mt-0.5 rounded-sm border-2 border-slate-100 bg-slate-100 px-4 py-2 text-xs font-medium text-slate-600 hover:border-primary dark:border-blackho dark:bg-blackho dark:text-slate-400 lg:text-sm">
                     {item.note}
