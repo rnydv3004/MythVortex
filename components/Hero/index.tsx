@@ -68,7 +68,7 @@ const Hero = () => {
             {/* button */}
             <div className="mt-10 ">
               <Link
-                href={"/#services"}
+                href={"/studio"}
                 className="rounded-md border-2 border-transparent bg-primary px-4 py-2 text-sm text-white active:scale-90"
               >
                 Get Started
