@@ -98,7 +98,7 @@ export default function Page() {
       <HeroParallax products={products} />
 
       <div className="mx-auto max-w-c-1280 px-4 md:px-8 xl:mt-20 xl:px-0">
-        <div className=" mb-10 flex w-full items-start gap-2 rounded-sm border border-green-600 bg-green-300 bg-opacity-25 px-4 py-2 text-justify text-sm font-medium text-green-500 dark:bg-green-700 dark:bg-opacity-35 lg:items-center lg:text-base">
+        {/* <div className=" mb-10 flex w-full items-start gap-2 rounded-sm border border-green-600 bg-green-300 bg-opacity-25 px-4 py-2 text-justify text-sm font-medium text-green-500 dark:bg-green-700 dark:bg-opacity-35 lg:items-center lg:text-base">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -115,9 +115,9 @@ export default function Page() {
           </svg>
           Hey there! 😊 Don't worry, we won't bother you with calls unless you
           ask for one. Your peace of mind is our priority.
-        </div>
+        </div> */}
 
-        <div className="relative flex flex-col gap-5 lg:flex-row">
+        {/* <div className="relative flex flex-col gap-5 lg:flex-row">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -167,9 +167,9 @@ export default function Page() {
                 </button>
               ))}
           </div>
-        </div>
+        </div> */}
 
-        <div className="mb-20 mt-5">
+        <div className="mb-20 ">
           {/* {blogData.length === 0 ? <>No Blog Found!</> : <></>} */}
 
           {studioList &&
