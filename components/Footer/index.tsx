@@ -5,7 +5,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <>
-      <footer className="border-t-2 z-50 border-stroke bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:border-strokedark dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent">
+      <footer className="z-50 border-t-2 border-stroke bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] dark:border-strokedark dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent">
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           {/* <!-- Footer Top --> */}
           <div className="py-10 lg:py-25">
@@ -106,6 +106,14 @@ const Footer = () => {
                         Careers
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href="/workflow"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Workflow
+                      </Link>
+                    </li>
                   </ul>
                 </motion.div>
 
@@ -135,18 +143,26 @@ const Footer = () => {
                   <ul>
                     <li>
                       <Link
-                        href="/workflow"
+                        href="/blog"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Workflow
+                        Blog
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="/contact"
+                        href="/studio"
                         className="mb-3 inline-block hover:text-primary"
                       >
-                        Support
+                        Studio
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/track"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Track
                       </Link>
                     </li>
                     {/* <li>
@@ -261,14 +277,6 @@ const Footer = () => {
                   </h4>
 
                   <ul>
-                    <li>
-                      <Link
-                        href="/blog"
-                        className="mb-3 inline-block hover:text-primary"
-                      >
-                        Blog
-                      </Link>
-                    </li>
                     {/* <li>
                       <Link
                         href="/under-development"
@@ -285,6 +293,14 @@ const Footer = () => {
                         Feedback
                       </Link>
                     </li> */}
+                    <li>
+                      <Link
+                        href="/contact"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Contact
+                      </Link>
+                    </li>
                     <li>
                       <Link
                         href="/#faq"
@@ -397,7 +413,7 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="#" className="hover:text-primary">
+                  <Link href="/contact" className="hover:text-primary">
                     Support
                   </Link>
                 </li>
@@ -449,7 +465,11 @@ const Footer = () => {
               <ul className="flex items-center gap-5">
                 {/* Facebook */}
                 <li>
-                  <Link href="https://www.facebook.com/people/MythVortex/61555751405440/" target="_blank" aria-label="social icon">
+                  <Link
+                    href="https://www.facebook.com/people/MythVortex/61555751405440/"
+                    target="_blank"
+                    aria-label="social icon"
+                  >
                     <svg
                       className="fill-[#383838] transition-all duration-300 hover:fill-primary dark:fill-[#878787]"
                       width="24"
@@ -475,7 +495,11 @@ const Footer = () => {
 
                 {/* Twitter */}
                 <li>
-                  <Link href="https://twitter.com/MythVortex_" target="_blank" aria-label="social icon">
+                  <Link
+                    href="https://twitter.com/MythVortex_"
+                    target="_blank"
+                    aria-label="social icon"
+                  >
                     <svg
                       className="fill-[#383838] transition-all duration-300 hover:fill-primary dark:fill-[#878787]"
                       width="24"
@@ -527,7 +551,11 @@ const Footer = () => {
 
                 {/* Instagram */}
                 <li>
-                  <Link href="https://www.instagram.com/mythvortex_/" target="_blank" aria-label="social icon">
+                  <Link
+                    href="https://www.instagram.com/mythvortex_/"
+                    target="_blank"
+                    aria-label="social icon"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
@@ -544,7 +572,11 @@ const Footer = () => {
 
                 {/* QUORA */}
                 <li>
-                  <Link href="https://qr.ae/pKdyGl" target="_blank" aria-label="social icon">
+                  <Link
+                    href="https://qr.ae/pKdyGl"
+                    target="_blank"
+                    aria-label="social icon"
+                  >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       x="0px"
