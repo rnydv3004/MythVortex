@@ -13,7 +13,7 @@ const FunFact = () => {
           {[...Array(2000)].map((_, index) => (
             <div
               key={index}
-              className="absolute bg-slate-200 dark:bg-slate-800 -z-10"
+              className="absolute bg-slate-300 dark:bg-slate-800 -z-10"
               style={{
                 width: "4px",
                 height: "4px",
