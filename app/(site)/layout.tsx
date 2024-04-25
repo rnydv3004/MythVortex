@@ -3,6 +3,7 @@ import "../globals.css";
 import React from "react";
 import MainLayout from "./mainLayout";
 import type { Metadata } from "next";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,7 +26,7 @@ export const metadata: Metadata = {
   creator: "Mythvortex",
   // twitter: {
   //   card: "summary_large_image",
-  //   site: "@yourtwitterhandle", 
+  //   site: "@yourtwitterhandle",
   //   title: "Mythvortex",
   //   description: "Where Myths Meet The Innovation",
   // },
@@ -48,6 +49,20 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`dark:bg-black ${inter.className}`}>
+        {/* Google Tag Manager */}
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-LXG8Y05XH8"
+        />
+        <Script>
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+    
+          gtag('config', 'G-LXG8Y05XH8');
+        `}
+        </Script>
         <MainLayout children={children} />
       </body>
     </html>
