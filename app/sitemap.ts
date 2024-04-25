@@ -29,6 +29,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
                 priority: 1,
             },
             {
+                url: "https://mythvortex.com/studio",
+                lastModified: new Date(),
+                changeFrequency: "weekly",
+                priority: 0.9,
+            },
+            {
+                url: "https://mythvortex.com/track",
+                lastModified: new Date(),
+                changeFrequency: "weekly",
+                priority: 0.8,
+            },
+            {
                 url: "https://mythvortex.com/careers",
                 lastModified: new Date(),
                 changeFrequency: "weekly",

@@ -3,7 +3,7 @@ import WorkFlow from "./WorkFlow";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Workflow | Mythvortex",
+  title: "Workflow",
   description:
     "Navigate the service lifecycle seamlessly with our comprehensive page workflow. From initiation to completion, unlock clarity and efficiency in every step.",
   keywords: [
@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "web app",
     "website",
     "website development",
+    "startup",
+    "business",
+    "Entrepreneurship",
     "startup",
   ],
   authors: [{ name: "Mythvortex", url: "https://www.mythvortex.com" }],

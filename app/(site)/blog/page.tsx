@@ -5,7 +5,7 @@ import { Metadata } from "next";
 import { useState } from "react";
 
 export const metadata: Metadata = {
-  title: "Blog | Mythvortex",
+  title: "Blog",
   description:
     "Step into our virtual library of insights and discoveries on our blog page. From thought-provoking analysis to practical tips and tutorials, find everything you need to stay ahead in Technology. ",
   keywords: [
@@ -18,6 +18,9 @@ export const metadata: Metadata = {
     "web app",
     "website",
     "website development",
+    "startup",
+    "business",
+    "Entrepreneurship",
     "startup",
   ],
   authors: [{ name: "Mythvortex", url: "https://www.mythvortex.com" }],

@@ -4,7 +4,7 @@ import { Metadata } from "next";
 import Whatsapp from "@/components/Whatsapp";
 
 export const metadata: Metadata = {
-  title: "Contact | Mythvortex",
+  title: "Contact",
   description:
     "Get in touch with us easily through our contact page. Whether you have questions, feedback, or inquiries, we're here to assist you. Reach out to us and let's start the conversation!",
   keywords: [
@@ -17,6 +17,9 @@ export const metadata: Metadata = {
     "web app",
     "website",
     "website development",
+    "startup",
+    "business",
+    "Entrepreneurship",
     "startup",
   ],
   authors: [{ name: "Mythvortex", url: "https://www.mythvortex.com" }],

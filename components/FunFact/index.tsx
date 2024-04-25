@@ -8,19 +8,21 @@ const FunFact = () => {
     <>
       {/* <!-- ===== Funfact Start ===== --> */}
       <section className="px-4 py-20 pt-20 md:px-8 md:py-20 lg:py-22.5 2xl:px-0">
-        <div className="relative z-1 mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5">
-          <Image
-            fill
-            src="/images/shape/shape-dotted-light-02.svg"
-            alt="Dotted"
-            className="absolute left-0 top-0 -z-1 dark:hidden"
-          />
-          <Image
-            fill
-            src="/images/shape/shape-dotted-dark-02.svg"
-            alt="Dotted"
-            className="absolute left-0 top-0 -z-1 hidden dark:block"
-          />
+        <div className="relative z-1 mx-auto max-w-c-1390 rounded-lg bg-gradient-to-t from-[#F8F9FF] to-[#DEE7FF] py-22.5 dark:bg-blacksection dark:bg-gradient-to-t dark:from-transparent dark:to-transparent dark:stroke-strokedark xl:py-27.5 overflow-hidden">
+          
+          {[...Array(2000)].map((_, index) => (
+            <div
+              key={index}
+              className="absolute bg-slate-200 dark:bg-slate-800 -z-10"
+              style={{
+                width: "4px",
+                height: "4px",
+                borderRadius: "50%",
+                top: `${Math.floor(index / 50) * 25}px`, // Calculate top position based on index
+                left: `${(index % 50) * 25}px`, // Calculate left position based on index
+              }}
+            />
+          ))}
 
           <motion.div
             variants={{
@@ -49,7 +51,7 @@ const FunFact = () => {
             </p>
           </motion.div>
 
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8 lg:gap-42.5">
+          <div className="flex flex-col items-center justify-center gap-8 md:flex-row lg:gap-42.5">
             <motion.div
               variants={{
                 hidden: {
@@ -155,7 +157,7 @@ const FunFact = () => {
               <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
                 10+
               </h3>
-              <p className="text-lg lg:text-para2 flex items-center gap-2">
+              <p className="flex items-center gap-2 text-lg lg:text-para2">
                 <span className="text-white">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

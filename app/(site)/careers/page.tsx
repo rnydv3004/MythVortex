@@ -3,7 +3,7 @@ import Career from "./Career";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Career | Mythvortex",
+  title: "Career",
   description:
     "Explore exciting opportunities and join our team! Discover rewarding career paths, innovative projects, and a supportive work environment. Start your journey with us today!",
   keywords: [
@@ -16,6 +16,9 @@ export const metadata: Metadata = {
     "web app",
     "website",
     "website development",
+    "startup",
+    "business",
+    "Entrepreneurship",
     "startup",
   ],
   authors: [{ name: "Mythvortex", url: "https://www.mythvortex.com" }],
