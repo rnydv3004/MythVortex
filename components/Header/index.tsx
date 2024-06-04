@@ -45,17 +45,9 @@ const Header = () => {
         }}
         className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:flex md:px-8 2xl:px-0"
       >
-        <div className="mr-10 flex w-full items-center justify-between md:w-fit">
+        <div className="mr-10 flex w-full items-center justify-between md:w-fit border-slate-600 aspect-square border-2 rounded-full">
           <a href="/">
-            {/* <h6 className="text-2xl font-semibold uppercase text-slate-700 dark:text-white">
-              <span className="bg-gradient-to-tr from-black via-slate-600 to-slate-900 bg-clip-text text-transparent dark:from-slate-500 dark:via-gray-200 dark:to-slate-400 ">
-                Myth
-              </span>
-              <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text font-extrabold text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
-                Vortex
-              </span>
-            </h6> */}
-            <Image src={LogoDark} alt={""} className="h-12 aspect-square w-fit rounded-full"/>
+            <Image src={LogoDark} alt={""} className="h-fit aspect-square w-12 rounded-full "/>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
