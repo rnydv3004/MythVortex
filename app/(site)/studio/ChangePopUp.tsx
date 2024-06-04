@@ -70,14 +70,14 @@ export default function ChangePopUp({
       onClick={() => {
         close(-1);
       }}
-      className="fixed left-0 top-0 z-40 flex h-screen w-screen items-start justify-center bg-slate-100 bg-opacity-75 p-2 pt-20 dark:bg-black md:items-center md:pt-0"
+      className="fixed z-above-header left-0 top-0 flex h-screen w-screen items-start justify-center bg-slate-100 bg-opacity-60 p-2 pt-20 dark:bg-black md:items-center md:pt-0"
     >
       {task.changeReq === "" ? (
         <div
           onClick={(e) => {
             e.stopPropagation();
           }}
-          className="relative z-99999 h-fit w-full rounded-md border p-5 shadow-xl dark:border-slate-700  dark:shadow-black md:w-[450px] bg-white dark:bg-black"
+          className="relative h-fit w-full rounded-md border p-5 shadow-xl dark:border-slate-700  dark:shadow-black md:w-[450px] bg-white dark:bg-black"
         >
           <button className="absolute right-4 top-4">
             <svg

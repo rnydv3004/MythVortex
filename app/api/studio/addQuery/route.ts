@@ -36,9 +36,9 @@ export async function POST(request: Request) {
         const data: any = result.rows[0];
 
         // Escaping backticks in the SQL query
-        const sqlQuery2 = `INSERT INTO worklogs (studioleadid, note) VALUES ($1, 'Task: ' || $2 || ' created with change number: ' || $3 || ': ' || $4);`;
+        const sqlQuery2 = `INSERT INTO worklogs (sctaskid, note) VALUES ($1, 'Task: ' || $2 || ' created with change number: ' || $3 || ': ' || $4);`;
 
-        await sql.query(sqlQuery2, [data.id, data.sctask, data.changeid, details.itemTitle]);
+        await sql.query(sqlQuery2, [data.sctask, data.sctask, data.changeid, details.itemTitle]);
 
 
         // Organize data by category
