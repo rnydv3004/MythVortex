@@ -45,9 +45,9 @@ const Header = () => {
         }}
         className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:flex md:px-8 2xl:px-0"
       >
-        <div className="mr-10 flex w-full items-center justify-between md:w-fit border-slate-600 aspect-square border-2 rounded-full">
+        <div className="mr-10 flex w-full items-center justify-between md:w-fit border-slate-600 rounded-full">
           <a href="/">
-            <Image src={LogoDark} alt={""} className="h-fit aspect-square w-12 rounded-full "/>
+            <Image src={LogoDark} alt={""} className="h-fit aspect-square w-12 rounded-full border-2 border-slate-700 "/>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
