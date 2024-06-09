@@ -7,6 +7,8 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 import LogoDark from "../../public/logo_rec.png";
+import Logo from "../../public/logo.png";
+import LogoWhite from "../../public/logo_wh.png";
 
 const Header = () => {
   const [navigationOpen, setNavigationOpen] = useState(false);
@@ -45,9 +47,13 @@ const Header = () => {
         }}
         className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:flex md:px-8 2xl:px-0"
       >
-        <div className="mr-10 flex w-full items-center justify-between md:w-fit border-slate-600 rounded-full">
-          <a href="/">
+        <div className="mr-10 flex w-full items-center justify-between md:w-fit dark:border-slate-600 rounded-full">
+          {/* <a href="/">
             <Image src={LogoDark} alt={""} className="h-fit aspect-square w-12 rounded-full border-2 border-slate-700 "/>
+          </a> */}
+
+          <a href="/">
+            <Image src={Logo} alt={""} className="h-fit w-16 scale-x-110 "/>
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}
@@ -165,9 +171,9 @@ const Header = () => {
 
             <Link
               href="/studio"
-              className="rounded-md border-2 border-transparent bg-primary px-4 py-2 text-sm text-white active:scale-90"
+              className="rounded-md border-2 border-transparent bg-primary px-4 py-2 text-sm text-white active:scale-90 font-bold"
             >
-              Get Started
+              Free Cosultation
             </Link>
           </div>
         </div>

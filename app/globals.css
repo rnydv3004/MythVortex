@@ -136,3 +136,18 @@ input:-webkit-autofill:active {
 ::-webkit-scrollbar{
   height: 0px;
 }
+
+.btn-primary{
+  @apply bg-blue-600 text-white rounded-sm py-2 px-4
+}
+
+.input-primary{
+  @apply py-2 text-slate-700 font-medium border-2 border-slate-200 rounded-sm px-4 outline-primary
+}
+
+select {
+  -webkit-appearance: none; /* For Chrome and Safari */
+  -moz-appearance: none; /* For Firefox */
+  appearance: none; /* For other browsers */
+}
+

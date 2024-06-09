@@ -13,13 +13,13 @@ const FunFact = () => {
           {[...Array(2000)].map((_, index) => (
             <div
               key={index}
-              className="absolute bg-slate-300 dark:bg-slate-800 -z-10"
+              className="absolute bg-white dark:bg-slate-600 -z-10"
               style={{
                 width: "4px",
                 height: "4px",
                 borderRadius: "50%",
                 top: `${Math.floor(index / 50) * 25}px`, // Calculate top position based on index
-                left: `${(index % 50) * 25}px`, // Calculate left position based on index
+                left: `${(index % 10) * 25}px`, // Calculate left position based on index
               }}
             />
           ))}
@@ -42,7 +42,7 @@ const FunFact = () => {
             viewport={{ once: true }}
             className="animate_top mx-auto mb-12.5 px-4 text-center md:w-4/5 md:px-0 lg:mb-17.5 lg:w-2/3 xl:w-1/2"
           >
-            <h2 className="mb-4  text-xl font-semibold text-black dark:text-white md:text-3xl xl:text-sectiontitle4">
+            <h2 className="mb-4  text-xl font-bold text-blue-800 dark:text-white md:text-3xl xl:text-sectiontitle4">
               Forging Digital Excellence
             </h2>
             <p className="mx-auto text-base lg:w-11/12">
@@ -70,7 +70,7 @@ const FunFact = () => {
               viewport={{ once: true }}
               className="animate_top text-center"
             >
-              <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+              <h3 className="mb-2.5 text-3xl font-bold text-blue-700 dark:text-white xl:text-sectiontitle3">
                 50+
               </h3>
               <p className="flex items-center gap-2 text-lg lg:text-para2">
@@ -94,6 +94,7 @@ const FunFact = () => {
                 Integration Tools
               </p>
             </motion.div>
+
             <motion.div
               variants={{
                 hidden: {
@@ -112,7 +113,7 @@ const FunFact = () => {
               viewport={{ once: true }}
               className="animate_top text-center"
             >
-              <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3 ">
+              <h3 className="mb-2.5 text-3xl font-bold text-blue-700 dark:text-white xl:text-sectiontitle3 ">
                 50,000+
               </h3>
               <p className="flex items-center gap-2 text-lg lg:text-para2">
@@ -154,7 +155,7 @@ const FunFact = () => {
               viewport={{ once: true }}
               className="animate_top text-center"
             >
-              <h3 className="mb-2.5 text-3xl font-bold text-black dark:text-white xl:text-sectiontitle3">
+              <h3 className="mb-2.5 text-3xl font-bold text-blue-700 dark:text-white xl:text-sectiontitle3">
                 10+
               </h3>
               <p className="flex items-center gap-2 text-lg lg:text-para2">
@@ -179,6 +180,7 @@ const FunFact = () => {
               </p>
             </motion.div>
           </div>
+          
         </div>
       </section>
       {/* <!-- ===== Funfact End ===== --> */}

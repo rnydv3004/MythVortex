@@ -46,13 +46,8 @@ const Footer = () => {
                   </p>
                   <p className="mb-0 mt-5">Address:</p>
                   <p className="mb-0 mt-2 text-sm">
-                    MythVortex, Plot no 80M,
-                    <br />
-                    Raees Colony, Chotpur Rd,
-                    <br />
-                    Alivardipur, Jalpura, Greater Noida{" "}
+                    180 John St, Toronto, ON M5T1X5
                   </p>
-                  <p className="mb-0 mt-0 text-sm">Pincode - 201306</p>
                   <p className="mb-0 mt-2 text-sm">
                     Email: contact@myhtvortex.com
                   </p>

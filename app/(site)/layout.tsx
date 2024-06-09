@@ -1,4 +1,4 @@
-import { Inter } from "next/font/google";
+import { Inter, Montserrat } from "next/font/google";
 import "../globals.css";
 import React from "react";
 import MainLayout from "./mainLayout";
@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Home | Mythvortex",
@@ -48,7 +49,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`dark:bg-black ${inter.className}`}>
+      <body className={`dark:bg-black ${montserrat.className}`}>
         {/* Google Tag Manager */}
         <Script
           async

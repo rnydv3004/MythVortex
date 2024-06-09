@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import dayjs, { Dayjs } from "dayjs";
 import Calendar from "react-calendar";
 // import "react-calendar/dist/Calendar.css";
-import 'assets/css/MiniCalender.css'
+import "assets/css/MiniCalender.css";
 
 const Hero = () => {
   const [sliderValue, setSliderValue] = useState(70);
@@ -16,17 +16,13 @@ const Hero = () => {
     e.preventDefault();
   };
 
-  const words = `Embark on a journey at MythVortex, where mythical narratives
-  seamlessly intertwine with innovative wonders, crafting a realm
-  of imagination and discovery`;
-
   return (
     <section className="relative -z-0 h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
       <div className="absolute left-0 top-0 -z-10 h-screen w-screen overflow-hidden">
         {[...Array(2000)].map((_, index) => (
           <div
             key={index}
-            className="absolute bg-slate-200 dark:bg-slate-800"
+            className="absolute bg-slate-200 bg-opacity-65 dark:bg-slate-800"
             style={{
               width: "4px",
               height: "4px",
@@ -39,44 +35,69 @@ const Hero = () => {
       </div>
 
       <div className="mx-auto flex h-full items-center justify-center overflow-hidden md:px-8 2xl:px-0">
-        <div className="flex h-full flex-col justify-evenly overflow-hidden lg:flex-row lg:items-center lg:gap-8 xl:gap-32.5">
-          <div className="flex h-full w-full flex-col justify-center px-4 md:px-0 lg:w-1/2 lg:pl-20">
+        <div className="flex h-full flex-col justify-evenly overflow-hidden lg:flex-row lg:items-center lg:gap-10">
+          <div className="flex h-full w-full flex-col justify-center px-4 md:px-0 lg:w-1/2 lg:pl-20 ">
             {/* heading */}
-            <h1 className="mb-0 pr-8 text-[2rem] font-extrabold leading-[42px] text-black dark:text-slate-300 md:text-6xl md:font-extrabold xl:text-5xl ">
-              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+            <h1 className="mb-0 mt-5 pr-8 text-[1.65rem] leading-8 lg:leading-[2.5rem] font-bold text-slate-800 dark:text-slate-300 md:text-6xl md:font-extrabold lg:mt-0 lg:text-[36px]">
+              <span className="bg-gradient-to-tr from-black via-gray-600 to-slate-800 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
                 Where
               </span>{" "}
               <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
                 Myths
               </span>{" "}
-              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                Meet
-              </span>{" "}
-              <span className="bg-gradient-to-tr from-black via-slate-700 to-slate-900 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                the
-              </span>{" "}
-              <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
-                Innovation
+              <span className="text-nowrap bg-gradient-to-tr from-black via-gray-600 to-slate-800 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                Meet{" "}
+                <span className="bg-gradient-to-tr from-black via-gray-600 to-slate-800 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                  the
+                </span>{" "}
+                <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
+                  Innovation
+                </span>
               </span>
             </h1>
 
             {/* sub desc */}
-            <div className="mt-2 text-justify font-medium leading-[22px] text-slate-400 lg:text-left lg:leading-6">
-              {words}
+            <div className="mt-2 w-[80%] text-justify font-medium leading-[22px] text-slate-500 lg:mt-4 lg:w-2/3 lg:leading-6">
+              <p>
+                <span className="font-extrabold text-primary">___</span>Immerse
+                yourself in <span className="text-primary">MythVortex</span>,
+                where myth meets cutting-edge web and mobile development,
+                crafting unparalleled realms of imagination and adventure.
+              </p>
             </div>
 
-            {/* button */}
-            <div className="mt-10 ">
+            <div className="item-start lg:mt-5 flex w-[80%] flex-col-reverse gap-2 lg:w-fit lg:flex-row lg:items-center lg:gap-5">
               <Link
                 href={"/studio"}
-                className="rounded-md border-2 border-transparent bg-primary px-4 py-2 text-sm text-white active:scale-90"
+                className="lg:text-md w-fit rounded-md border-[3px] border-transparent bg-primary px-4 py-2 text-center text-sm font-semibold text-white hover:border-primary hover:bg-transparent hover:text-primary active:scale-90 lg:min-w-[180px]"
               >
-                Get Started
+                Free Consultation
+              </Link>
+
+              <Link
+                className="lg:text-md w-fit rounded-md border-primary bg-transparent px-1 text-left text-sm font-semibold text-primary duration-300 ease-in-out hover:bg-primary hover:text-white active:scale-90 lg:min-w-[180px] lg:border-[3px] lg:px-4 py-2 lg:text-center flex justify-center items-center gap-2"
+                href={"/"}
+              >
+                View our work
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.8"
+                  stroke="currentColor"
+                  className="size-5 lg:hidden"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
+                  />
+                </svg>
               </Link>
             </div>
           </div>
 
-          <div className="animate_right flex h-full w-full items-end justify-center overflow-hidden pl-4 lg:w-[70%]">
+          <div className="animate_right flex h-full w-full items-end justify-center overflow-hidden pl-4 lg:w-1/2">
             <div className="h-[100%] w-full overflow-hidden rounded-tl-lg border-2 border-b-0 border-slate-300 bg-slate-200 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[90%] md:p-10">
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
                 <div className="flex h-full w-full items-center justify-center gap-2">
@@ -86,7 +107,7 @@ const Hero = () => {
                       <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-blue-600 hover:bg-blue-600 hover:text-white md:py-1 md:text-xs">
                         Development
                       </button>
-                      <button className="rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-red-600 hover:bg-red-600 hover:text-white md:py-1 md:text-xs hidden lg:block">
+                      <button className="hidden rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-red-600 hover:bg-red-600 hover:text-white md:py-1 md:text-xs lg:block">
                         SEO
                       </button>
                       <button className="rounded-full border border-green-600 bg-green-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-green-600 hover:bg-green-600 hover:text-white md:py-1 md:text-xs">
@@ -464,7 +485,7 @@ const Hero = () => {
                     </div>
 
                     {/* Buttons */}
-                    <div className="hidden lg:flex w-full flex-wrap justify-between gap-y-2 md:flex-nowrap ">
+                    <div className="hidden w-full flex-wrap justify-between gap-y-2 md:flex-nowrap lg:flex ">
                       <ThemeToggler />
                       <button className="w-fit self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
                         Button
@@ -478,7 +499,7 @@ const Hero = () => {
                     </div>
 
                     {/* Calender */}
-                    <div className="mx-auto max-w-md rounded-xl border p-2 shadow-md dark:border-slate-600 dark:bg-black dark:bg-opacity-60 dark:text-white  md:bg-white md:p-2 text-sm animate-floatYR">
+                    <div className="mx-auto max-w-md animate-floatYR rounded-xl border p-2 text-sm shadow-md dark:border-slate-600 dark:bg-black  dark:bg-opacity-60 dark:text-white md:bg-white md:p-2">
                       <div className="calendar-container">
                         <Calendar defaultValue={dayjs().toDate()} />
                       </div>

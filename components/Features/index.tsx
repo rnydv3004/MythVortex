@@ -8,8 +8,12 @@ const Feature = () => {
   return (
     <>
       {/* <!-- ===== Features Start ===== --> */}
-      <section id="features" className="py-20 lg:py-25 xl:py-30 border border-x-0 border-y-stroke bg-alabaster dark:border-y-strokedark dark:bg-black">
-        <div className="mx-auto max-w-c-1315 px-4 md:px-8 xl:px-0">
+      <section
+        id="features"
+        className="border-4 border-x-0 border-y-stroke bg-alabaster py-20 dark:border-y-strokedark dark:bg-black lg:py-15"
+      >
+        <div className="mx-auto  max-w-c-1315 px-4 md:px-8 xl:px-0">
+          
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
@@ -20,7 +24,7 @@ const Feature = () => {
           />
           {/* <!-- Section Title End --> */}
 
-          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-15 lg:grid-cols-3 xl:mt-20 xl:gap-12.5">
+          <div className="mt-12.5 grid grid-cols-1 gap-7.5 md:grid-cols-2 lg:mt-10 lg:grid-cols-3 xl:gap-12.5">
             {/* <!-- Features item Start --> */}
 
             {featuresData.map((feature, key) => (
@@ -28,6 +32,7 @@ const Feature = () => {
             ))}
             {/* <!-- Features item End --> */}
           </div>
+          
         </div>
       </section>
 

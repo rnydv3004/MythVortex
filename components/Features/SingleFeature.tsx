@@ -24,9 +24,9 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
         whileInView="visible"
         transition={{ duration: 0.5 }}
         viewport={{ once: true }}
-        className="animate_top z-40 rounded-md border border-white bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-8"
+        className="animate_top z-40 rounded-md border border-slate-200 bg-white p-7.5 shadow-solid-3 transition-all hover:shadow-solid-4 dark:border-strokedark dark:bg-blacksection dark:hover:bg-hoverdark xl:p-6"
       >
-        <div className="flex w-full gap-4 items-center mb-5">
+        <div className="flex w-full gap-4 items-center mb-2">
           <div className="relative flex min-h-[50px] min-w-[50px] items-center justify-center rounded-2xl bg-primary text-white p-2">
             {icon}
           </div>
@@ -34,7 +34,7 @@ const SingleFeature = ({ feature }: { feature: Feature }) => {
             {title}
           </h3>
         </div>
-        <p>{description}</p>
+        <p className="text-justify">{description}</p>
       </motion.div>
     </>
   );
