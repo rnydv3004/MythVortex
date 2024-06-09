@@ -9,6 +9,8 @@ import Calendar from "react-calendar";
 // import "react-calendar/dist/Calendar.css";
 import "assets/css/MiniCalender.css";
 
+import AppointmentImage from "../../public/images/appointment.png";
+
 const Hero = () => {
   const [sliderValue, setSliderValue] = useState(70);
 
@@ -38,7 +40,7 @@ const Hero = () => {
         <div className="flex h-full flex-col justify-evenly overflow-hidden lg:flex-row lg:items-center lg:gap-10">
           <div className="flex h-full w-full flex-col justify-center px-4 md:px-0 lg:w-1/2 lg:pl-20 ">
             {/* heading */}
-            <h1 className="mb-0 mt-5 pr-8 text-[1.65rem] leading-8 lg:leading-[2.5rem] font-bold text-slate-800 dark:text-slate-300 md:text-6xl md:font-extrabold lg:mt-0 lg:text-[36px]">
+            <h1 className="mb-0 mt-5 pr-8 text-[1.65rem] font-bold leading-8 text-slate-800 dark:text-slate-300 md:text-6xl md:font-extrabold lg:mt-0 lg:text-[36px] lg:leading-[2.5rem]">
               <span className="bg-gradient-to-tr from-black via-gray-600 to-slate-800 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
                 Where
               </span>{" "}
@@ -57,16 +59,19 @@ const Hero = () => {
             </h1>
 
             {/* sub desc */}
-            <div className="mt-2 w-[80%] text-justify font-medium leading-[22px] text-slate-500 lg:mt-4 lg:w-2/3 lg:leading-6">
+            <div className="mt-2 w-[80%] text-justify font-medium leading-[22px] text-slate-500 dark:text-slate-400 lg:mt-4 lg:w-2/3 lg:leading-6">
               <p>
-                <span className="font-extrabold text-primary">___</span>Immerse
-                yourself in <span className="text-primary">MythVortex</span>,
+                <span className="font-extrabold text-primary underline">
+                  ___
+                </span>
+                Immerse yourself in{" "}
+                <span className="font-semibold text-primary">MythVortex</span>,
                 where myth meets cutting-edge web and mobile development,
                 crafting unparalleled realms of imagination and adventure.
               </p>
             </div>
 
-            <div className="item-start lg:mt-5 flex w-[80%] flex-col-reverse gap-2 lg:w-fit lg:flex-row lg:items-center lg:gap-5">
+            <div className="item-start flex w-[80%] flex-col-reverse gap-2 lg:mt-5 lg:w-fit lg:flex-row lg:items-center lg:gap-5">
               <Link
                 href={"/studio"}
                 className="lg:text-md w-fit rounded-md border-[3px] border-transparent bg-primary px-4 py-2 text-center text-sm font-semibold text-white hover:border-primary hover:bg-transparent hover:text-primary active:scale-90 lg:min-w-[180px]"
@@ -75,7 +80,7 @@ const Hero = () => {
               </Link>
 
               <Link
-                className="lg:text-md w-fit rounded-md border-primary bg-transparent px-1 text-left text-sm font-semibold text-primary duration-300 ease-in-out hover:bg-primary hover:text-white active:scale-90 lg:min-w-[180px] lg:border-[3px] lg:px-4 py-2 lg:text-center flex justify-center items-center gap-2"
+                className="lg:text-md flex w-fit items-center justify-center gap-2 rounded-md border-primary bg-transparent px-1 py-2 text-left text-sm font-semibold text-primary duration-300 ease-in-out hover:bg-primary hover:text-white active:scale-90 lg:min-w-[180px] lg:border-[3px] lg:px-4 lg:text-center"
                 href={"/"}
               >
                 View our work
@@ -107,104 +112,82 @@ const Hero = () => {
                       <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-blue-600 hover:bg-blue-600 hover:text-white md:py-1 md:text-xs">
                         Development
                       </button>
-                      <button className="hidden rounded-full border border-red-600 bg-red-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-red-600 hover:bg-red-600 hover:text-white md:py-1 md:text-xs lg:block">
-                        SEO
-                      </button>
                       <button className="rounded-full border border-green-600 bg-green-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-green-600 hover:bg-green-600 hover:text-white md:py-1 md:text-xs">
                         Enhancement
                       </button>
                     </div>
 
                     {/* LOGIN PANEL */}
-                    <div className="hover:scale-10tra5 h-fit w-fit animate-floatY flex-col gap-4 rounded-lg border border-zinc-300 bg-primary p-4 text-white shadow-zinc-300 backdrop-filter dark:border-slate-900 dark:bg-transparent dark:bg-gradient-to-tr dark:from-blue-800 dark:via-blue-700 dark:to-blue-800 dark:dark:shadow-2xl dark:shadow-2xl dark:shadow-gray-900 dark:outline-black md:flex md:p-6 md:pt-8">
-                      <p className="text-xs font-medium text-white md:text-sm">
-                        Login
-                      </p>
-                      <div className="mt-3 flex w-full items-center justify-between md:mt-0">
-                        <input
-                          placeholder="user@gmail.com"
-                          type="text"
-                          className="h-full w-[80%] border-b-2 border-slate-300 bg-transparent text-xs font-light text-white placeholder-white outline-none dark:border-slate-500 dark:text-white"
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          height={"18"}
-                          width={"18"}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75"
-                          />
-                        </svg>
-                      </div>
-                      <div className="mt-3 flex w-full items-center justify-between md:mt-0">
-                        <input
-                          type="password"
-                          className="dar:text-white w-[80%] border-b-2 border-slate-300 bg-transparent text-xs font-light placeholder-white outline-none dark:border-slate-500"
-                          placeholder="**************"
-                        />
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          fill="none"
-                          viewBox="0 0 24 24"
-                          strokeWidth="1.5"
-                          stroke="currentColor"
-                          height={"18"}
-                          width={"18"}
-                        >
-                          <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z"
-                          />
-                        </svg>
-                      </div>
-                      <p className="mt-1 cursor-pointer text-[0.5rem] font-light text-blue-300 hover:text-white md:mt-0 md:text-xs">
-                        Forget Password?
-                      </p>
-                      <button
-                        onClick={() => {
-                          toast.custom(
-                            <div className="rounded-full px-4 py-2 text-sm font-medium shadow-lg dark:bg-slate-500 dark:text-white">
-                              Hi!&#x1F44B; You logged in my heart{" "}
-                              <span className="text-red-600">&#x2764;</span>
-                            </div>,
-                            {
-                              position: "bottom-left",
-                            },
-                          );
-                        }}
-                        className="w-[50%] self-center rounded-full bg-gradient-to-tl from-white via-slate-200 to-white  px-2 py-1 text-xs font-medium text-slate-900 outline-none active:scale-95 md:w-[60%] md:py-2"
-                      >
-                        Log in
-                      </button>
-                    </div>
+                    <Link
+                      className="animate-floatYR  overflow-hidden rounded-md opacity-80 hover:opacity-100"
+                      href={"/"}
+                    >
+                      <Image src={AppointmentImage} alt={"schedule"} />
+                      <h3 className="relative bottom-10 flex -rotate-[10deg] justify-center text-center font-semibold text-primary ">
+                        Book
+                        <span className="h-fit">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            className="size-6 -rotate-12 text-yellow-600"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
+                            />
+                          </svg>
+                        </span>
+                      </h3>
+                      <h3 className="relative bottom-10 flex -rotate-[10deg] justify-center text-center font-semibold text-primary">
+                        Free Consultation
+                      </h3>
+                    </Link>
 
                     {/* Range */}
-                    <div className="mt-5 w-full scale-90">
-                      <div className="flex w-full animate-floatX gap-2 rounded-full border bg-white px-4 py-2  hover:scale-105 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:gap-8 md:px-8 md:pb-[17px] md:pt-4">
-                        <input
-                          type="range"
-                          id="slider"
-                          name="slider"
-                          min="0"
-                          max="100"
-                          step="1"
-                          value={sliderValue}
-                          onChange={(e) => {
-                            setSliderValue(parseInt(e.target.value));
-                          }}
-                          className="w-full accent-blue-600"
-                        />
-                        <p className="w-15 font-semibold text-blue-600 dark:text-white">
-                          {sliderValue}%
-                        </p>
-                      </div>
+                    <div className="flex items-center justify-between">
+                      <Link
+                        href={"/"}
+                        className="relative bottom-8 mt-5 flex w-fit scale-90 animate-floatYR items-center justify-center gap-3 rounded-full border-2 border-green-400 bg-green-400 bg-opacity-20 px-4 py-2 opacity-70 hover:opacity-100"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          x="0px"
+                          y="0px"
+                          className="size-7"
+                          viewBox="0 0 48 48"
+                        >
+                          <path
+                            fill="#fff"
+                            d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"
+                          ></path>
+                          <path
+                            fill="#fff"
+                            d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"
+                          ></path>
+                          <path
+                            fill="#cfd8dc"
+                            d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"
+                          ></path>
+                          <path
+                            fill="#40c351"
+                            d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"
+                          ></path>
+                          <path
+                            fill="#fff"
+                            fill-rule="evenodd"
+                            d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
+                            clip-rule="evenodd"
+                          ></path>
+                        </svg>
+                        <span className="text-xl font-bold text-green-500">
+                          Connect
+                        </span>
+                      </Link>
+                      <ThemeToggler />
                     </div>
 
                     {/* Chat Screen */}
@@ -486,7 +469,6 @@ const Hero = () => {
 
                     {/* Buttons */}
                     <div className="hidden w-full flex-wrap justify-between gap-y-2 md:flex-nowrap lg:flex ">
-                      <ThemeToggler />
                       <button className="w-fit self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
                         Button
                       </button>

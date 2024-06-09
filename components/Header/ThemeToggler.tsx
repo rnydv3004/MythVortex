@@ -23,7 +23,7 @@ const ThemeToggler = () => {
         setTheme(theme === "dark" ? "light" : "dark");
         // toggleTheme();
       }}
-      className="flex h-8 w-8 items-center  justify-center rounded-full border-2 border-slate-600 p-1 text-sm text-slate-600 active:scale-90 dark:border-slate-400 dark:text-slate-400"
+      className="flex h-8 w-8 items-center  justify-center rounded-full border-2 border-slate-500 p-1 text-sm text-slate-400 active:scale-90 dark:border-slate-400 dark:text-slate-400"
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
