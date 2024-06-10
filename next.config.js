@@ -14,7 +14,8 @@ const nextConfig = {
   },
   env: {
     NODEMAILER_EMAIL: 'support@mythvortex.com',
-    NODEMAILER_PW: 'ajpe kwxa tstd kpvh'
+    NODEMAILER_PW: 'ajpe kwxa tstd kpvh',
+    DB_URL: "https://mythvortex-default-rtdb.firebaseio.com"
   },
 };
 

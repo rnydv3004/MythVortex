@@ -51,7 +51,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="relative -z-0 h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
+    <section className="relative container mx-auto -z-0 h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
       <div className="absolute left-0 top-0 -z-10 h-screen w-screen overflow-hidden">
         {[...Array(2000)].map((_, index) => (
           <div
@@ -105,14 +105,14 @@ const Hero = () => {
 
             <div className="item-start flex w-[80%] flex-col-reverse gap-2 lg:mt-5 lg:w-fit lg:flex-row lg:items-center lg:gap-5">
               <Link
-                href={"/studio"}
-                className="lg:text-md w-fit rounded-md border-[3px] border-transparent bg-primary px-4 py-2 text-center text-sm font-semibold text-white hover:border-primary hover:bg-transparent hover:text-primary active:scale-90 lg:min-w-[180px]"
+                href={"/appointment"}
+                className="lg:text-md w-fit rounded-sm border-[3px] border-transparent bg-primary px-4 py-2 text-center text-sm font-semibold text-white hover:border-primary hover:bg-transparent hover:text-primary active:scale-90 lg:min-w-[180px]"
               >
                 Free Consultation
               </Link>
 
               <Link
-                className="lg:text-md flex w-fit items-center justify-center gap-2 rounded-md border-primary bg-transparent px-1 py-2 text-left text-sm font-semibold text-primary duration-300 ease-in-out hover:bg-primary hover:text-white active:scale-90 lg:min-w-[180px] lg:border-[3px] lg:px-4 lg:text-center"
+                className="lg:text-md flex w-fit items-center justify-center gap-2 rounded-sm border-primary bg-transparent px-1 py-2 text-left text-sm font-semibold text-primary duration-300 ease-in-out hover:bg-primary hover:text-white active:scale-90 lg:min-w-[180px] lg:border-[3px] lg:px-4 lg:text-center"
                 href={"/"}
               >
                 View our work
@@ -133,19 +133,19 @@ const Hero = () => {
               </Link>
             </div>
 
-            <div className="relative mt-45 lg:mt-35 lg:bottom-0 ml-auto lg:ml-0 w-[350px] rounded-md bg-gradient-to-l lg:bg-gradient-to-r from-slate-100 via-slate-50 p-2 text-justify font-semibold border-r-4 text-slate-500 text-sm">
+            <div className="relative mt-45 lg:mt-35 lg:bottom-0 ml-auto lg:ml-0 w-[350px] rounded-sm bg-gradient-to-l lg:bg-gradient-to-r lg:dark:bg-gradient-to-r dark:from-slate-900 dark:via-slate-800 dark:to-slate-800 from-slate-100 via-slate-50 p-2 text-justify font-semibold border-r-4 dark:border-slate-600 text-slate-500 dark:text-slate-400 text-sm">
             Code provides the ultimate flexibility for your application or
             website.
             <br />
-            <p className="text-right text-primary">~ Aryan</p>
+            <p className="text-right text-primary dark:text-blue-400">~ Aryan</p>
           </div>
           </div>
 
          
 
           {/* WINDOW */}
-          <div className="animate_right  hidden h-full w-full items-end justify-center overflow-visible pl-4 lg:flex lg:w-1/2">
-            <div className="h-[100%] w-full overflow-visible rounded-tl-lg border-2 border-b-0 border-slate-200 bg-slate-200 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[90%] md:p-10">
+          <div className="animate_right  hidden h-full w-full items-end justify-center overflow-visible pl-4 lg:flex lg:w-[800px]">
+            <div className="h-[100%] w-full overflow-visible rounded-tl-lg border-2 border-b-0 border-slate-200 bg-slate-200 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[600px] md:p-10">
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
                 <div className="flex h-full w-full items-center justify-center gap-2">
                   <div className="h-full w-[50%] md:w-[40%]">
@@ -161,8 +161,8 @@ const Hero = () => {
 
                     {/* LOGIN PANEL */}
                     <Link
-                      className="animate-floatYR  overflow-hidden rounded-md opacity-80 hover:opacity-100"
-                      href={"/"}
+                      className="animate-floatYR  overflow-hidden rounded-sm opacity-80 hover:opacity-100"
+                      href={"/appointment"}
                     >
                       <Image src={AppointmentImage} alt={"schedule"} />
                       <h3 className="relative bottom-10 flex -rotate-[10deg] justify-center text-center font-semibold text-primary ">

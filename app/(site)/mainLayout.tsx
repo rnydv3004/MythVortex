@@ -19,7 +19,7 @@ export default function mainLayout({
   const path = usePathname()
   return (
     <>
-      <ThemeProvider enableSystem={false} attribute="class" defaultTheme="dark">
+      <ThemeProvider enableSystem={false} attribute="class" defaultTheme="light">
         {/* <Lines /> */}
         {!(path.includes('/dashboard')) && <Header />}
         <Analytics />
