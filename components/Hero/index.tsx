@@ -10,6 +10,38 @@ import Calendar from "react-calendar";
 import "assets/css/MiniCalender.css";
 
 import AppointmentImage from "../../public/images/appointment.png";
+import { Team } from "../Team";
+
+const People = [
+  {
+    id: 1,
+    name: "Sarneet Sachar",
+    designation: "Founder",
+    image:
+      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+  },
+  {
+    id: 2,
+    name: "Aryan Yadav",
+    designation: "Founder",
+    image:
+      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    id: 3,
+    name: "Shiven Yadav",
+    designation: "Founder",
+    image:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+  },
+  {
+    id: 4,
+    name: "Developers",
+    designation: "",
+    image:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+  },
+];
 
 const Hero = () => {
   const [sliderValue, setSliderValue] = useState(70);
@@ -36,11 +68,11 @@ const Hero = () => {
         ))}
       </div>
 
-      <div className="mx-auto flex h-full items-center justify-center overflow-hidden md:px-8 2xl:px-0">
+      <div className="mx-auto flex h-full flex-col items-center justify-center overflow-hidden md:px-8 lg:flex-row 2xl:px-0">
         <div className="flex h-full flex-col justify-evenly overflow-hidden lg:flex-row lg:items-center lg:gap-10">
-          <div className="flex h-full w-full flex-col justify-center px-4 md:px-0 lg:w-1/2 lg:pl-20 ">
+          <div className="justify-normal flex h-full w-full flex-col px-4 md:px-0 lg:w-1/2 lg:justify-center lg:pl-20">
             {/* heading */}
-            <h1 className="mb-0 mt-5 pr-8 text-[1.65rem] font-bold leading-8 text-slate-800 dark:text-slate-300 md:text-6xl md:font-extrabold lg:mt-0 lg:text-[36px] lg:leading-[2.5rem]">
+            <h1 className="mb-0 pr-8 pt-20 text-[1.65rem] font-bold leading-8 text-slate-800 dark:text-slate-300 md:text-6xl md:font-extrabold lg:mt-0 lg:pt-0 lg:text-[36px] lg:leading-[2.5rem]">
               <span className="bg-gradient-to-tr from-black via-gray-600 to-slate-800 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
                 Where
               </span>{" "}
@@ -65,7 +97,7 @@ const Hero = () => {
                   ___
                 </span>
                 Immerse yourself in{" "}
-                <span className="font-semibold text-primary">MythVortex</span>,
+                <span className="font-semibold text-primary">Mythvortex</span>,
                 where myth meets cutting-edge web and mobile development,
                 crafting unparalleled realms of imagination and adventure.
               </p>
@@ -100,10 +132,20 @@ const Hero = () => {
                 </svg>
               </Link>
             </div>
+
+            <div className="relative mt-45 lg:mt-35 lg:bottom-0 ml-auto lg:ml-0 w-[350px] rounded-md bg-gradient-to-l lg:bg-gradient-to-r from-slate-100 via-slate-50 p-2 text-justify font-semibold border-r-4 text-slate-500 text-sm">
+            Code provides the ultimate flexibility for your application or
+            website.
+            <br />
+            <p className="text-right text-primary">~ Aryan</p>
+          </div>
           </div>
 
-          <div className="animate_right flex h-full w-full items-end justify-center overflow-hidden pl-4 lg:w-1/2">
-            <div className="h-[100%] w-full overflow-hidden rounded-tl-lg border-2 border-b-0 border-slate-300 bg-slate-200 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[90%] md:p-10">
+         
+
+          {/* WINDOW */}
+          <div className="animate_right  hidden h-full w-full items-end justify-center overflow-visible pl-4 lg:flex lg:w-1/2">
+            <div className="h-[100%] w-full overflow-visible rounded-tl-lg border-2 border-b-0 border-slate-200 bg-slate-200 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[90%] md:p-10">
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
                 <div className="flex h-full w-full items-center justify-center gap-2">
                   <div className="h-full w-[50%] md:w-[40%]">
@@ -148,10 +190,10 @@ const Hero = () => {
                     </Link>
 
                     {/* Range */}
-                    <div className="flex items-center justify-between">
+                    <div className="relative bottom-5 flex items-center justify-between">
                       <Link
                         href={"/"}
-                        className="relative bottom-8 mt-5 flex w-fit scale-90 animate-floatYR items-center justify-center gap-3 rounded-full border-2 border-green-400 bg-green-400 bg-opacity-20 px-4 py-2 opacity-70 hover:opacity-100"
+                        className="flex w-fit scale-90 animate-floatX items-center justify-center gap-3 rounded-full border-2 border-green-400 bg-green-400 bg-opacity-20 px-4 py-2 opacity-70 hover:opacity-100"
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -269,6 +311,27 @@ const Hero = () => {
                   </div>
 
                   <div className="flex h-[100%] w-[50%] flex-col items-end justify-between gap-5 px-2 md:w-[60%]">
+                    <div className="flex w-full justify-between">
+                      <Team items={People} />
+                      <p className="flex cursor-pointer items-center gap-2 text-2xl font-semibold hover:animate-pulse">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="size-6"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
+                          />
+                        </svg>
+                        Our Team
+                      </p>
+                    </div>
+
                     {/* 4 INDICATORS */}
                     <div className="flex w-full justify-evenly gap-2">
                       <button className="flex w-full animate-floatX items-center justify-center rounded-lg border bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 text-white hover:scale-105 active:scale-90 dark:border-slate-600 dark:shadow-2xl dark:shadow-gray-900 md:py-4">
@@ -465,19 +528,6 @@ const Hero = () => {
                           </div>
                         </div>
                       </div>
-                    </div>
-
-                    {/* Buttons */}
-                    <div className="hidden w-full flex-wrap justify-between gap-y-2 md:flex-nowrap lg:flex ">
-                      <button className="w-fit self-center rounded-full bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600 hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
-                        Button
-                      </button>
-                      <button className="w-fit self-center rounded-lg bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600  hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
-                        Button
-                      </button>
-                      <button className="w-fit self-center rounded-sm bg-gradient-to-tl from-blue-800 via-blue-600 to-blue-500 px-4 py-2 text-xs font-light text-white shadow-slate-600  hover:scale-105 active:scale-95 dark:shadow-2xl md:text-base">
-                        Button
-                      </button>
                     </div>
 
                     {/* Calender */}
