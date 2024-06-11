@@ -3,7 +3,7 @@ import WorkFlow from "./WorkFlow";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Workflow",
+  title: "Process",
   description:
     "Navigate the service lifecycle seamlessly with our comprehensive page workflow. From initiation to completion, unlock clarity and efficiency in every step.",
   keywords: [

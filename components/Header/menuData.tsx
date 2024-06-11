@@ -25,12 +25,12 @@ const menuData: Menu[] = [
   //   newTab: false,
   //   path: "/template",
   // },
-  // {
-  //   id: 7,
-  //   title: "Software",
-  //   newTab: false,
-  //   path: "/software",
-  // },
+  {
+    id: 7,
+    title: "Our Work",
+    newTab: false,
+    path: "/portfolio",
+  },
   {
     id: 4,
     title: "Careers",
@@ -39,9 +39,9 @@ const menuData: Menu[] = [
   },
   {
     id: 8,
-    title: "Workflow",
+    title: "Process",
     newTab: false,
-    path: "/workflow",
+    path: "/process",
   },
   {
     id: 9,

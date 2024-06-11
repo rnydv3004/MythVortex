@@ -582,7 +582,7 @@ export default function Formcomponent() {
                 </div>
 
                 { dateValue && allSlots.length > 0 && 
-                  (<div className=" flex w-fit flex-wrap items-center justify-center gap-2 rounded-sm bg-white p-4 text-black dark:bg-slate-800 md:mb-0 ">
+                  (<div className=" flex w-fit flex-wrap items-center justify-center gap-2 rounded-sm bg-white p-4 text-black dark:text-slate-300 dark:bg-slate-800 md:mb-0 ">
                     <div className="flex items-center  justify-center gap-2 text-xs font-semibold">
                       <div className="h-2 w-2 rounded-full bg-slate-500"></div>{" "}
                       Booked

@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Formcomponent from "@/components/Appointmentsystem/Formcomponent";
 import { Toaster } from "react-hot-toast";
@@ -9,7 +9,19 @@ import { useTheme } from "next-themes";
 
 export default function Page() {
   const { theme } = useTheme();
-  console.log(theme)
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return (
+      <div className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center overflow-hidden bg-white dark:bg-slate-800">
+        <div className="border-primary-500 h-14 w-14 animate-spin rounded-full border-t-4"></div>
+      </div>
+    ); 
+  }
 
   return (
     <div className="flex h-screen w-screen bg-transparent lg:justify-center ">

@@ -141,8 +141,6 @@ const Hero = () => {
           </div>
           </div>
 
-         
-
           {/* WINDOW */}
           <div className="animate_right  hidden h-full w-full items-end justify-center overflow-visible pl-4 lg:flex lg:w-[800px]">
             <div className="h-[100%] w-full overflow-visible rounded-tl-lg border-2 border-b-0 border-slate-200 bg-slate-200 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[600px] md:p-10">
