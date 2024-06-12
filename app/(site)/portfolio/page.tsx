@@ -5,6 +5,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 // import DarkBg from "../../../public/bg/dark_bg2.webp";
 // import LightBg from "../../../public/bg/white_bg2.webp";
+import PortfolioData, { PortfolioInterface } from "./data";
 
 export default function page() {
   const { theme } = useTheme();
@@ -61,7 +62,7 @@ export default function page() {
             </div>
 
             <div className=" ml-auto h-fit">
-              <h2 className="mb-2 text-sm font-semibold text-slate-600">
+              <h2 className="mb-2 text-sm font-semibold text-slate-600 dark:text-slate-400">
                 Our{" "}
                 <span className="border-b-2 border-slate-300 text-primary">
                   Principles
@@ -69,8 +70,18 @@ export default function page() {
               </h2>
 
               <div className="grid w-fit grid-cols-1 gap-5 lg:grid-cols-2">
-                <div className="h-fit rounded-md border-2 px-4 py-4 shadow dark:border-2 dark:border-slate-600 dark:bg-black  dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
+                <div className="h-fit rounded-md border-2 bg-white bg-opacity-45 px-4 py-4 shadow-sm dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
                   <h3 className="text-xs font-semibold text-primary lg:text-sm">
+                    Quality
+                  </h3>
+                  <p className="mt-2 text-sm font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, nemo.
+                  </p>
+                </div>
+
+                <div className="h-fit rounded-md border-2 bg-white bg-opacity-45 px-4 py-4 shadow-sm dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
+                  <h3 className="text-sm font-semibold text-primary lg:text-sm">
                     Quality
                   </h3>
                   <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
@@ -79,31 +90,21 @@ export default function page() {
                   </p>
                 </div>
 
-                <div className="h-fit rounded-md border-2 px-4 py-4 shadow dark:border-2 dark:border-slate-600 dark:bg-black  dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
+                <div className="h-fit rounded-md border-2 bg-white bg-opacity-45 px-4 py-4 shadow-sm dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
                   <h3 className="text-xs font-semibold text-primary lg:text-sm">
                     Quality
                   </h3>
-                  <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
+                  <p className="mt-2 text-sm font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perspiciatis, nemo.
                   </p>
                 </div>
 
-                <div className="h-fit rounded-md border-2 px-4 py-4 shadow dark:border-2 dark:border-slate-600 dark:bg-black  dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
+                <div className="h-fit rounded-md border-2 bg-white bg-opacity-45 px-4 py-4 shadow-sm dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
                   <h3 className="text-xs font-semibold text-primary lg:text-sm">
                     Quality
                   </h3>
-                  <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis, nemo.
-                  </p>
-                </div>
-
-                <div className="h-fit rounded-md border-2 px-4 py-4 shadow dark:border-2 dark:border-slate-600 dark:bg-black  dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
-                  <h3 className="text-xs font-semibold text-primary lg:text-sm">
-                    Quality
-                  </h3>
-                  <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
+                  <p className="mt-2 text-sm font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                     Perspiciatis, nemo.
                   </p>
@@ -112,9 +113,9 @@ export default function page() {
             </div>
           </div>
 
-          <div className="mt-5 h-0.5 w-full bg-slate-600 lg:hidden"></div>
+          <div className="mt-5 h-0.5 w-full bg-slate-200 dark:bg-slate-600 lg:hidden"></div>
 
-          <div className="relative ml-auto mt-5 w-full rounded-sm border border-r-4 bg-gradient-to-l shadow-md from-slate-100 via-slate-50 to-white p-2 text-justify text-sm font-semibold text-slate-500 dark:border-slate-600 dark:from-slate-900 dark:via-slate-800 dark:to-slate-800 dark:text-slate-400 lg:bottom-0 lg:ml-0 lg:mt-35 lg:w-[900px] lg:bg-gradient-to-r lg:dark:bg-gradient-to-r ">
+          <div className="relative ml-auto mt-7 w-full rounded-sm border border-r-4 bg-gradient-to-l from-slate-100 via-slate-50 to-white p-2 text-justify text-sm font-semibold text-slate-500 dark:border-slate-600 dark:from-slate-900 dark:via-slate-800 dark:to-slate-800 dark:text-slate-400 lg:bottom-0 lg:ml-0 lg:mt-35 lg:w-[900px] lg:bg-gradient-to-r lg:shadow-md lg:dark:bg-gradient-to-r ">
             At <span className="font-semibold text-primary">Mythvortex</span>,
             we create digital experiences that captivate and engage. Our
             portfolio showcases the innovation, dedication, and skill our team
@@ -124,11 +125,11 @@ export default function page() {
           </div>
         </div>
 
-        <div className="relative lg:-top-30 pb-30 lg:px-20">
-          {Array.from({ length: 5 }).map((item, index) => (
-            <div className="grid grid-cols-2 px-4 my-10 lg:my-50" key={index}>
+        <div className="relative pb-30 lg:-top-30 lg:px-20 border">
+          {PortfolioData.map((item: PortfolioInterface, index) => (
+            <div className="my-8 grid grid-cols-2 mx-auto lg:gap-5 px-4 lg:my-50" key={index}>
               <div
-                className={`hidden lg:block bg-opacity-20 col-span-2 lg:col-span-1  ${
+                className={`col-span-2 hidden scale-75 bg-opacity-20 lg:col-span-1 lg:block  ${
                   index % 2 === 0 ? "order-1" : "order-2"
                 }`}
                 style={{
@@ -136,42 +137,72 @@ export default function page() {
                   marginLeft: index % 2 === 0 ? 0 : "auto",
                 }}
               >
-                <div className=" w-full h-[250px] lg:h-[520px] lg:w-[340px] lg:rounded-md bg-slate-200 dark:bg-slate-800">
-                  <iframe
-                    src="https://amrapalidiagnostics.com/"
-                    title="Embedded Website"
-                    // width="340px"
-                    // height="520px"
-                    frameBorder="0"
-                    className="w-[340px] h-[520px] relative top-5 mx-auto animate-floatY overflow-hidden rounded-md border-2 shadow-xl dark:border-slate-700 dark:shadow-slate-700"
-                    style={{ left: index % 2 === 0 ? "40px" : "-40px" }}
-                  />
+                <div className=" aspect-[9/16] w-[340px] bg-slate-200 dark:bg-slate-800 lg:rounded-md">
+                  {item.siteBlocked ? (
+                    <Link
+                      target="_blank"
+                      href={item.link}
+                      className="relative top-5 mx-auto aspect-[9/16] w-[340px] animate-floatY overflow-hidden rounded-md border-2 shadow-xl flex flex-col justify-center items-center bg-white dark:bg-gradient-to-t cursor-pointer dark:from-black dark:via-slate-900 dark:to-slate-800 dark:border-slate-700 dark:shadow-slate-700"
+                      style={{ left: index % 2 === 0 ? "40px" : "-40px" }}
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth="1.5"
+                        stroke="currentColor"
+                        className="size-20"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"
+                        />
+                      </svg>
+                      <label>redirect to</label>
+                      <h6 className="text-xl font-bold">{item.name}</h6>
+                    </Link>
+                  ) : (
+                    <iframe
+                      src={item.link}
+                      title={item.name}
+                      // width="340px"
+                      // height="520px"
+                      frameBorder="0"
+                      className="relative top-5 mx-auto aspect-[9/16] w-[340px] animate-floatY overflow-hidden rounded-md border-2 shadow-xl dark:border-slate-700 dark:shadow-slate-700"
+                      style={{ left: index % 2 === 0 ? "40px" : "-40px" }}
+                    />
+                  )}
                 </div>
               </div>
 
               <div
-                className={`col-span-2 lg:col-span-1 my-auto border-t-2 border-slate-800 lg:border-none pt-10 lg:pt-0 ${
+                className={`col-span-2 my-auto border-t-2 border-slate-200 pt-10 dark:border-slate-600 lg:col-span-1 lg:border-none lg:pt-0 ${
                   index % 2 === 0 ? "order-2" : "order-1"
                 }`}
                 style={{ order: index % 2 === 0 ? 2 : 1 }}
               >
-                <h3 className="w-full font-bold text-2xl lg:text-4xl ">
-                  Amprapali Diagnostics
+                <h3 className="w-full text-2xl font-bold text-slate-600 dark:text-slate-400 lg:text-4xl">
+                  {item.name}
                 </h3>
+                <h2 className="font-semibold">{item.type}</h2>
                 <p className="pt-5 text-justify text-sm lg:text-base">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
-                  nesciunt culpa commodi? Ex earum officia, cumque perferendis
-                  distinctio asperiores dolor?
+                  {item.desc}
                 </p>
                 <ul className="pt-5">
-                  <li className="text-justify text-sm lg:text-base">Lorem ipsum dolor sit.</li>
-                  <li className="text-justify text-sm lg:text-base">Lorem ipsum dolor sit.</li>
-                  <li className="text-justify text-sm lg:text-base">Lorem ipsum dolor sit.</li>
-                  <li className="text-justify text-sm lg:text-base">Lorem ipsum dolor sit.</li>
+                  {item.keyPoints.map((points, index) => (
+                    <li
+                      key={index}
+                      className="text-justify text-sm lg:text-base"
+                    >
+                      {points}
+                    </li>
+                  ))}
                 </ul>
                 <Link
-                  href={""}
-                  className="mt-5 flex w-fit items-center gap-2 rounded-sm border-2 border-primary bg-primary bg-opacity-5 px-6 py-2 font-semibold text-primary hover:bg-opacity-20 text-sm lg:text-base"
+                  target="_blank"
+                  href={item.link}
+                  className="mt-5 flex w-fit items-center gap-2 rounded-sm border-2 border-primary bg-primary bg-opacity-5 px-6 py-2 text-sm font-semibold text-primary hover:bg-opacity-20 lg:text-base"
                 >
                   Launch{" "}
                   <svg
