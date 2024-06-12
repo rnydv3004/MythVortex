@@ -8,7 +8,7 @@ import LatestBlog from "@/components/Blog/LatestBlog";
 import Whatsapp from "@/components/Whatsapp";
 
 export const metadata: Metadata = {
-  title: "MythVortex",
+  title: "Mythvortex | Home",
   description: "Where Myths Meet the Innovation",
   keywords: [
     "web development services",
