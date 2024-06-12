@@ -124,11 +124,11 @@ export default function page() {
           </div>
         </div>
 
-        <div className="relative -top-30 pb-30 lg:px-20">
+        <div className="relative lg:-top-30 pb-30 lg:px-20">
           {Array.from({ length: 5 }).map((item, index) => (
-            <div className="grid grid-cols-2 lg:my-50" key={index}>
+            <div className="grid grid-cols-2 px-4 my-10 lg:my-50" key={index}>
               <div
-                className={`bg-opacity-20 lg:col-span-1 ${
+                className={`hidden lg:block bg-opacity-20 col-span-2 lg:col-span-1  ${
                   index % 2 === 0 ? "order-1" : "order-2"
                 }`}
                 style={{
@@ -136,42 +136,42 @@ export default function page() {
                   marginLeft: index % 2 === 0 ? 0 : "auto",
                 }}
               >
-                <div className="h-[520px] w-[340px] rounded-md bg-slate-200 dark:bg-slate-800">
+                <div className=" w-full h-[250px] lg:h-[520px] lg:w-[340px] lg:rounded-md bg-slate-200 dark:bg-slate-800">
                   <iframe
                     src="https://amrapalidiagnostics.com/"
                     title="Embedded Website"
-                    width="340px"
-                    height="520px"
+                    // width="340px"
+                    // height="520px"
                     frameBorder="0"
-                    className="relative top-5 mx-auto animate-floatY overflow-hidden rounded-md border-2 shadow-xl dark:border-slate-700 dark:shadow-slate-700"
+                    className="w-[340px] h-[520px] relative top-5 mx-auto animate-floatY overflow-hidden rounded-md border-2 shadow-xl dark:border-slate-700 dark:shadow-slate-700"
                     style={{ left: index % 2 === 0 ? "40px" : "-40px" }}
                   />
                 </div>
               </div>
 
               <div
-                className={`col-span-1 my-auto ${
+                className={`col-span-2 lg:col-span-1 my-auto border-t-2 border-slate-800 lg:border-none pt-10 lg:pt-0 ${
                   index % 2 === 0 ? "order-2" : "order-1"
                 }`}
                 style={{ order: index % 2 === 0 ? 2 : 1 }}
               >
-                <h3 className="w-full font-bold lg:text-4xl ">
+                <h3 className="w-full font-bold text-2xl lg:text-4xl ">
                   Amprapali Diagnostics
                 </h3>
-                <p className="pt-5">
+                <p className="pt-5 text-justify text-sm lg:text-base">
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
                   nesciunt culpa commodi? Ex earum officia, cumque perferendis
                   distinctio asperiores dolor?
                 </p>
                 <ul className="pt-5">
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li>Lorem ipsum dolor sit.</li>
-                  <li>Lorem ipsum dolor sit.</li>
+                  <li className="text-justify text-sm lg:text-base">Lorem ipsum dolor sit.</li>
+                  <li className="text-justify text-sm lg:text-base">Lorem ipsum dolor sit.</li>
+                  <li className="text-justify text-sm lg:text-base">Lorem ipsum dolor sit.</li>
+                  <li className="text-justify text-sm lg:text-base">Lorem ipsum dolor sit.</li>
                 </ul>
                 <Link
                   href={""}
-                  className="mt-5 flex w-fit items-center gap-2 rounded-sm border-2 border-primary bg-primary bg-opacity-5 px-6 py-2 font-semibold text-primary hover:bg-opacity-20"
+                  className="mt-5 flex w-fit items-center gap-2 rounded-sm border-2 border-primary bg-primary bg-opacity-5 px-6 py-2 font-semibold text-primary hover:bg-opacity-20 text-sm lg:text-base"
                 >
                   Launch{" "}
                   <svg
