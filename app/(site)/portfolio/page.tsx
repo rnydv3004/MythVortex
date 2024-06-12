@@ -3,16 +3,18 @@ import { useTheme } from "next-themes";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
-import DarkBg from "../../../public/bg/dark_bg2.webp";
-import LightBg from "../../../public/bg/white_bg2.webp";
+// import DarkBg from "../../../public/bg/dark_bg2.webp";
+// import LightBg from "../../../public/bg/white_bg2.webp";
 
 export default function page() {
   const { theme } = useTheme();
-  const [mounted, setMounted] = useState(false);
+  const [mounted, setMounted] = useState(true);
+  const [bgImage, setBgImage] = useState("/bg/white_bg2.webp");
 
-  useEffect(() => {
-    setMounted(true);
-  }, []);
+  //   useEffect(() => {
+  //     setBgImage(theme === "dark" ? "/bg/dark_bg2.webp" : "/bg/white_bg2.webp");
+  //     setMounted(true);
+  //   }, []);
 
   if (!mounted) {
     return (
@@ -23,12 +25,10 @@ export default function page() {
   }
 
   return (
-    <div className="container mx-auto lg:aspect-video ">
-      
-      
-
-      <div className="flex h-fit lg:h-full w-full flex-col justify-normal px-4 md:px-0 lg:mt-30 lg:justify-start lg:px-20">
-
+    <div className=" container mx-auto  lg:aspect-video">
+      <div className="blackSquarePattern bg-gradient-to-tr from-white via-slate-100 to-slate-100 dark:bg-gradient-to-tr dark:from-black dark:via-slate-900 dark:to-slate-900">
+        <div className="flex h-fit w-full flex-col justify-normal px-4 md:px-0 lg:h-full lg:justify-start lg:px-20 lg:pt-30">
+          {/* 
       <div className="absolute left-0 top-0 -z-10 w-screen overflow-hidden">
         <Image
           priority
@@ -36,87 +36,164 @@ export default function page() {
           alt={"background"}
           className="h-screen w-full"
         />
-      </div>
-      
-        <div className="flex flex-col lg:flex-row justify-between gap-20 lg:gap-30">
-          <div className="  flex h-fit flex-col justify-center mt-10 lg:mt-0">
-            {/* heading */}
-            <h1 className="mb-0 pr-8 pt-20 text-[1.65rem] font-bold leading-8 text-slate-800 dark:text-slate-300 md:text-6xl md:font-extrabold lg:mt-0 lg:pt-0 lg:text-[36px] lg:leading-[2.5rem]">
-              <span className="bg-gradient-to-tr from-black via-gray-600 to-slate-800 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
-                Our
-              </span>{" "}
-              <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
-                Work
-              </span>
-            </h1>
+      </div> */}
 
-            {/* sub desc */}
-            <div className="mt-2 w-[80%] text-left font-medium leading-[22px] text-slate-500 dark:text-slate-400 lg:mt-4 lg:w-[400px] lg:leading-6">
-              <p className="text-sm lg:text-base">
-                we craft captivating digital experiences. Explore our portfolio
-                to see how we transform visionary concepts into powerful web
-                solutions.
-              </p>
-            </div>
-          </div>
+          <div className="flex flex-col justify-between gap-20 lg:flex-row lg:gap-30">
+            <div className="  mt-10 flex h-fit flex-col justify-center lg:mt-0">
+              {/* heading */}
+              <h1 className="mb-0 pr-8 pt-20 text-[1.65rem] font-bold leading-8 text-slate-800 dark:text-slate-300 md:text-6xl md:font-extrabold lg:mt-0 lg:pt-0 lg:text-[36px] lg:leading-[2.5rem]">
+                <span className="bg-gradient-to-tr from-black via-gray-600 to-slate-800 bg-clip-text text-transparent dark:from-slate-900 dark:via-gray-200 dark:to-slate-700 ">
+                  Our
+                </span>{" "}
+                <span className="bg-gradient-to-tr from-blue-800 via-blue-500 to-blue-900 bg-clip-text text-transparent dark:from-blue-600 dark:via-sky-500 dark:to-blue-950">
+                  Work
+                </span>
+              </h1>
 
-          <div className=" ml-auto h-fit">
-            <h2 className="mb-2 text-sm font-semibold text-slate-600">
-              Our{" "}
-              <span className="border-b-2 border-slate-300 text-primary">
-                Principles
-              </span>
-            </h2>
-
-            <div className="grid w-fit grid-cols-1 lg:grid-cols-2 gap-5">
-              
-              <div className="lg:aspect-video h-fit lg:h-[150px] rounded-md border-2 dark:border-2 px-4 lg:px-6 py-4 lg:py-4 shadow dark:bg-black dark:bg-opacity-55 dark:border-slate-600 ">
-                <h3 className="text-xs lg:text-sm font-semibold text-primary">Quality</h3>
-                <p className="mt-2 text-xs lg:text-sm font-medium text-slate-700 dark:text-slate-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Perspiciatis, nemo.
-                </p>
-              </div>
-
-              <div className="lg:aspect-video h-fit lg:h-[150px] rounded-md border-2 dark:border-2 px-4 lg:px-6 py-4 lg:py-4 shadow dark:bg-black dark:bg-opacity-55 dark:border-slate-600 ">
-                <h3 className="text-xs lg:text-sm font-semibold text-primary">Quality</h3>
-                <p className="mt-2 text-xs lg:text-sm font-medium text-slate-700 dark:text-slate-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Perspiciatis, nemo.
-                </p>
-              </div>
-
-              <div className="lg:aspect-video h-fit lg:h-[150px] rounded-md border-2 dark:border-2 px-4 lg:px-6 py-4 lg:py-4 shadow dark:bg-black dark:bg-opacity-55 dark:border-slate-600 ">
-                <h3 className="text-xs lg:text-sm font-semibold text-primary">Quality</h3>
-                <p className="mt-2 text-xs lg:text-sm font-medium text-slate-700 dark:text-slate-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Perspiciatis, nemo.
-                </p>
-              </div>
-
-              <div className="lg:aspect-video h-fit lg:h-[150px] rounded-md border-2 dark:border-2 px-4 lg:px-6 py-4 lg:py-4 shadow dark:bg-black dark:bg-opacity-55 dark:border-slate-600 ">
-                <h3 className="text-xs lg:text-sm font-semibold text-primary">Quality</h3>
-                <p className="mt-2 text-xs lg:text-sm font-medium text-slate-700 dark:text-slate-400">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Perspiciatis, nemo.
+              {/* sub desc */}
+              <div className="mt-2 w-[80%] text-left font-medium leading-[22px] text-slate-500 dark:text-slate-400 lg:mt-4 lg:w-[400px] lg:leading-6">
+                <p className="text-sm lg:text-base">
+                  we craft captivating digital experiences. Explore our
+                  portfolio to see how we transform visionary concepts into
+                  powerful web solutions.
                 </p>
               </div>
             </div>
+
+            <div className=" ml-auto h-fit">
+              <h2 className="mb-2 text-sm font-semibold text-slate-600">
+                Our{" "}
+                <span className="border-b-2 border-slate-300 text-primary">
+                  Principles
+                </span>
+              </h2>
+
+              <div className="grid w-fit grid-cols-1 gap-5 lg:grid-cols-2">
+                <div className="h-fit rounded-md border-2 px-4 py-4 shadow dark:border-2 dark:border-slate-600 dark:bg-black  dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
+                  <h3 className="text-xs font-semibold text-primary lg:text-sm">
+                    Quality
+                  </h3>
+                  <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, nemo.
+                  </p>
+                </div>
+
+                <div className="h-fit rounded-md border-2 px-4 py-4 shadow dark:border-2 dark:border-slate-600 dark:bg-black  dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
+                  <h3 className="text-xs font-semibold text-primary lg:text-sm">
+                    Quality
+                  </h3>
+                  <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, nemo.
+                  </p>
+                </div>
+
+                <div className="h-fit rounded-md border-2 px-4 py-4 shadow dark:border-2 dark:border-slate-600 dark:bg-black  dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
+                  <h3 className="text-xs font-semibold text-primary lg:text-sm">
+                    Quality
+                  </h3>
+                  <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, nemo.
+                  </p>
+                </div>
+
+                <div className="h-fit rounded-md border-2 px-4 py-4 shadow dark:border-2 dark:border-slate-600 dark:bg-black  dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
+                  <h3 className="text-xs font-semibold text-primary lg:text-sm">
+                    Quality
+                  </h3>
+                  <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Perspiciatis, nemo.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-5 h-0.5 w-full bg-slate-600 lg:hidden"></div>
+
+          <div className="relative ml-auto mt-5 w-full rounded-sm border border-r-4 bg-gradient-to-l shadow-md from-slate-100 via-slate-50 to-white p-2 text-justify text-sm font-semibold text-slate-500 dark:border-slate-600 dark:from-slate-900 dark:via-slate-800 dark:to-slate-800 dark:text-slate-400 lg:bottom-0 lg:ml-0 lg:mt-35 lg:w-[900px] lg:bg-gradient-to-r lg:dark:bg-gradient-to-r ">
+            At <span className="font-semibold text-primary">Mythvortex</span>,
+            we create digital experiences that captivate and engage. Our
+            portfolio showcases the innovation, dedication, and skill our team
+            brings to every project. From dynamic e-commerce platforms to robust
+            enterprise solutions, explore how we turn visionary concepts into
+            powerful digital realities.
           </div>
         </div>
 
-        <div className="h-0.5 bg-slate-600 w-full mt-5 lg:hidden"></div>
-        
-        <div className="relative ml-auto mt-5 w-full rounded-sm border border-r-4 bg-gradient-to-l from-slate-100 via-slate-50 p-2 text-justify text-sm font-semibold text-slate-500 dark:border-slate-600 dark:from-slate-900 dark:via-slate-800 dark:to-slate-800 dark:text-slate-400 lg:bottom-0 lg:ml-0 lg:mt-35 lg:w-[900px] lg:bg-gradient-to-r lg:dark:bg-gradient-to-r ">
-          At <span className="font-semibold text-primary">Mythvortex</span>, we
-          create digital experiences that captivate and engage. Our portfolio
-          showcases the innovation, dedication, and skill our team brings to
-          every project. From dynamic e-commerce platforms to robust enterprise
-          solutions, explore how we turn visionary concepts into powerful
-          digital realities.
+        <div className="relative -top-30 pb-30 lg:px-20">
+          {Array.from({ length: 5 }).map((item, index) => (
+            <div className="grid grid-cols-2 lg:my-50" key={index}>
+              <div
+                className={`bg-opacity-20 lg:col-span-1 ${
+                  index % 2 === 0 ? "order-1" : "order-2"
+                }`}
+                style={{
+                  order: index % 2 === 0 ? 1 : 2,
+                  marginLeft: index % 2 === 0 ? 0 : "auto",
+                }}
+              >
+                <div className="h-[520px] w-[340px] rounded-md bg-slate-200 dark:bg-slate-800">
+                  <iframe
+                    src="https://amrapalidiagnostics.com/"
+                    title="Embedded Website"
+                    width="340px"
+                    height="520px"
+                    frameBorder="0"
+                    className="relative top-5 mx-auto animate-floatY overflow-hidden rounded-md border-2 shadow-xl dark:border-slate-700 dark:shadow-slate-700"
+                    style={{ left: index % 2 === 0 ? "40px" : "-40px" }}
+                  />
+                </div>
+              </div>
+
+              <div
+                className={`col-span-1 my-auto ${
+                  index % 2 === 0 ? "order-2" : "order-1"
+                }`}
+                style={{ order: index % 2 === 0 ? 2 : 1 }}
+              >
+                <h3 className="w-full font-bold lg:text-4xl ">
+                  Amprapali Diagnostics
+                </h3>
+                <p className="pt-5">
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa
+                  nesciunt culpa commodi? Ex earum officia, cumque perferendis
+                  distinctio asperiores dolor?
+                </p>
+                <ul className="pt-5">
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                  <li>Lorem ipsum dolor sit.</li>
+                </ul>
+                <Link
+                  href={""}
+                  className="mt-5 flex w-fit items-center gap-2 rounded-sm border-2 border-primary bg-primary bg-opacity-5 px-6 py-2 font-semibold text-primary hover:bg-opacity-20"
+                >
+                  Launch{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.8"
+                    stroke="currentColor"
+                    className="size-4"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M15.59 14.37a6 6 0 0 1-5.84 7.38v-4.8m5.84-2.58a14.98 14.98 0 0 0 6.16-12.12A14.98 14.98 0 0 0 9.631 8.41m5.96 5.96a14.926 14.926 0 0 1-5.841 2.58m-.119-8.54a6 6 0 0 0-7.381 5.84h4.8m2.581-5.84a14.927 14.927 0 0 0-2.58 5.84m2.699 2.7c-.103.021-.207.041-.311.06a15.09 15.09 0 0 1-2.448-2.448 14.9 14.9 0 0 1 .06-.312m-2.24 2.39a4.493 4.493 0 0 0-1.757 4.306 4.493 4.493 0 0 0 4.306-1.758M16.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
+                    />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-
     </div>
   );
 }
