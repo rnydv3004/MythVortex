@@ -125,7 +125,7 @@ export default function page() {
           </div>
         </div>
 
-        <div className="relative pb-30 lg:-top-30 lg:px-20 border">
+        <div className="relative pb-30 lg:-top-30 lg:px-20">
           {PortfolioData.map((item: PortfolioInterface, index) => (
             <div className="my-8 grid grid-cols-2 mx-auto lg:gap-5 px-4 lg:my-50" key={index}>
               <div
