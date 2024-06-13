@@ -58,7 +58,8 @@ const Header = () => {
 
           {/* <!-- Hamburger Toggle BTN --> */}
           <button
-            aria-label="hamburger Toggler"
+            // aria-label="hamburger Toggler"
+            aria-labelledby="hamburger Toggler"
             className="block md:hidden"
             onClick={() => setNavigationOpen(!navigationOpen)}
           >

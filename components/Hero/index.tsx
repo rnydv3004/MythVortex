@@ -15,17 +15,17 @@ import { Team } from "../Team";
 const People = [
   {
     id: 1,
-    name: "Sarneet Sachar",
-    designation: "Founder",
-    image:
-      "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
-  },
-  {
-    id: 2,
     name: "Aryan Yadav",
     designation: "Founder",
     image:
-      "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
+      "/team/aryan.webp",
+  },
+  {
+    id: 2,
+    name: "Sarneet Sachar",
+    designation: "Founder",
+    image:
+      "/team/sarneet.webp",
   },
   {
     id: 3,
@@ -33,14 +33,7 @@ const People = [
     designation: "Founder",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-  },
-  {
-    id: 4,
-    name: "Developers",
-    designation: "",
-    image:
-      "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-  },
+  }
 ];
 
 const Hero = () => {
@@ -120,13 +113,13 @@ const Hero = () => {
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
-                  stroke-width="1.8"
+                  strokeWidth="1.8"
                   stroke="currentColor"
                   className="size-5 lg:hidden"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                     d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"
                   />
                 </svg>
@@ -172,13 +165,13 @@ const Hero = () => {
                             xmlns="http://www.w3.org/2000/svg"
                             fill="none"
                             viewBox="0 0 24 24"
-                            stroke-width="1.5"
+                            strokeWidth="1.5"
                             stroke="currentColor"
                             className="size-6 -rotate-12 text-yellow-600"
                           >
                             <path
-                              stroke-linecap="round"
-                              stroke-linejoin="round"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
                               d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
                             />
                           </svg>
@@ -220,9 +213,10 @@ const Hero = () => {
                           ></path>
                           <path
                             fill="#fff"
-                            fill-rule="evenodd"
+                            fillRule="evenodd"
                             d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
-                            clip-rule="evenodd"
+                            clipRule="evenodd"
+                            
                           ></path>
                         </svg>
                         <span className="text-xl font-bold text-green-500">
@@ -313,18 +307,18 @@ const Hero = () => {
                   <div className="flex h-[100%] w-[50%] flex-col items-end justify-between gap-5 px-2 md:w-[60%]">
                     <div className="flex w-full justify-between">
                       <Team items={People} />
-                      <p className="flex cursor-pointer items-center gap-2 text-2xl font-semibold hover:animate-pulse">
+                      <p className="flex cursor-pointer items-center gap-2 text-2xl font-semibold hover:animate-pulse hover:text-primary">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           className="size-6"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"
                           />
                         </svg>
@@ -361,13 +355,13 @@ const Hero = () => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           className="size-7 scale-50 md:scale-100"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M3.75 9.776c.112-.017.227-.026.344-.026h15.812c.117 0 .232.009.344.026m-16.5 0a2.25 2.25 0 0 0-1.883 2.542l.857 6a2.25 2.25 0 0 0 2.227 1.932H19.05a2.25 2.25 0 0 0 2.227-1.932l.857-6a2.25 2.25 0 0 0-1.883-2.542m-16.5 0V6A2.25 2.25 0 0 1 6 3.75h3.879a1.5 1.5 0 0 1 1.06.44l2.122 2.12a1.5 1.5 0 0 0 1.06.44H18A2.25 2.25 0 0 1 20.25 9v.776"
                           />
                         </svg>
@@ -381,13 +375,13 @@ const Hero = () => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           className="size-7 scale-50 md:scale-100"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 0 0 .75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 0 0-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0 1 12 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 0 1-.673-.38m0 0A2.18 2.18 0 0 1 3 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 0 1 3.413-.387m7.5 0V5.25A2.25 2.25 0 0 0 13.5 3h-3a2.25 2.25 0 0 0-2.25 2.25v.894m7.5 0a48.667 48.667 0 0 0-7.5 0M12 12.75h.008v.008H12v-.008Z"
                           />
                         </svg>
@@ -428,13 +422,13 @@ const Hero = () => {
                           xmlns="http://www.w3.org/2000/svg"
                           fill="none"
                           viewBox="0 0 24 24"
-                          stroke-width="1.5"
+                          strokeWidth="1.5"
                           stroke="currentColor"
                           className="size-7 scale-50 md:scale-100"
                         >
                           <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
                             d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z"
                           />
                         </svg>
@@ -562,186 +556,7 @@ const Hero = () => {
                       </div>
                     </div>
 
-                    {/* <div className="h-full w-full animate-floatY text-black">
-                      <div className="mx-auto max-w-md rounded-xl border p-2 shadow-md dark:border-slate-600 dark:bg-black dark:bg-opacity-60 dark:text-white md:scale-90 md:bg-white md:p-5 md:py-10">
-                        <h2 className="mb-2 flex justify-between text-xs font-medium md:text-lg">
-                          <span className="text-xs md:pb-2 md:text-xl">
-                            Calender
-                          </span>
-                          <span className="flex items-center justify-center gap-1 text-xs md:text-base">
-                            Apr, 2024{" "}
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              fill="none"
-                              viewBox="0 0 24 24"
-                              strokeWidth="5"
-                              stroke="currentColor"
-                              height={"15"}
-                              width={"15"}
-                              className="text-primary"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                              />
-                            </svg>
-                          </span>
-                        </h2>
-
-                        <div className="grid grid-cols-7 gap-2 md:p-3">
-                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
-                            Sun
-                          </div>
-                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
-                            Mon
-                          </div>
-                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
-                            Tue
-                          </div>
-                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
-                            Wed
-                          </div>
-                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
-                            Thu
-                          </div>
-                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
-                            Fri
-                          </div>
-                          <div className="col-span-1 text-center text-[0.5rem] font-semibold text-slate-400 md:text-sm">
-                            Sat
-                          </div>
-
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            1
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            2
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            3
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            4
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            5
-                          </div>
-
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            6
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            7
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            8
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            9
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            10
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            11
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            12
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            13
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            14
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            15
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            16
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            17
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            18
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            19
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            20
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            21
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            22
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            23
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            24
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            25
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            26
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            27
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            28
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            29
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            30
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            31
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                          <div className="col-span-1 py-1 text-center text-[0.3rem] hover:rounded-full hover:bg-blue-600 hover:text-white md:text-sm">
-                            -
-                          </div>
-                        </div>
-                      </div>
-                    </div> */}
+               
                   </div>
                 </div>
               </div>

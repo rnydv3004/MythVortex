@@ -3,6 +3,7 @@ import React from "react";
 import featuresData from "./featuresData";
 import SingleFeature from "./SingleFeature";
 import SectionHeader from "../Common/SectionHeader";
+import { GlowingStarsBackgroundCard } from "../Card/GlowingCard";
 
 const Feature = () => {
   return (
@@ -13,7 +14,6 @@ const Feature = () => {
         className="border-4 border-x-0 border-y-stroke bg-alabaster py-20 dark:border-y-strokedark dark:bg-black lg:py-15"
       >
         <div className="mx-auto  max-w-c-1315 px-4 md:px-8 xl:px-0">
-          
           {/* <!-- Section Title Start --> */}
           <SectionHeader
             headerInfo={{
@@ -32,7 +32,6 @@ const Feature = () => {
             ))}
             {/* <!-- Features item End --> */}
           </div>
-          
         </div>
       </section>
 

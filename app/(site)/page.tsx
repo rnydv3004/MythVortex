@@ -74,7 +74,7 @@ export default function Home() {
       <Hero />
       <Feature />
       <FunFact />
-      <LatestBlog/>
+      {/* <LatestBlog/> */}
       <FAQ />
       <Contact />
       <Whatsapp/>
