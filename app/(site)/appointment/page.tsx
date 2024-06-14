@@ -24,7 +24,7 @@ export default function Page() {
   }
 
   return (
-    <div className="flex h-screen w-screen bg-transparent lg:justify-center ">
+    <div className="flex lg:h-screen w-screen bg-transparent lg:justify-center ">
       <div className="absolute left-0 top-0 -z-10 h-screen w-screen overflow-hidden">
         <Image
           priority

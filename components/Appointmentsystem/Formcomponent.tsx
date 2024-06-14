@@ -142,7 +142,7 @@ export default function Formcomponent() {
       if (!mailResponse.ok) {
         // Handle error if the response status is not OK (e.g., 404, 500).
         toast.error(
-          "Error in sending mail. Our team will connect you by phone"
+          "Error in sending mail. Our team will connect you by phone",
         );
         throw new Error(`Error fetching data. Status: ${mailResponse.status}`);
       }
@@ -165,7 +165,7 @@ export default function Formcomponent() {
       if (!subscription.ok) {
         // Handle error if the response status is not OK (e.g., 404, 500).
         toast.error(
-          "Error in sending mail. Our team will connect you by phone"
+          "Error in sending mail. Our team will connect you by phone",
         );
         throw new Error(`Error fetching data. Status: ${subscription.status}`);
       }
@@ -314,8 +314,8 @@ export default function Formcomponent() {
       setDialog(true);
       try {
         // Call your bookAppointment function here
-        const response:any = await bookAppointment();
-        console.log("Response: ",response)
+        const response: any = await bookAppointment();
+        console.log("Response: ", response);
         if (response.status === 200) {
           setLoading(false);
           setBookingStatus(true);
@@ -379,7 +379,7 @@ export default function Formcomponent() {
         <div className="flex h-full w-full items-center justify-center ">
           <form
             onSubmit={handleSubmit}
-            className=" grid h-[calc(100vh-96px)] w-full grid-cols-2 overflow-y-auto rounded-lg bg-opacity-50 bg-gradient-to-t from-slate-200 via-slate-100 px-6 pb-10 pt-10 dark:border-slate-600 dark:bg-opacity-40  dark:bg-gradient-to-t dark:from-black dark:via-slate-700 md:h-[65%] md:gap-5 lg:border-2 lg:px-0 lg:shadow-xl"
+            className=" grid w-full grid-cols-2 rounded-lg bg-opacity-50 bg-gradient-to-t from-slate-200 via-slate-100 px-6 pb-10 pt-10 dark:border-slate-600 dark:bg-opacity-40 dark:bg-gradient-to-t dark:from-black dark:via-slate-700 md:h-[65%] md:gap-5 lg:overflow-y-auto lg:border-2 lg:px-0 lg:shadow-xl"
           >
             {/* User Details */}
             <div className="col-span-2 mx-auto flex w-full flex-col  gap-4 gap-x-8 gap-y-6 sm:grid-cols-2 md:col-span-1 md:max-w-[300px]">
@@ -553,7 +553,7 @@ export default function Formcomponent() {
                           dark:text-slate-200 dark:outline-none md:py-2"
                           />
                           <div
-                            className="absolute top-0 -z-0 flex w-full justify-between rounded-sm bg-white px-4 py-3 text-sm border border-slate-200 dark:border-slate-600 font-medium text-[#3e3e3e] outline-primary dark:bg-slate-800
+                            className="absolute top-0 -z-0 flex w-full justify-between rounded-sm border border-slate-200 bg-white px-4 py-3 text-sm font-medium text-[#3e3e3e] outline-primary dark:border-slate-600 dark:bg-slate-800
                          dark:text-slate-200 dark:outline-none md:py-2"
                           >
                             {" "}
@@ -581,8 +581,8 @@ export default function Formcomponent() {
                   </div>
                 </div>
 
-                { dateValue && allSlots.length > 0 && 
-                  (<div className=" flex w-fit flex-wrap items-center justify-center gap-2 rounded-sm bg-white p-4 text-black dark:text-slate-300 dark:bg-slate-800 md:mb-0 ">
+                {dateValue && allSlots.length > 0 && (
+                  <div className=" flex w-fit flex-wrap items-center justify-center gap-2 rounded-sm bg-white p-4 text-black dark:bg-slate-800 dark:text-slate-300 md:mb-0 ">
                     <div className="flex items-center  justify-center gap-2 text-xs font-semibold">
                       <div className="h-2 w-2 rounded-full bg-slate-500"></div>{" "}
                       Booked
@@ -595,17 +595,6 @@ export default function Formcomponent() {
                       <div className="h-2 w-2 rounded-full bg-green-600"></div>{" "}
                       Selected
                     </div>
-                  </div>)
-                }
-
-                {dateValue === "yyyy-MM-dd" && (
-                  <div className="🤚 mt-20">
-                    <div className="👉"></div>
-                    <div className="👉"></div>
-                    <div className="👉"></div>
-                    <div className="👉"></div>
-                    <div className="🌴"></div>
-                    <div className="👍"></div>
                   </div>
                 )}
 
@@ -622,7 +611,7 @@ export default function Formcomponent() {
                       <div className="👍"></div>
                     </div>
                   ) : (
-                    <div className="flex flex-wrap items-center justify-center gap-2 rounded-sm bg-white bg-opacity-70 py-4 dark:bg-slate-800  border-b border-slate-200 dark:border-slate-600">
+                    <div className="flex flex-wrap items-center justify-center gap-2 rounded-sm border-b border-slate-200 bg-white bg-opacity-70  py-4 dark:border-slate-600 dark:bg-slate-800">
                       {allSlots.map((time, index) => {
                         const isAvailable = availableSlot.includes(time);
 
@@ -662,7 +651,6 @@ export default function Formcomponent() {
                   )}
                 </div>
               </div>
-
               <div className="col-span-2 my-10 flex w-full justify-center md:fixed md:bottom-5 md:right-5 md:my-0 md:h-fit md:w-fit">
                 <button
                   type="submit"

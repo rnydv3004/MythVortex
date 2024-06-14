@@ -42,7 +42,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="container relative -z-0 mx-auto h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
+    <section className="container max-h-[800px] relative -z-0 mx-auto h-screen select-none overflow-hidden bg-transparent pb-0 pt-17 dark:from-slate-900 dark:via-black dark:to-slate-800">
       <div className="absolute left-0 top-0 -z-10 h-screen w-screen overflow-hidden">
         {[...Array(2000)].map((_, index) => (
           <div
@@ -138,7 +138,7 @@ const Hero = () => {
           <div className="animate_right  hidden h-full w-full items-end justify-center overflow-visible pl-4 lg:flex lg:w-[800px]">
             <div className="h-[100%] w-full overflow-visible rounded-tl-lg border-2 border-b-0 border-slate-200 bg-slate-200 bg-opacity-30 p-4 pb-0 dark:border-slate-700 dark:bg-blue-800 dark:bg-opacity-20 dark:outline-black md:h-[600px] md:p-10">
               <div className="relative flex h-full w-full flex-col 2xl:-mr-7.5">
-                <div className="flex h-full w-full items-center justify-center gap-2">
+                <div className="flex h-full w-full items-center justify-evenly gap-2">
                   <div className="h-full w-[50%] md:w-[40%]">
                     {/* TAGS */}
                     <div className="flex animate-floatX gap-2 mb-3">
