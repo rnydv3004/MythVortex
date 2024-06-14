@@ -9,7 +9,7 @@ import Calendar from "react-calendar";
 // import "react-calendar/dist/Calendar.css";
 import "assets/css/MiniCalender.css";
 
-import AppointmentImage from "../../public/images/appointment.png";
+// import AppointmentImage from "../../public/images/";
 import { Team } from "../Team";
 
 const People = [
@@ -17,15 +17,13 @@ const People = [
     id: 1,
     name: "Aryan Yadav",
     designation: "Founder",
-    image:
-      "/team/aryan.webp",
+    image: "/team/aryan.webp",
   },
   {
     id: 2,
     name: "Sarneet Sachar",
     designation: "Founder",
-    image:
-      "/team/sarneet.webp",
+    image: "/team/sarneet.webp",
   },
   {
     id: 3,
@@ -33,7 +31,7 @@ const People = [
     designation: "Founder",
     image:
       "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8YXZhdGFyfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
-  }
+  },
 ];
 
 const Hero = () => {
@@ -143,7 +141,7 @@ const Hero = () => {
                 <div className="flex h-full w-full items-center justify-center gap-2">
                   <div className="h-full w-[50%] md:w-[40%]">
                     {/* TAGS */}
-                    <div className="flex animate-floatX gap-2">
+                    <div className="flex animate-floatX gap-2 mb-3">
                       <button className="rounded-full border border-blue-600 bg-blue-600 bg-opacity-10 px-2 py-[0.05rem] text-[0.5rem] font-medium text-blue-600 hover:bg-blue-600 hover:text-white md:py-1 md:text-xs">
                         Development
                       </button>
@@ -154,39 +152,36 @@ const Hero = () => {
 
                     {/* LOGIN PANEL */}
                     <Link
-                      className="animate-floatYR  overflow-hidden rounded-sm opacity-80 hover:opacity-100"
+                      className="animate-floatYR  overflow-hidden rounded-sm"
                       href={"/appointment"}
                     >
-                      <Image src={AppointmentImage} alt={"schedule"} />
-                      <h3 className="relative bottom-10 flex -rotate-[10deg] justify-center text-center font-semibold text-primary ">
-                        Book
-                        <span className="h-fit">
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            fill="none"
-                            viewBox="0 0 24 24"
-                            strokeWidth="1.5"
-                            stroke="currentColor"
-                            className="size-6 -rotate-12 text-yellow-600"
-                          >
-                            <path
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                              d="M15.042 21.672 13.684 16.6m0 0-2.51 2.225.569-9.47 5.227 7.917-3.286-.672ZM12 2.25V4.5m5.834.166-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243-1.59-1.59"
-                            />
-                          </svg>
-                        </span>
-                      </h3>
-                      <h3 className="relative bottom-10 flex -rotate-[10deg] justify-center text-center font-semibold text-primary">
-                        Free Consultation
-                      </h3>
+                      <div className="flex flex-col items-center justify-center bg-gradient-to-tr from-slate-700 via-slate-800 to-transparent text-white rounded-md py-2 border-2 dark:border-slate-600">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="1.5"
+                          stroke="currentColor"
+                          className="size-40"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5m-9-6h.008v.008H12v-.008ZM12 15h.008v.008H12V15Zm0 2.25h.008v.008H12v-.008ZM9.75 15h.008v.008H9.75V15Zm0 2.25h.008v.008H9.75v-.008ZM7.5 15h.008v.008H7.5V15Zm0 2.25h.008v.008H7.5v-.008Zm6.75-4.5h.008v.008h-.008v-.008Zm0 2.25h.008v.008h-.008V15Zm0 2.25h.008v.008h-.008v-.008Zm2.25-4.5h.008v.008H16.5v-.008Zm0 2.25h.008v.008H16.5V15Z"
+                          />
+                        </svg>
+                        <h4 className="text-center uppercase text-white font-semibold text-sm">
+                          Book
+                          Consultation
+                        </h4>
+                      </div>
                     </Link>
 
-                    {/* Range */}
-                    <div className="relative bottom-5 flex items-center justify-between">
+                    {/* Whatsapp */}
+                    <div className="relative flex items-center justify-between mt-4">
                       <Link
                         href={"/"}
-                        className="flex w-fit scale-90 animate-floatX items-center justify-center gap-3 rounded-full border-2 border-green-400 bg-green-400 bg-opacity-20 px-4 py-2 opacity-70 hover:opacity-100"
+                        className="flex w-fit scale-90 animate-floatX items-center justify-center gap-3 rounded-full border-2 border-green-400 bg-green-400 bg-opacity-20 px-4 py-2 "
                       >
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
@@ -216,7 +211,6 @@ const Hero = () => {
                             fillRule="evenodd"
                             d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z"
                             clipRule="evenodd"
-                            
                           ></path>
                         </svg>
                         <span className="text-xl font-bold text-green-500">
@@ -227,7 +221,7 @@ const Hero = () => {
                     </div>
 
                     {/* Chat Screen */}
-                    <div className="h-full w-full animate-floatYR rounded-lg border bg-white p-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black  md:mt-4 md:p-4">
+                    <div className="h-full w-full animate-floatX mt-4 rounded-lg border bg-white p-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-30 dark:outline-black md:p-4">
                       <div className="flex items-center justify-start gap-5 border-b pb-2 dark:border-slate-600  dark:outline-black">
                         <div className="h-10 w-10">
                           <Image
@@ -298,6 +292,24 @@ const Hero = () => {
                           </p>
                           <p className="text-xs font-normal">
                             Yes, It's really great.
+                          </p>
+                        </div>
+                      </div>
+                      <div className="flex items-center justify-start gap-5 border-b py-2 dark:border-slate-600 dark:outline-black">
+                        <div className="h-10 w-10">
+                          <Image
+                            src={"/images/avatar2.png"}
+                            alt={"avatar2"}
+                            width={"35"}
+                            height={"35"}
+                          />
+                        </div>
+                        <div className="flex flex-col">
+                          <p className="md:text-medium text-xs font-medium dark:text-white">
+                            Anjali Mishra
+                          </p>
+                          <p className="text-xs font-normal">
+                            I am good Anil...
                           </p>
                         </div>
                       </div>
@@ -555,8 +567,6 @@ const Hero = () => {
                         <Calendar defaultValue={dayjs().toDate()} />
                       </div>
                     </div>
-
-               
                   </div>
                 </div>
               </div>

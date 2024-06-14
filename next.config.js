@@ -4,11 +4,14 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   images: {
-    domains: ["localhost"],
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "**",
+        protocol: 'https',
+        hostname: '**',
+      },
+      {
+        protocol: 'http',
+        hostname: '**',
       },
     ],
   },
@@ -19,7 +22,7 @@ const nextConfig = {
     SPREADSHEET_ID: '1bhTNq-8KAr2AOwnEOCsLafqmhQHC4USycpA221ktFus',
     USER_DETAILS_ID: "admin",
     USER_PASSWORD: "Admin24680#",
-    
+
     // Calender
     SCOPES: "https://www.googleapis.com/auth/calendar",
     GOOGLE_PRIVATE_KEY:
