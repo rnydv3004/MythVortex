@@ -1,7 +1,6 @@
 import { DateTime } from "luxon";
 import { NextRequest, NextResponse } from "next/server";
 
-
 const { google } = require('googleapis');
 
 const SCOPES = process.env.SCOPES;
@@ -40,8 +39,8 @@ export async function POST(request: NextRequest) {
         const startTime = dateTime.toUTC()
         const endTime = startTime.plus({ minutes: 20 })
 
-        // console.log("Start date:", startTime)
-        // console.log("Start date:", endTime)
+        console.log("Start date:", date)
+        console.log("Start date:", time)
 
         var event = {
             'summary': `Appointment with ${firstName} ${lastName}`,

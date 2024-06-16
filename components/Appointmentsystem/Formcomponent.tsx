@@ -1,10 +1,6 @@
 "use client";
 import React, { FormEvent, useEffect, useState } from "react";
-// import Logo from "./../../public/png.png";
 import Image from "next/image";
-// import { LocalizationProvider } from "@mui/x-date-pickers/LocalizationProvider";
-// import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
-// import { DateCalendar } from "@mui/x-date-pickers/DateCalendar";
 import dayjs from "dayjs";
 import { toast } from "react-hot-toast";
 import Link from "next/link";
@@ -78,32 +74,6 @@ export default function Formcomponent() {
 
   async function bookAppointment() {
     try {
-      // ADD GOOGLE EVENT
-      const response = await fetch("/api/addevent", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          firstName: appointmentDetails.firstName,
-          lastName: appointmentDetails.lastName,
-          date: appointmentDetails.date,
-          time: appointmentDetails.time,
-        }),
-      });
-      if (response.ok) {
-        // Parse the response JSON data
-        const responseData = await response.json();
-        // Update the eventId in the appointmentDetails state
-        setAppointmentDetails((prevDetails) => ({
-          ...prevDetails,
-          eventId: responseData.details,
-        }));
-      } else {
-        // If the request was not successful, handle the error
-        console.error("Error:", response.statusText);
-      }
-      // ADD DATA TO GOOGLESHEET
       const response2 = await fetch("/api/addgsheet", {
         method: "POST",
         headers: {
@@ -118,58 +88,33 @@ export default function Formcomponent() {
           time: appointmentDetails.time,
         }),
       });
-      // You can handle the response here if needed
-      if (!response.ok) {
-        // Handle non-successful response (e.g., error handling)
-        console.error("Failed to add event:", response.statusText);
-      } else if (!response2.ok) {
-        // Handle non-successful response (e.g., error handling)
-        console.error("Failed to add details in sheet:", response2.statusText);
+
+      const firebaseBook = async () => {
+        try {
+          const response = await fetch("/api/bookappointment", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(appointmentDetails),
+          });
+          if (!response.ok) {
+            throw new Error(`Error fetching data. Status: ${response.status}`);
+            setBookingStatus(false);
+          } else {
+            setBookingStatus(true);
+          }
+
+          setLoading(false);
+          const data = await response.json();
+        } catch (error: any) {
+          console.error("Error:", error.message);
+        }
+      };
+
+      if (!(appointmentDetails.phone === "")) {
+        firebaseBook();
       }
-      {
-        // Event added successfully
-        toast.success("Confirmation email sent");
-        console.log("Event added successfully");
-      }
-      // MAILER
-      const mailResponse = await fetch("/api/mailer", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(appointmentDetails),
-      });
-      if (!mailResponse.ok) {
-        // Handle error if the response status is not OK (e.g., 404, 500).
-        toast.error(
-          "Error in sending mail. Our team will connect you by phone",
-        );
-        throw new Error(`Error fetching data. Status: ${mailResponse.status}`);
-      }
-      // REMINDER MAIL SCHEDULER
-      const reminderScheduler = await fetch("/api/schedule", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(appointmentDetails),
-      });
-      // BEEHIVE SUBSCRIPTION
-      const subscription = await fetch("/api/subscription", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(appointmentDetails),
-      });
-      if (!subscription.ok) {
-        // Handle error if the response status is not OK (e.g., 404, 500).
-        toast.error(
-          "Error in sending mail. Our team will connect you by phone",
-        );
-        throw new Error(`Error fetching data. Status: ${subscription.status}`);
-      }
-      return response;
     } catch (error) {
       // console.error("Error fetching data:", error);
       throw error;
@@ -209,30 +154,6 @@ export default function Formcomponent() {
       </button>
     );
   }
-
-  useEffect(() => {
-    // const firebaseBook = async () => {
-    //   try {
-    //     const response = await fetch("/api/bookappointment", {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify(appointmentDetails),
-    //     });
-    //     if (!response.ok) {
-    //       throw new Error(`Error fetching data. Status: ${response.status}`);
-    //     }
-    //     const data = await response.json();
-    //     // Do something with the data if needed
-    //   } catch (error: any) {
-    //     console.error("Error:", error.message);
-    //   }
-    // };
-    // if (!(appointmentDetails.phone === "")) {
-    //   firebaseBook();
-    // }
-  }, [appointmentDetails.eventId]);
 
   async function fetchDates() {
     try {
@@ -342,21 +263,15 @@ export default function Formcomponent() {
 
       {dialog ? (
         <div className="absolute bottom-0 left-0 right-0 top-0 z-40 flex h-screen w-screen items-center justify-center">
-          <div className="m-10 flex flex-col items-center justify-center gap-6 rounded-sm bg-white p-5 dark:bg-slate-800 md:p-10">
+          <div
+            className={`${!loading ? "border border-slate-200 dark:border-slate-600 bg-white dark:bg-slate-800" : ""} m-10 flex flex-col items-center justify-center gap-6 rounded-sm   p-5  md:p-10`}
+          >
             {!loading ? (
               <div className="flex flex-col items-center justify-center gap-5 ">
-                <div className="flex h-16 w-fit">
-                  <Image
-                    src={""}
-                    alt={"Taxmechnaic Logo"}
-                    className="h-16 w-auto"
-                    sizes="(max-width: 600px) 100vw, (max-width: 1024px) 50vw, 800px"
-                  />
-                </div>
                 {bookingStatus ? (
-                  <h1 className="flex-wrap text-center text-sm font-medium text-slate-900 lg:w-[400px]">
-                    Thank you for scheduling an appointment with TaxMechanic.
-                    The meeting link will be shared with you via email.
+                  <h1 className="flex-wrap text-center text-sm font-medium text-slate-900 dark:text-slate-300 lg:w-[400px]">
+                    Thank you for scheduling an appointment with Mythvortex. The
+                    meeting link will be shared with you via email.
                   </h1>
                 ) : (
                   <h1 className="flex-wrap text-center text-xs font-bold text-red-700">
@@ -364,14 +279,16 @@ export default function Formcomponent() {
                     later.
                   </h1>
                 )}
-                <Link href={"https://www.taxmechanic.ca/"}>
-                  <p className="z-40 w-fit rounded-sm bg-[#e1ac27] px-5 py-2.5 text-center text-sm font-semibold text-[#FFEBCD] shadow-sm hover:bg-[#bb8f22] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:bg-[#bb8f22]">
+                <Link href={"https://www.mythvortex.com/"}>
+                  <p className="z-40 w-fit rounded-sm bg-primary px-5 py-2.5 text-center text-sm font-semibold text-[#FFEBCD] shadow-sm hover:bg-[#2722bb] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600 active:bg-[#2722bb]">
                     Visit us
                   </p>
                 </Link>
               </div>
             ) : (
-              <span className="loader"></span>
+              <div className=" mt-5 items-center justify-center overflow-hidden ">
+                <div className="mx-auto h-14 w-14 animate-spin rounded-full border-t-4 border-slate-700 dark:border-white"></div>
+              </div>
             )}
           </div>
         </div>
@@ -512,7 +429,7 @@ export default function Formcomponent() {
 
                 <div className="w-full rounded-sm p-0 text-black ">
                   <div className="relative mb-5 flex flex-col md:mb-0">
-                    {dateSlots && dateSlots.first && (
+                    {dateSlots && dateSlots.first ? (
                       <>
                         <label
                           htmlFor="appointmentDate"
@@ -576,6 +493,10 @@ export default function Formcomponent() {
                           </div>
                         </div>
                       </>
+                    ) : (
+                      <div className=" mt-5  w-full overflow-hidden">
+                        <div className="mx-auto h-14 w-14 animate-spin rounded-full border-t-4 border-slate-700 dark:border-white"></div>
+                      </div>
                     )}
                     <div className="absolute top-0 z-10 h-full w-[80%] bg-opacity-0"></div>
                   </div>
@@ -602,13 +523,8 @@ export default function Formcomponent() {
                   className={`flex w-full flex-col items-center justify-start   gap-4 pt-3 md:p-0 `}
                 >
                   {timeLoader ? (
-                    <div className="🤚 mt-14">
-                      <div className="👉"></div>
-                      <div className="👉"></div>
-                      <div className="👉"></div>
-                      <div className="👉"></div>
-                      <div className="🌴"></div>
-                      <div className="👍"></div>
+                    <div className=" mt-5 items-center justify-center overflow-hidden ">
+                      <div className="mx-auto h-14 w-14 animate-spin rounded-full border-t-4 border-slate-700 dark:border-white"></div>
                     </div>
                   ) : (
                     <div className="flex flex-wrap items-center justify-center gap-2 rounded-sm border-b border-slate-200 bg-white bg-opacity-70  py-4 dark:border-slate-600 dark:bg-slate-800">

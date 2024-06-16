@@ -70,6 +70,7 @@ async function saveData(fullNameReq: string, lastNameReq: string, typeReq: strin
 }
 
 export async function POST(request: NextRequest) {
+    console.log("Inside route book app.")
     try {
         const reqBody = await request.json()
         const { firstName, lastName, type, email, phone, message, date, time, eventId } = reqBody
