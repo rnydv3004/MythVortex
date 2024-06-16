@@ -27,7 +27,7 @@ export default function mainLayout({
         <ToasterContext />
         <Toaster />
         <div className="overflow-hidden">{children}</div>
-        {!(path.includes('/dashboard')) &&<Footer />}
+        {!(path.includes('/dashboard') || path === '/appointment' ) &&<Footer />}
         {/* <ScrollToTop /> */}
       </ThemeProvider>
     </>

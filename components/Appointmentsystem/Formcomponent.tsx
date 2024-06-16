@@ -86,6 +86,7 @@ export default function Formcomponent() {
           email: appointmentDetails.email,
           date: appointmentDetails.date,
           time: appointmentDetails.time,
+          timeZone: appointmentDetails.timezone
         }),
       });
 

@@ -75,38 +75,38 @@ export default function page() {
                     Quality
                   </h3>
                   <p className="mt-2 text-sm font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis, nemo.
+                    Delivering exceptional, high-performance web solutions with
+                    meticulous attention to detail.
                   </p>
                 </div>
 
                 <div className="h-fit rounded-md border-2 bg-white bg-opacity-45 px-4 py-4 shadow-sm dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
                   <h3 className="text-sm font-semibold text-primary lg:text-sm">
-                    Quality
+                    Innovation
                   </h3>
                   <p className="mt-2 text-xs font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis, nemo.
+                    Embracing cutting-edge technologies for competitive and
+                    modern web development.
                   </p>
                 </div>
 
                 <div className="h-fit rounded-md border-2 bg-white bg-opacity-45 px-4 py-4 shadow-sm dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
                   <h3 className="text-xs font-semibold text-primary lg:text-sm">
-                    Quality
+                    Reliability
                   </h3>
                   <p className="mt-2 text-sm font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis, nemo.
+                    Dependable service, timely delivery, and transparent
+                    communication throughout projects.
                   </p>
                 </div>
 
                 <div className="h-fit rounded-md border-2 bg-white bg-opacity-45 px-4 py-4 shadow-sm dark:border-2 dark:border-slate-600 dark:bg-black dark:bg-opacity-55 lg:aspect-video lg:h-[150px] lg:px-6 lg:py-4 ">
                   <h3 className="text-xs font-semibold text-primary lg:text-sm">
-                    Quality
+                    Continuous Improvement
                   </h3>
                   <p className="mt-2 text-sm font-medium text-slate-700 dark:text-slate-400 lg:text-sm">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Perspiciatis, nemo.
+                    Ongoing skill enhancement to provide the best web
+                    development services.
                   </p>
                 </div>
               </div>
@@ -127,7 +127,10 @@ export default function page() {
 
         <div className="relative pb-30 lg:-top-30 lg:px-20">
           {PortfolioData.map((item: PortfolioInterface, index) => (
-            <div className="my-8 grid grid-cols-2 mx-auto lg:gap-5 px-4 lg:my-50" key={index}>
+            <div
+              className="mx-auto my-8 grid grid-cols-2 px-4 lg:my-50 lg:gap-5"
+              key={index}
+            >
               <div
                 className={`col-span-2 hidden scale-75 bg-opacity-20 lg:col-span-1 lg:block  ${
                   index % 2 === 0 ? "order-1" : "order-2"
@@ -142,7 +145,7 @@ export default function page() {
                     <Link
                       target="_blank"
                       href={item.link}
-                      className="relative top-5 mx-auto aspect-[9/16] w-[340px] animate-floatY overflow-hidden rounded-md border-2 shadow-xl flex flex-col justify-center items-center bg-white dark:bg-gradient-to-t cursor-pointer dark:from-black dark:via-slate-900 dark:to-slate-800 dark:border-slate-700 dark:shadow-slate-700"
+                      className="relative top-5 mx-auto flex aspect-[9/16] w-[340px] animate-floatY cursor-pointer flex-col items-center justify-center overflow-hidden rounded-md border-2 bg-white shadow-xl dark:border-slate-700 dark:bg-gradient-to-t dark:from-black dark:via-slate-900 dark:to-slate-800 dark:shadow-slate-700"
                       style={{ left: index % 2 === 0 ? "40px" : "-40px" }}
                     >
                       <svg
@@ -182,19 +185,36 @@ export default function page() {
                 }`}
                 style={{ order: index % 2 === 0 ? 2 : 1 }}
               >
-                <h3 className="w-full text-2xl font-bold text-slate-600 dark:text-slate-400 lg:text-4xl">
+                <h3 className="w-full text-2xl font-bold text-slate-800 dark:text-slate-300 lg:text-4xl">
                   {item.name}
                 </h3>
                 <h2 className="font-semibold">{item.type}</h2>
-                <p className="pt-5 text-justify text-sm lg:text-base">
+                <p className="pt-5 text-justify text-sm lg:text-base text-slate-700 dark:text-slate-300">
                   {item.desc}
                 </p>
-                <ul className="pt-5">
+                <ul className="pt-5 text-slate-700 dark:text-slate-300">
                   {item.keyPoints.map((points, index) => (
                     <li
                       key={index}
-                      className="text-justify text-sm lg:text-base"
+                      className="flex items-center text-justify text-sm gap-2 lg:text-base"
                     >
+                      <span className="text-primary ">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          stroke-width="2"
+                          stroke="currentColor"
+                          className="size-4"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            d="m21 7.5-2.25-1.313M21 7.5v2.25m0-2.25-2.25 1.313M3 7.5l2.25-1.313M3 7.5l2.25 1.313M3 7.5v2.25m9 3 2.25-1.313M12 12.75l-2.25-1.313M12 12.75V15m0 6.75 2.25-1.313M12 21.75V19.5m0 2.25-2.25-1.313m0-16.875L12 2.25l2.25 1.313M21 14.25v2.25l-2.25 1.313m-13.5 0L3 16.5v-2.25"
+                          />
+                        </svg>
+                      </span>
+
                       {points}
                     </li>
                   ))}
