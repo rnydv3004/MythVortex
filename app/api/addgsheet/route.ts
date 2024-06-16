@@ -16,8 +16,6 @@ export async function POST(request: NextRequest) {
         const reqBody = await request.json();
         const { firstName, lastName, type, email, phone, date, time, timeZone } = reqBody;
 
-
-
         const appendData = async () => {
 
             const auth = new google.auth.GoogleAuth({
@@ -125,10 +123,8 @@ Thank you for choosing MythVortex. Your trust in us is greatly appreciated, and 
 Best regards,
 
 MythVortex Team
-[Your Company Address]
-[Your Company Phone Number]
-[Your Company Email]
-[Your Company Website]`
+180 John St. Toronto, ON M5T1X5
+www.mythvortex.com`
 
     var clientMailOptions = {
         from: 'contact@mythvortex.com',
