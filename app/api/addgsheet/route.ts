@@ -10,7 +10,6 @@ const SPREADSHEET_ID = "1wk_XqkgtPx0oMZBQk_J6MHwkL27qlZBAv9raqLGF4CU"; // Replac
 const RANGE_NAME = 'Details!A2'; // Replace with the sheet name where you want to start writing data
 
 
-
 export async function POST(request: NextRequest) {
     try {
         const reqBody = await request.json();
@@ -74,6 +73,7 @@ export async function POST(request: NextRequest) {
             message: "Appointment Booked Successfully!",
             status: 200,
         }, { status: 200 });
+        
     } catch (error: any) {
         console.error('Error:', error);
         return NextResponse.json({ error: error.message });

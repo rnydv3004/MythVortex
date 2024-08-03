@@ -45,7 +45,7 @@ const Header = () => {
         onClick={(e) => {
           e.stopPropagation();
         }}
-        className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:flex md:px-8 2xl:px-0"
+        className="relative container mx-auto max-w-c-1390 items-center justify-between px-4 md:flex md:px-8 2xl:px-0"
       >
         <div className="mr-10 flex w-full items-center justify-between rounded-full dark:border-slate-600 md:w-fit">
           {/* <a href="/">
