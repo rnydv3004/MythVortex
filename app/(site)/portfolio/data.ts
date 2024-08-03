@@ -24,9 +24,9 @@ const PortfolioData: PortfolioInterface[] = [
         "link": "https://www.catclub.in/"
     },
     {
-        "name": "Taxmechanic Appointment System",
+        "name": "HairForum Appointment System",
         "type": "Web Application",
-        "desc": "Taxmechanic Appointment System is an advanced appointment system for tax firms. It features a mailing system for appointments, Google Calendar integration, Google Sheets integration, a user-friendly dashboard, enhanced client management, and seamless scheduling.",
+        "desc": "HairForum Appointment System is an advanced appointment system for saloon. It features a mailing system for appointments, Google Calendar integration, Google Sheets integration, a user-friendly dashboard, enhanced client management, and seamless scheduling.",
         "keyPoints": [
             "Mailing system for appointments",
             "Google Calendar integration",
@@ -35,7 +35,7 @@ const PortfolioData: PortfolioInterface[] = [
             "Enhanced client management",
             "Seamless scheduling"
         ],
-        "link": "https://taxmechanic-appointment.vercel.app/"
+        "link": "https://hairforum-appointment.vercel.app/"
     },
 
     {
