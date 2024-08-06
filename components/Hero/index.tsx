@@ -93,15 +93,13 @@ const Hero = () => {
         </h1>
 
         {/* sub desc */}
-        <div className="mt-2 w-[90%] text-justify md:text-center font-medium text-sm md:text-base leading-[22px] text-slate-500 dark:text-slate-400 lg:mt-4 lg:w-2/3 lg:leading-6">
-          <p>
+          <p className="mt-2 md:w-[90%] text-justify md:text-center font-semibold text-base leading-[22px] text-slate-500 dark:text-slate-400 lg:mt-4 lg:w-2/3 lg:leading-6">
             We build powerful websites, applications, and customized tools.
             Harness the power of code to elevate
             <br className="hidden md:block" />
             your business and bring your vision to life with our expert digital
             solutions.
           </p>
-        </div>
 
         <div className="item-start flex w-[80%] flex-col-reverse gap-2 lg:mt-5 lg:w-fit lg:flex-row lg:items-center lg:gap-5">
           <Link
