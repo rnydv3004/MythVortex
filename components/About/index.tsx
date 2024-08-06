@@ -16,11 +16,11 @@ export default function index() {
           foremost priority is customer satisfaction, and we pride ourselves on
           delivering honest and reliable services without making false promises.
         </p>
-        <div className="col-span-2 flex-col items-center justify-center gap-2 lg:col-span-1 lg:flex mt-24 lg:mt-8 lg:pt-10">
+        <div className="col-span-2 flex-col lg:w-[50%] mx-auto items-center justify-center gap-2 lg:col-span-1 lg:flex mt-24 lg:mt-8 lg:pt-10">
           <Image
             src={TechTeam}
             alt={"services"}
-            className="h-fit w-full lg:max-h-[600px] lg:w-fit"
+            className="h-fit w-full  lg:max-h-[600px] lg:w-fit"
           />
         </div>
       </div>

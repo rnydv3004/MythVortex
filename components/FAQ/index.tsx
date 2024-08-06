@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 import FAQItem from "./FAQItem";
-import faqData from "./faqData";
+import {faqData, additionalFaqData} from "./faqData";
 
 const FAQ = () => {
   const [activeFaq, setActiveFaq] = useState(1);
@@ -15,14 +15,38 @@ const FAQ = () => {
   return (
     <>
       {/* <!-- ===== FAQ Start ===== --> */}
-      <section id="faq" className="overflow-hidden pb-20 lg:pb-25 xl:pb-30">
-        <div className="relative mx-auto max-w-c-1235 px-4 md:px-8 xl:px-0">
-          <div className="flex flex-col gap-2 md:flex-nowrap ">
+      <section id="faq" className="w-screen select-none bg-white">
+        <div className="container mx-auto bg-gradient-to-t from-slate-300 via-white to-slate-50 px-8 py-14 lg:px-20">
+          <motion.div
+            variants={{
+              hidden: {
+                opacity: 0,
+                x: -20,
+              },
+
+              visible: {
+                opacity: 1,
+                x: 0,
+              },
+            }}
+            initial="hidden"
+            whileInView="visible"
+            transition={{ duration: 1, delay: 0.1 }}
+            viewport={{ once: true }}
+            className="animate_left md:w-2/5 lg:w-1/2"
+          >
+            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
+              FAQ
+            </h2>
+          </motion.div>
+
+
+          <div className="flex flex-col lg:flex-col lg:gap-10 gap-2 md:flex-nowrap mt-2">
             <motion.div
               variants={{
                 hidden: {
                   opacity: 0,
-                  x: -20,
+                  x: 20,
                 },
 
                 visible: {
@@ -34,11 +58,16 @@ const FAQ = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_left md:w-2/5 lg:w-1/2"
+              className="animate_right w-full"
             >
-              <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-4xl">
-                FAQ
-              </h2>
+              <div className="rounded-lg bg-white shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
+                {faqData.map((faq, key) => (
+                  <FAQItem
+                    key={key}
+                    faqData={{ ...faq, activeFaq, handleFaqToggle }}
+                  />
+                ))}
+              </div>
             </motion.div>
 
             <motion.div
@@ -60,7 +89,7 @@ const FAQ = () => {
               className="animate_right w-full"
             >
               <div className="rounded-lg bg-white shadow-solid-8 dark:border dark:border-strokedark dark:bg-blacksection">
-                {faqData.map((faq, key) => (
+                {additionalFaqData.map((faq, key) => (
                   <FAQItem
                     key={key}
                     faqData={{ ...faq, activeFaq, handleFaqToggle }}

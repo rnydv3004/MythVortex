@@ -78,7 +78,6 @@ export default function Home() {
       {/* <Feature /> */}
       <TechSection />
       <About/>
-      <FunFact />
       {/* <LatestBlog/> */}
       <FAQ />
       <Contact />

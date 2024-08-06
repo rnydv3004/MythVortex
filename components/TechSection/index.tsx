@@ -1,5 +1,5 @@
 import React from "react";
-import TechImage from "../../public/images/tech.png";
+import TechStack from "../../public/images/techStack.png";
 import TechEvolve from "../../public/images/techevolve.png";
 import Image from "next/image";
 
@@ -7,7 +7,7 @@ export default function index() {
   return (
     <section className="w-screen bg-white select-none">
       <div className="container mx-auto grid grid-cols-2 bg-gradient-to-tr from-slate-300 via-white to-slate-50 px-8 py-14 lg:px-20">
-        <div className="col-span-2 flex flex-col lg:gap-10 lg:col-span-1 lg:justify-end">
+        <div className="col-span-2 flex flex-col lg:gap-10 lg:col-span-1 lg:justify-start">
           <div>
             <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
               Technologies We Use
@@ -17,16 +17,16 @@ export default function index() {
             </p>
           </div>
           <Image
-            src={TechEvolve}
+            src={TechStack}
             alt={"services"}
-            className=" h-fit w-full lg:right-0 lg:max-h-[400px] lg:w-fit"
+            className=" h-fit w-full lg:right-0 lg:max-h-[400px] lg:w-fit ml-auto hidden lg:block"
           />
         </div>
-        <div className="col-span-2 flex-col items-center justify-center gap-2 lg:col-span-1 hidden lg:flex">
+        <div className="col-span-2 flex-col items-center justify-center gap-2 lg:col-span-1 lg:flex">
           <Image
-            src={TechImage}
+            src={TechEvolve}
             alt={"services"}
-            className="pl-10 h-fit w-full lg:pl-20 lg:max-h-[600px] lg:w-fit"
+            className="pl-10 h-fit w-full lg:pl-20 lg:max-h-[450px] lg:w-fit mt-10"
           />
         </div>
       </div>
