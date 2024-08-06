@@ -144,7 +144,7 @@ const Contact = () => {
                 </p>
             </div>
 
-            <div>
+            <div className="col-span-2 lg:col-span-1">
               <Image
                 src={Consult}
                 alt={"services"}
@@ -196,7 +196,7 @@ const Contact = () => {
             className="grid grid-cols-2"
           >
             <div className="col-span-2 lg:col-span-1">
-              <p className="mt-1 text-justify text-sm font-semibold text-slate-700 lg:max-w-[550px] lg:text-base">
+              <p className="mt-1 lg:text-justify text-sm font-semibold text-slate-700 lg:max-w-[550px] lg:text-base">
                 Please fill out the form with your query, complaint,
                 requirement, or any other request, or email us at{" "}
                 <span className="font-semibold text-primary">
