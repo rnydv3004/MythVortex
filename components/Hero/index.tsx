@@ -74,7 +74,7 @@ const Hero = () => {
         className="container flex h-full w-full flex-col justify-center px-4 md:px-0 lg:items-center lg:justify-center"
       >
         {/* heading */}
-        <h1 className="mb-0 pr-8 pt-20 text-2xl leading-8 text-slate-800 dark:text-slate-300 md:text-6xl font-extrabold lg:mt-0 lg:pt-0 lg:text-[48px] lg:leading-[2.5rem]">
+        <h1 className="mb-0 pr-8 pt-20 text-3xl leading-8 text-slate-800 dark:text-slate-300 md:text-6xl font-extrabold lg:mt-0 lg:pt-0 lg:text-[48px] lg:leading-[2.5rem]">
           <span className="bg-gradient-to-tr from-black via-gray-600 to-slate-800 bg-clip-text text-transparent dark:from-slate-300 dark:via-gray-200 dark:to-slate-500 ">
             Where
           </span>{" "}

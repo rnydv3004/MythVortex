@@ -6,6 +6,7 @@ import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import LatestBlog from "@/components/Blog/LatestBlog";
 import Whatsapp from "@/components/Whatsapp";
+import Services from "@/components/Services";
 
 export const metadata: Metadata = {
   title: "Mythvortex | Home",
@@ -72,7 +73,8 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Feature />
+      <Services/>
+      {/* <Feature /> */}
       <FunFact />
       {/* <LatestBlog/> */}
       <FAQ />
