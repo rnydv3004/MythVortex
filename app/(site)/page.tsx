@@ -1,12 +1,12 @@
 import { Metadata } from "next";
 import Hero from "@/components/Hero";
-import Feature from "@/components/Features";
 import FunFact from "@/components/FunFact";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import LatestBlog from "@/components/Blog/LatestBlog";
 import Whatsapp from "@/components/Whatsapp";
 import Services from "@/components/Services";
+import TechSection from "@/components/TechSection";
 
 export const metadata: Metadata = {
   title: "Mythvortex | Home",
@@ -73,13 +73,14 @@ export default function Home() {
   return (
     <main>
       <Hero />
-      <Services/>
+      <Services />
       {/* <Feature /> */}
+      <TechSection />
       <FunFact />
       {/* <LatestBlog/> */}
       <FAQ />
       <Contact />
-      <Whatsapp/>
+      <Whatsapp />
     </main>
   );
 }

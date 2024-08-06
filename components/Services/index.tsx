@@ -5,20 +5,20 @@ import BusinessMan from "../../public/images/services.png";
 
 const Feature = () => {
   return (
-    <section className="w-screen bg-white">
-      <div className="container mx-auto grid grid-cols-2 bg-gradient-to-t from-slate-300 via-white to-slate-50 pt-10 px-8 lg:px-20">
+    <section className="w-screen bg-white select-none">
+      <div className="container mx-auto grid grid-cols-2 bg-gradient-to-t from-slate-300 via-white to-slate-50 pt-14 px-8 lg:px-20">
         <div className="flex flex-col lg:justify-end gap-20 col-span-2 lg:col-span-1">
           <div>
-            <h2 className="w-full max-w-[340px] text-left text-xl font-bold text-primary">
+            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
               Our Services
             </h2>
-            <p className="text-base font-semibold text-slate-700">Our primary focus is on ensuring customer satisfaction.</p>
+            <p className="mt-1 text-base font-semibold text-slate-700">Our primary focus is on ensuring customer satisfaction.</p>
           </div>
 
           <Image
             src={BusinessMan}
             alt={"services"}
-            className="h-fit lg:max-h-[400px] w-full relative right-8 lg:right-0 lg:w-fit pl-20"
+            className="h-fit lg:max-h-[400px] w-full px-10 lg:pl-20 lg:w-fit "
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-2 col-span-2 lg:col-span-1">
