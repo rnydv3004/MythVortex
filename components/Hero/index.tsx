@@ -135,7 +135,7 @@ const Hero = () => {
           Code provides the ultimate flexibility for your application or
           website.
           <br />
-          <p className="text-right text-primary dark:text-blue-400">~ Aryan</p>
+          <p className="text-right text-primary dark:text-blue-400">~ Mythvortex</p>
         </div>
       </motion.div>
     </section>

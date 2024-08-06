@@ -12,7 +12,7 @@ export default function index() {
             <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
               Technologies We Use
             </h2>
-            <p className="mt-1 text-base font-semibold text-slate-700 lg:max-w-[600px] text-justify">
+            <p className="mt-1 text-sm lg:text-base font-semibold text-slate-700 lg:max-w-[600px] text-justify">
             Technology is evolving day by day, and to meet the demands of the current market and industry standards, we continuously adopt and integrate the latest technologies. Our commitment to staying updated ensures that both our team and our services evolve with the times.
             </p>
           </div>
