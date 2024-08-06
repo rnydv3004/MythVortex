@@ -5,14 +5,14 @@ import BusinessMan from "../../public/images/services.png";
 
 const Feature = () => {
   return (
-    <section className="w-screen select-none bg-white">
-      <div className="container mx-auto grid grid-cols-2 bg-gradient-to-t from-slate-300 via-white to-slate-50 px-8 pt-14 lg:px-20">
+    <section className="w-screen select-none bg-white dark:bg-blackho">
+      <div className="container mx-auto grid grid-cols-2 bg-gradient-to-t from-slate-300 via-white to-slate-50 dark:from-black dark:via-slate-700 dark:to-blackho px-8 pt-14 lg:px-20">
         <div className="col-span-2 flex flex-col gap-20 lg:col-span-1 lg:justify-end">
           <div>
             <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
               Our Services
             </h2>
-            <p className="mt-1 text-sm font-semibold text-slate-700 lg:text-base">
+            <p className="mt-1 text-sm font-semibold text-slate-700 dark:text-slate-300 lg:text-base">
               Our primary focus is on ensuring customer satisfaction.
             </p>
           </div>
@@ -25,7 +25,7 @@ const Feature = () => {
         </div>
         <div className="col-span-2 flex flex-col items-center justify-center gap-2 lg:col-span-1">
           <ul className="flex w-full max-w-[340px] flex-col gap-2 pb-10 text-sm font-semibold text-slate-700 lg:text-base">
-            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 bg-white shadow">
+            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 dark:border-slate-600 bg-white dark:bg-slate-600 dark:text-slate-100 shadow">
               <svg
                 className="aspect-square h-10 w-10 rounded-r-3xl bg-primary p-2 text-white lg:h-12 lg:w-12"
                 aria-hidden="true"
@@ -48,7 +48,7 @@ const Feature = () => {
               </svg>
               Consultation
             </li>
-            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 bg-white shadow">
+            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 dark:border-slate-600 bg-white dark:bg-slate-600 dark:text-slate-100 shadow">
               <svg
                 className="aspect-square h-10 w-10 rounded-r-3xl bg-primary p-2 text-white lg:h-12"
                 aria-hidden="true"
@@ -66,7 +66,7 @@ const Feature = () => {
               </svg>
               Website
             </li>
-            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 bg-white shadow">
+            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 dark:border-slate-600 bg-white dark:bg-slate-600 dark:text-slate-100 shadow">
               <svg
                 className="aspect-square h-10 w-10 rounded-r-3xl bg-primary p-2 text-white lg:h-12"
                 aria-hidden="true"
@@ -80,7 +80,7 @@ const Feature = () => {
               </svg>
               Customized Tool
             </li>
-            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 bg-white shadow">
+            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 dark:border-slate-600 bg-white dark:bg-slate-600 dark:text-slate-100 shadow">
               <svg
                 className="aspect-square h-10 w-10 rounded-r-3xl bg-primary p-2 text-white lg:h-12"
                 aria-hidden="true"
@@ -98,7 +98,7 @@ const Feature = () => {
               </svg>
               Web Application
             </li>
-            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 bg-white shadow">
+            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 dark:border-slate-600 bg-white dark:bg-slate-600 dark:text-slate-100 shadow">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 x="0px"
@@ -110,13 +110,13 @@ const Feature = () => {
               </svg>
               Android Application
             </li>
-            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 bg-white shadow">
+            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 dark:border-slate-600 bg-white dark:bg-slate-600 dark:text-slate-100 shadow">
               <span className="flex aspect-square h-10 w-10 items-center justify-center rounded-r-3xl bg-primary p-2 text-sm text-white lg:h-12">
                 iOS
               </span>
               IOS Application
             </li>
-            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 bg-white shadow">
+            <li className="flex items-center gap-2 overflow-hidden rounded-md border border-slate-100 dark:border-slate-600 bg-white dark:bg-slate-600 dark:text-slate-100 shadow">
               <svg
                 className="aspect-square h-10 w-10 rounded-r-3xl bg-primary p-2 text-white lg:h-12"
                 xmlns="http://www.w3.org/2000/svg"
