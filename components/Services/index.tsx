@@ -18,7 +18,7 @@ const Feature = () => {
           <Image
             src={BusinessMan}
             alt={"services"}
-            className="lg:h-[400px] h-fit w-full relative right-8 lg:right-0 lg:w-fit pl-20"
+            className="h-fit lg:max-h-[400px] w-full relative right-8 lg:right-0 lg:w-fit pl-20"
           />
         </div>
         <div className="flex flex-col items-center justify-center gap-2 col-span-2 lg:col-span-1">
