@@ -81,7 +81,7 @@ export default function Home() {
       {/* <LatestBlog/> */}
       <FAQ />
       <Contact />
-      <Whatsapp />
+      {/* <Whatsapp /> */}
     </main>
   );
 }

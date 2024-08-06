@@ -5,6 +5,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 import Loader from "../Common/Loader";
+import BusinessMan from "../../public/images/contact2.png";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -80,9 +81,8 @@ const Contact = () => {
       )}
 
       {/* <!-- ===== Contact Start ===== --> */}
-      <section id="support" className="px-2 md:px-8 2xl:px-0">
-       
-        <div className="relative mx-auto mb-25 flex max-w-c-1390 flex-col items-center justify-center gap-10  px-2 pb-2 pt-2 dark:bg-black md:px-7.5 md:pt-10 lg:px-15 lg:pt-15 xl:px-10 xl:pb-10 xl:pt-10">
+      <section id="support" className="w-screen select-none bg-white">
+        {/* <div className="container mx-auto bg-gradient-to-t from-slate-300 via-white to-slate-50 px-8 py-14 lg:px-20">
           <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg "></div>
           {[...Array(2000)].map((_, index) => (
             <div
@@ -98,7 +98,7 @@ const Contact = () => {
             />
           ))}
 
-          <div className="flex w-full justify-center">
+          <div className="">
             <motion.div
               variants={{
                 hidden: {
@@ -115,14 +115,10 @@ const Contact = () => {
               whileInView="visible"
               transition={{ duration: 1, delay: 0.1 }}
               viewport={{ once: true }}
-              className="animate_top z-10 w-full bg-[#fff] rounded-lg border border-slate-300 p-7.5 text-sm shadow-lg placeholder:text-slate-500 dark:border-slate-700 dark:bg-blackho md:w-3/5 lg:w-3/4 xl:p-15"
+              className="grid grid-cols-2 py-10"
             >
-              <h2 className="mb-15 text-2xl font-medium text-primary dark:text-white xl:text-3xl">
-                Reach Out for Web Excellence
-              </h2>
-
-              <div>
-                <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+              <div className="col-span-2 grid grid-cols-2 rounded-md bg-white p-5 shadow-md lg:col-span-1 lg:p-10">
+                <div className="col-span-2 mb-7.5 flex flex-col gap-7.5 lg:col-span-2 lg:flex-row  lg:justify-between lg:gap-14">
                   <input
                     type="text"
                     placeholder="Full name"
@@ -133,7 +129,7 @@ const Contact = () => {
                         fullName: e.target.value,
                       });
                     }}
-                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary lg:w-1/2"
                   />
 
                   <input
@@ -146,11 +142,11 @@ const Contact = () => {
                         email: e.target.value,
                       });
                     }}
-                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary lg:w-1/2"
                   />
                 </div>
 
-                <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
+                <div className="col-span-2 mb-12.5 flex flex-col gap-7.5 lg:col-span-2 lg:flex-row  lg:justify-between lg:gap-14">
                   <input
                     type="text"
                     placeholder="Subject"
@@ -161,7 +157,7 @@ const Contact = () => {
                         subject: e.target.value,
                       });
                     }}
-                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary lg:w-1/2"
                   />
 
                   <input
@@ -174,11 +170,11 @@ const Contact = () => {
                         phone: e.target.value,
                       });
                     }}
-                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary lg:w-1/2"
                   />
                 </div>
 
-                <div className="mb-11.5 flex">
+                <div className="col-span-2 mb-11.5 flex lg:col-span-2">
                   <textarea
                     placeholder="Message"
                     rows={4}
@@ -189,17 +185,17 @@ const Contact = () => {
                         message: e.target.value,
                       });
                     }}
-                    className="w-full border-b-2 dark:border-b-2 border-slate-400 dark:border-slate-600 bg-transparent pb-3.5 text-base font-medium text-slate-600 dark:text-slate-300 outline-none focus:border-primary focus:dark:border-primary lg:w-1/2"
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary "
                   ></textarea>
                 </div>
 
-                <div className="flex flex-wrap gap-4 xl:justify-between ">
+                <div className="col-span-2 flex flex-wrap gap-4 lg:col-span-2 xl:justify-between ">
                   <button
                     aria-label="send message"
                     onClick={() => {
                       sendMail();
                     }}
-                    className={`inline-flex items-center gap-2.5 rounded-full bg-primary px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-primaryho dark:bg-primary dark:hover:bg-primaryho`}
+                    className={`inline-flex min-w-[150px] items-center justify-center gap-2.5 rounded-sm bg-primary px-4 py-2 text-sm font-medium text-white duration-300 ease-in-out hover:bg-primaryho dark:bg-primary dark:hover:bg-primaryho`}
                   >
                     {loader ? (
                       "Sending"
@@ -226,10 +222,209 @@ const Contact = () => {
                   </button>
                 </div>
               </div>
+
+              <div className="col-span-2 lg:col-span-1">
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      x: -20,
+                    },
+
+                    visible: {
+                      opacity: 1,
+                      x: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 1, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="animate_left md:w-2/5 lg:w-1/2"
+                >
+                  <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
+                    Free Consulation
+                  </h2>
+                </motion.div>
+                <Image
+                  src={BusinessMan}
+                  alt={"services"}
+                  className="h-fit w-full px-10 lg:max-h-[400px] lg:w-fit lg:pl-20 "
+                />
+              </div>
+            </motion.div>
+          </div>
+        </div> */}
+
+        <div className="container mx-auto bg-gradient-to-b from-slate-300 via-white to-slate-50 px-8 py-14 lg:px-20">
+          <div className="absolute left-0 top-0 -z-1 h-2/3 w-full rounded-lg "></div>
+          {[...Array(2000)].map((_, index) => (
+            <div
+              key={index}
+              className="absolute bg-slate-200 dark:bg-slate-800"
+              style={{
+                width: "4px",
+                height: "4px",
+                borderRadius: "50%",
+                top: `${Math.floor(index / 50) * 25}px`, // Calculate top position based on index
+                left: `${(index % 50) * 25}px`, // Calculate left position based on index
+              }}
+            />
+          ))}
+
+          <div className="">
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  x: -20,
+                },
+
+                visible: {
+                  opacity: 1,
+                  x: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="animate_left md:w-2/5 lg:w-1/2"
+            >
+              <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
+                Contact Us
+              </h2>
+            </motion.div>
+            <motion.div
+              variants={{
+                hidden: {
+                  opacity: 0,
+                  y: -20,
+                },
+
+                visible: {
+                  opacity: 1,
+                  y: 0,
+                },
+              }}
+              initial="hidden"
+              whileInView="visible"
+              transition={{ duration: 1, delay: 0.1 }}
+              viewport={{ once: true }}
+              className="grid grid-cols-2"
+            >
+              <div className="col-span-2 lg:col-span-1">
+                <p className="mt-1 text-sm font-semibold text-slate-700 lg:text-base text-justify lg:max-w-[550px]">
+                  Please fill out the form with your query, complaint,
+                  requirement, or any other request, or email us at{" "}
+                  <span className="font-semibold text-primary">
+                    contact@mythvortex.com
+                  </span>{" "}
+                  or{" "}
+                  <span className="font-semibold text-primary">
+                    support@mythvortex.com
+                  </span>
+                </p>
+                <Image
+                  src={BusinessMan}
+                  alt={"services"}
+                  className="h-fit w-full px-10 mt-5 lg:max-h-[400px] lg:w-fit lg:pl-20 "
+                />
+              </div>
+
+              <div className="col-span-2 grid grid-cols-2 rounded-md bg-white p-5 shadow-md lg:col-span-1 lg:p-10">
+                <div className="col-span-2 mb-7.5 flex flex-col gap-7.5 lg:col-span-2 lg:flex-row  lg:justify-between lg:gap-14">
+                  <input
+                    type="text"
+                    placeholder="Full name"
+                    value={formData.fullName}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        fullName: e.target.value,
+                      });
+                    }}
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary lg:w-1/2"
+                  />
+
+                  <input
+                    type="email"
+                    placeholder="Email address"
+                    value={formData.email}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        email: e.target.value,
+                      });
+                    }}
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary lg:w-1/2"
+                  />
+                </div>
+
+                <div className="col-span-2 mb-12.5 flex flex-col gap-7.5 lg:col-span-2 lg:flex-row  lg:justify-between lg:gap-14">
+                  <input
+                    type="text"
+                    placeholder="Subject"
+                    value={formData.subject}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        subject: e.target.value,
+                      });
+                    }}
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary lg:w-1/2"
+                  />
+
+                  <input
+                    type="text"
+                    placeholder="Phone number"
+                    value={formData.phone}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        phone: e.target.value,
+                      });
+                    }}
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary lg:w-1/2"
+                  />
+                </div>
+
+                <div className="col-span-2 mb-11.5 flex lg:col-span-2">
+                  <textarea
+                    placeholder="Message"
+                    rows={4}
+                    value={formData.message}
+                    onChange={(e) => {
+                      setFormData({
+                        ...formData,
+                        message: e.target.value,
+                      });
+                    }}
+                    className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary "
+                  ></textarea>
+                </div>
+
+                <div className="col-span-2 flex flex-wrap gap-4 lg:col-span-2 xl:justify-between ">
+                  <button
+                    aria-label="send message"
+                    onClick={() => {
+                      sendMail();
+                    }}
+                    className={`inline-flex min-w-[150px] items-center justify-center gap-2.5 rounded-sm bg-primary px-4 uppercase text-sm font-semibold h-fit py-2 text-white duration-300 ease-in-out hover:bg-primaryho dark:bg-primary dark:hover:bg-primaryho`}
+                  >
+                    {loader ? (
+                      "Sending"
+                    ) : (
+                      <>
+                        Send
+                      </>
+                    )}
+                  </button>
+                </div>
+              </div>
             </motion.div>
           </div>
         </div>
-        
       </section>
       {/* <!-- ===== Contact End ===== --> */}
     </>
