@@ -88,12 +88,12 @@ const Contact = () => {
             variants={{
               hidden: {
                 opacity: 0,
-                x: -20,
+                y: -20,
               },
 
               visible: {
                 opacity: 1,
-                x: 0,
+                y: 0,
               },
             }}
             initial="hidden"
@@ -173,8 +173,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="animate_left md:w-2/5 lg:w-1/2"
           >
-            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary dark:text-white">
-            </h2>
+            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary dark:text-white">Contact Us</h2>
           </motion.div>
           <motion.div
             variants={{

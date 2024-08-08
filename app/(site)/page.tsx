@@ -74,7 +74,6 @@ export default function Home() {
     <main>
       <Hero />
       <Services />
-      {/* <Feature /> */}
       <TechSection />
       <About/>
       {/* <LatestBlog/> */}
