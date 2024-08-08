@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Hero from "@/components/Hero";
-import FunFact from "@/components/FunFact";
 import FAQ from "@/components/FAQ";
 import Contact from "@/components/Contact";
 import LatestBlog from "@/components/Blog/LatestBlog";

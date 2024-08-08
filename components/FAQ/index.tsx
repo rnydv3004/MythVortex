@@ -16,7 +16,7 @@ const FAQ = () => {
     <>
       {/* <!-- ===== FAQ Start ===== --> */}
       <section id="faq" className="w-screen select-none bg-white">
-        <div className="container mx-auto bg-gradient-to-t from-slate-300 via-white to-slate-50 px-8 py-14 lg:px-20">
+        <div className="container mx-auto bg-gradient-to-t from-slate-300 via-white to-slate-50 dark:from-slate-900 dark:via-black dark:to-slate-800 px-8 py-14 lg:px-20">
           <motion.div
             variants={{
               hidden: {
@@ -35,13 +35,13 @@ const FAQ = () => {
             viewport={{ once: true }}
             className="animate_left md:w-2/5 lg:w-1/2"
           >
-            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
+            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary dark:text-white">
               FAQ
             </h2>
           </motion.div>
 
 
-          <div className="flex flex-col lg:flex-col lg:gap-10 gap-2 md:flex-nowrap mt-2">
+          <div className="flex flex-col lg:gap-10 gap-2 md:flex-nowrap mt-2">
             <motion.div
               variants={{
                 hidden: {

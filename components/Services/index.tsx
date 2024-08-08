@@ -6,10 +6,10 @@ import BusinessMan from "../../public/images/services.png";
 const Feature = () => {
   return (
     <section className="w-screen select-none bg-white dark:bg-blackho">
-      <div className="container mx-auto grid grid-cols-2 bg-gradient-to-t from-slate-300 via-white to-slate-50 dark:from-black dark:via-slate-700 dark:to-blackho px-8 pt-14 lg:px-20">
+      <div className="container mx-auto grid grid-cols-2 bg-gradient-to-t from-slate-300 via-white to-slate-50 dark:from-slate-900 dark:via-black dark:to-slate-800 px-8 pt-14 lg:px-20">
         <div className="col-span-2 flex flex-col gap-20 lg:col-span-1 lg:justify-end">
           <div>
-            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
+            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary dark:text-white">
               Our Services
             </h2>
             <p className="mt-1 text-sm font-semibold text-slate-700 dark:text-slate-300 lg:text-base">

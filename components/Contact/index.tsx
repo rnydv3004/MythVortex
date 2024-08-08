@@ -83,7 +83,7 @@ const Contact = () => {
 
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="w-screen select-none bg-white">
-        <div className="container relative mx-auto bg-gradient-to-t from-slate-300 via-white to-slate-50 px-8 py-14 lg:px-20">
+        <div className="container relative mx-auto bg-gradient-to-t from-slate-300 via-white to-slate-50 dark:from-slate-900 dark:via-black dark:to-slate-800 px-8 py-14 lg:px-20">
           <motion.div
             variants={{
               hidden: {
@@ -102,7 +102,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="animate_left md:w-2/5 lg:w-1/2"
           >
-            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
+            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary dark:text-white">
               Consult With Us
             </h2>
           </motion.div>
@@ -125,7 +125,7 @@ const Contact = () => {
             className="grid grid-cols-2"
           >
             <div className="col-span-2 lg:col-span-1">
-              <p className="mt-1 text-justify text-sm font-semibold text-slate-700 lg:max-w-[550px] lg:text-base">
+              <p className="mt-1 text-justify text-sm font-semibold text-slate-700 dark:text-slate-300 lg:max-w-[550px] lg:text-base">
                 Reserve a{" "}
                 <span className="rounded-sm bg-gradient-to-t from-green-600 via-green-500 to-green-600 px-2 py-0.5 text-sm font-semibold uppercase text-white">
                   free
@@ -139,7 +139,7 @@ const Contact = () => {
               </p>
 
               <button className="bg-primary px-4 py-2 rounded-sm text-white text-sm font-semibold mt-5">Free Consulation</button>
-              <p className="text-xs font-semibold pl-1 mt-1 text-primary">
+              <p className="text-xs font-semibold pl-1 mt-1 text-primary dark:text-slate-300">
                   Limited period offer
                 </p>
             </div>
@@ -154,7 +154,7 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        <div className="container relative mx-auto bg-gradient-to-b from-slate-300 via-white to-slate-50 px-8 py-14 lg:px-20">
+        <div className="container relative mx-auto bg-gradient-to-b from-slate-300 via-white to-slate-50 dark:from-slate-900 dark:via-black dark:to-slate-800 px-8 py-14 lg:px-20">
           <motion.div
             variants={{
               hidden: {
@@ -173,8 +173,7 @@ const Contact = () => {
             viewport={{ once: true }}
             className="animate_left md:w-2/5 lg:w-1/2"
           >
-            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary">
-              Contact Us
+            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary dark:text-white">
             </h2>
           </motion.div>
           <motion.div
@@ -196,7 +195,7 @@ const Contact = () => {
             className="grid grid-cols-2"
           >
             <div className="col-span-2 lg:col-span-1">
-              <p className="mt-1 lg:text-justify text-sm font-semibold text-slate-700 lg:max-w-[550px] lg:text-base">
+              <p className="mt-1 lg:text-justify text-sm font-semibold text-slate-500 dark:text-slate-300 lg:max-w-[550px] lg:text-base">
                 Please fill out the form with your query, complaint,
                 requirement, or any other request, or email us at{" "}
                 <span className="font-semibold text-primary">
@@ -214,7 +213,7 @@ const Contact = () => {
               />
             </div>
 
-            <div className="col-span-2 grid grid-cols-2 rounded-md bg-white p-5 shadow-md lg:col-span-1 lg:p-10">
+            <div className="col-span-2 grid grid-cols-2 rounded-md bg-white dark:bg-blacksection dark:border dark:border-slate-700 p-5 shadow-md lg:col-span-1 lg:p-10">
               <div className="col-span-2 mb-7.5 flex flex-col gap-7.5 lg:col-span-2 lg:flex-row  lg:justify-between lg:gap-14">
                 <input
                   type="text"
