@@ -14,58 +14,101 @@ const Contact = () => {
     email: "",
     subject: "",
     phone: "",
-    message: "",
+    content: "",
   });
 
   const [loader, setLoader] = useState(false);
 
   function sendMail() {
-    setLoader(true);
+    // setLoader(true);
     if (formData.fullName === "") {
-      toast.error("Please Fill Your Name", {
-        position: "bottom-center",
-      });
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? "animate-enter" : "animate-leave"
+          }  w-fit rounded-full border-2 border-slate-300 bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-2xl dark:border-slate-600`}
+        >
+          &#10006; Please Fill Your Name
+        </div>
+      ));
     } else if (formData.email === "") {
-      toast.error("Please Fill Email", {
-        position: "bottom-center",
-      });
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? "animate-enter" : "animate-leave"
+          }  w-fit rounded-full border-2 border-slate-300 bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-2xl dark:border-slate-600`}
+        >
+          &#10006; Please Fill Your Email
+        </div>
+      ));
     } else if (formData.subject === "") {
-      toast.error("Please Fill Subject", {
-        position: "bottom-center",
-      });
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? "animate-enter" : "animate-leave"
+          }  w-fit rounded-full border-2 border-slate-300 bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-2xl dark:border-slate-600`}
+        >
+          &#10006; Please Fill Subject
+        </div>
+      ));
     } else if (formData.phone === "") {
-      toast.error("Please Fill Phone", {
-        position: "bottom-center",
-      });
-    } else if (formData.message === "") {
-      toast.error("Please Fill Message", {
-        position: "bottom-center",
-      });
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? "animate-enter" : "animate-leave"
+          }  w-fit rounded-full border-2 border-slate-300 bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-2xl dark:border-slate-600`}
+        >
+          &#10006; Please Fill Your Phone
+        </div>
+      ));
+    } else if (formData.content === "") {
+      toast.custom((t) => (
+        <div
+          className={`${
+            t.visible ? "animate-enter" : "animate-leave"
+          }  w-fit rounded-full border-2 border-slate-300 bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-2xl dark:border-slate-600`}
+        >
+          &#10006; Please Fill Your content
+        </div>
+      ));
     } else {
       setLoader(true);
       axios
         .post("/api/mailer", formData)
         .then((res) => {
-          toast.success("Mail Sent!", {
-            position: "bottom-center",
-          });
-          if (res.status === 200) {
-            console.log("Message sent");
+          console.log("es", res)
+          if (res.data.success) {
+            toast.custom((t) => (
+              <div
+                className={`${
+                  t.visible ? "animate-enter" : "animate-leave"
+                }  w-fit rounded-full border-2 border-slate-300 bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-2xl dark:border-slate-600`}
+              >
+                &#10003; Mail Sent!
+              </div>
+            ));
+            // console.log("content sent");
             setFormData({
               fullName: "",
               email: "",
               subject: "",
               phone: "",
-              message: "",
+              content: "",
             });
           }
           setLoader(false);
         })
         .catch((error) => {
           console.log(error);
-          toast.error("Some Error Occured!", {
-            position: "bottom-center",
-          });
+          toast.custom((t) => (
+            <div
+              className={`${
+                t.visible ? "animate-enter" : "animate-leave"
+              }  w-fit rounded-full border-2 border-slate-300 bg-red-500 px-4 py-2 text-sm font-semibold text-white shadow-2xl dark:border-slate-600`}
+            >
+              &#10006; Soething Went Wrong, Try later!
+            </div>
+          ));
           setLoader(false);
         });
     }
@@ -83,7 +126,7 @@ const Contact = () => {
 
       {/* <!-- ===== Contact Start ===== --> */}
       <section id="support" className="w-screen select-none bg-white">
-        <div className="container relative mx-auto bg-gradient-to-t from-slate-300 via-white to-slate-50 dark:from-slate-900 dark:via-black dark:to-slate-800 px-8 py-14 lg:px-20">
+        <div className="container relative mx-auto bg-gradient-to-t from-slate-300 via-white to-slate-50 px-8 py-14 dark:from-slate-900 dark:via-black dark:to-slate-800 lg:px-20">
           <motion.div
             variants={{
               hidden: {
@@ -134,14 +177,15 @@ const Contact = () => {
                 your requirements. We’re here to help you make informed
                 decisions and achieve your goals
                 <br />
-                
                 <br />
               </p>
 
-              <button className="bg-primary px-4 py-2 rounded-sm text-white text-sm font-semibold mt-5">Free Consulation</button>
-              <p className="text-xs font-semibold pl-1 mt-1 text-primary dark:text-slate-300">
-                  Limited period offer
-                </p>
+              <button className="mt-5 rounded-sm bg-primary px-4 py-2 text-sm font-semibold text-white">
+                Free Consulation
+              </button>
+              <p className="mt-1 pl-1 text-xs font-semibold text-primary dark:text-slate-300">
+                Limited period offer
+              </p>
             </div>
 
             <div className="col-span-2 lg:col-span-1">
@@ -154,7 +198,7 @@ const Contact = () => {
           </motion.div>
         </div>
 
-        <div className="container relative mx-auto bg-gradient-to-b from-slate-300 via-white to-slate-50 dark:from-slate-900 dark:via-black dark:to-slate-800 px-8 py-14 lg:px-20">
+        <div className="container relative mx-auto bg-gradient-to-b from-slate-300 via-white to-slate-50 px-8 py-14 dark:from-slate-900 dark:via-black dark:to-slate-800 lg:px-20">
           <motion.div
             variants={{
               hidden: {
@@ -173,7 +217,9 @@ const Contact = () => {
             viewport={{ once: true }}
             className="animate_left md:w-2/5 lg:w-1/2"
           >
-            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary dark:text-white">Contact Us</h2>
+            <h2 className="w-full max-w-[340px] text-left text-2xl font-bold text-primary dark:text-white">
+              Contact Us
+            </h2>
           </motion.div>
           <motion.div
             variants={{
@@ -194,7 +240,7 @@ const Contact = () => {
             className="grid grid-cols-2"
           >
             <div className="col-span-2 lg:col-span-1">
-              <p className="mt-1 lg:text-justify text-sm font-semibold text-slate-500 dark:text-slate-300 lg:max-w-[550px] lg:text-base">
+              <p className="mt-1 text-sm font-semibold text-slate-500 dark:text-slate-300 lg:max-w-[550px] lg:text-justify lg:text-base">
                 Please fill out the form with your query, complaint,
                 requirement, or any other request, or email us at{" "}
                 <span className="font-semibold text-primary">
@@ -212,7 +258,7 @@ const Contact = () => {
               />
             </div>
 
-            <div className="col-span-2 grid grid-cols-2 rounded-md bg-white dark:bg-blacksection dark:border dark:border-slate-700 p-5 shadow-md lg:col-span-1 lg:p-10">
+            <div className="col-span-2 grid grid-cols-2 rounded-md bg-white p-5 shadow-md dark:border dark:border-slate-700 dark:bg-blacksection lg:col-span-1 lg:p-10">
               <div className="col-span-2 mb-7.5 flex flex-col gap-7.5 lg:col-span-2 lg:flex-row  lg:justify-between lg:gap-14">
                 <input
                   type="text"
@@ -273,11 +319,11 @@ const Contact = () => {
                 <textarea
                   placeholder="Message"
                   rows={4}
-                  value={formData.message}
+                  value={formData.content}
                   onChange={(e) => {
                     setFormData({
                       ...formData,
-                      message: e.target.value,
+                      content: e.target.value,
                     });
                   }}
                   className="w-full border-b-2 border-slate-300 bg-transparent pb-3.5 text-sm font-medium text-slate-600 outline-none focus:border-primary dark:border-b-2 dark:border-slate-600 dark:text-slate-300 focus:dark:border-primary "
@@ -286,7 +332,7 @@ const Contact = () => {
 
               <div className="col-span-2 flex flex-wrap gap-4 lg:col-span-2 xl:justify-between ">
                 <button
-                  aria-label="send message"
+                  aria-label="send content"
                   onClick={() => {
                     sendMail();
                   }}

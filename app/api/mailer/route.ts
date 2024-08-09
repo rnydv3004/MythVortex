@@ -49,6 +49,7 @@ export async function POST(request: NextRequest) {
                 return NextResponse.json({
                     content: "Emails sent successfully!",
                     status: 200,
+                    success: true,
                 });
             } else {
                 console.error("Client email not accepted for delivery.");
@@ -62,14 +63,16 @@ export async function POST(request: NextRequest) {
         if (error.response && error.response.includes("Recipient address rejected")) {
             return NextResponse.json({
                 error: "The provided email address does not exist.",
-                status: 400,
+                success: false,
+                status: 200,
             });
         } else {
             console.error("Error sending email:", error);
             return NextResponse.json({
                 error: "An error occurred while sending emails.",
+                success: false,
                 details: error.message || "Unknown error",
-                status: 500,
+                status: 200,
             });
         }
     }

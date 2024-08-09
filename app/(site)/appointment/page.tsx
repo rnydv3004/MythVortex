@@ -20,7 +20,7 @@
 //       <div className="fixed left-0 top-0 z-50 flex h-screen w-screen items-center justify-center overflow-hidden bg-white dark:bg-slate-800">
 //         <div className="border-primary-500 h-14 w-14 animate-spin rounded-full border-t-4"></div>
 //       </div>
-//     ); 
+//     );
 //   }
 
 //   return (
@@ -40,10 +40,13 @@
 //     </div>
 //   );
 // }
-import React from 'react'
+import React from "react";
 
 export default function page() {
   return (
-    <div></div>
-  )
+    <div className="flex h-[80vh] text-center w-full justify-center items-center text-sm font-semibold text-slate-500">
+      Under Maintainance!<br/><br/>Meanwhile you can drop a mail at Contact Section.
+      Thanks for your understanding.
+    </div>
+  );
 }
