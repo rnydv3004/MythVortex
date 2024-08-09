@@ -7,7 +7,7 @@ import ThemeToggler from "./ThemeToggler";
 import menuData from "./menuData";
 
 import LogoDark from "../../public/logo_rec.png";
-import Logo from "../../public/logo.png";
+import Logo from "../../public/images/logo/logo-large.png";
 import LogoWhite from "../../public/logo_wh.png";
 
 const Header = () => {
@@ -53,7 +53,7 @@ const Header = () => {
           </a> */}
 
           <a href="/">
-            <Image src={Logo} alt={""} className="h-fit w-16 scale-x-110 " />
+            <Image src={Logo} alt={""} className="h-7 w-fit scale-x-110 " />
           </a>
 
           {/* <!-- Hamburger Toggle BTN --> */}

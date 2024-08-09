@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import "assets/css/MiniCalender.css";
 
 // import AppointmentImage from "../../public/images/";
-import { Team } from "../Team";
+// import { Team } from "../Team";
 
 const People = [
   {

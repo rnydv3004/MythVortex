@@ -1,97 +1,76 @@
 import { NextRequest, NextResponse } from "next/server";
-
-var nodemailer = require("nodemailer");
+import nodemailer from "nodemailer";
 
 export async function POST(request: NextRequest) {
     try {
+        const reqBody = await request.json();
+        const { fullName, email, subject, phone, content } = reqBody;
 
-        const reqBody = await request.json()
-        const { fullName, email, subject, phone, message } = reqBody
+        console.log(
+            `Fullname: ${fullName}; Email: ${email}; Subject: ${subject}; Phone: ${phone}; Msg: ${content}`
+        );
 
-        console.log('Fullname:', fullName, "; email:", email, ";Subject:", subject, "; Phone:", phone, ",Msg:", message)
-
-        var transporter = await nodemailer.createTransport({
+        const transporter = nodemailer.createTransport({
             service: "gmail",
             auth: {
                 user: 'yaryanyadav3087@gmail.com',
                 pass: 'oirr dbgs rppx pcjz',
             },
+            tls: {
+                // This allows self-signed certificates
+                rejectUnauthorized: false,
+            },
         });
 
-        const clientCopy = `Dear ${fullName},
-
-I trust this message finds you well. We appreciate your recent visit to our website and the time you took to submit your inquiry through our contact form.
-        
-This email is to confirm that we have received your message and want to assure you that our team is actively reviewing the details you provided. We understand the importance of your query and are committed to providing you with the assistance you need.
-        
-Our team is diligently working on your request, and you can expect a detailed response within the next 24 hours. If you have any additional information or specific details to add, please feel free to reply directly to this email. Your feedback and updates are valuable to us, and we want to ensure that we address your needs comprehensively.
-        
-We appreciate your patience as we work towards resolving your inquiry. Should you have any immediate concerns or require urgent assistance, please don't hesitate to contact us at [Your Contact Information].
-        
-Thank you for choosing Mythvortex. We look forward to the opportunity to serve you, and we will do our utmost to exceed your expectations.
-        
-Best regards,
-Team MythVortex
-Where Myths Meet The Innovation`
-
-        var clientMailOptions = {
+        const clientMailOptions = {
             from: 'contact@mythvortex.com',
             to: email,
-            bcc: 'taryan3087@gmail.com',
             subject: "Mythvortex: Inquiry Acknowledged",
-            text: clientCopy,
+            text: content,
         };
 
-        var companyMessage = `Hi Team,
-        
-We received a new query. Please have a look.
-
-Name: ${fullName}
-Phone: ${phone}
-Email: ${email}
-Subject: ${subject}
-Message: ${message}
-
-Thanks,
-MythVortex`
-
-        var companyMailoptions = {
+        const companyMailOptions = {
             from: 'contact@mythvortex.com',
-            to: 'contact@mythvortex.com',
-            bcc: 'taryan3087@gmail.com',
+            to: 'taryan3087@gmail.com',
             subject: subject,
-            text: companyMessage,
+            text: content,
         };
 
-        // console.log("Mailoption set successfully to client!")
+        const sendCompanyMailStatus = await transporter.sendMail(companyMailOptions);
+        console.log("Company email send status:", sendCompanyMailStatus);
 
-        const sendStatus = await transporter.sendMail(companyMailoptions);
-        console.log("Send status 1:", sendStatus)
+        if (sendCompanyMailStatus.accepted.length > 0) {
+            console.log("Company email sent successfully.");
 
+            const sendClientMailStatus = await transporter.sendMail(clientMailOptions);
+            console.log("Client email send status:", sendClientMailStatus);
 
-        if (sendStatus.accepted.length > 0) {
-            console.log("Email Sent to ", email);
-
-            const sendStatus = await transporter.sendMail(clientMailOptions);
-            console.log("Send status 2:", sendStatus)
-
-            if (sendStatus.accepted.length > 0) {
-
+            if (sendClientMailStatus.accepted.length > 0) {
                 return NextResponse.json({
-                    message: "Email sent!",
+                    content: "Emails sent successfully!",
                     status: 200,
                 });
+            } else {
+                console.error("Client email not accepted for delivery.");
+                throw new Error("Client email not accepted for delivery.");
             }
-
-
-
         } else {
-            console.error("Email not accepted for delivery.");
-            throw new Error("Email not accepted for delivery.");
+            console.error("Company email not accepted for delivery.");
+            throw new Error("Company email not accepted for delivery.");
         }
-
     } catch (error: any) {
-        return NextResponse.json({ error: error.message });
+        if (error.response && error.response.includes("Recipient address rejected")) {
+            return NextResponse.json({
+                error: "The provided email address does not exist.",
+                status: 400,
+            });
+        } else {
+            console.error("Error sending email:", error);
+            return NextResponse.json({
+                error: "An error occurred while sending emails.",
+                details: error.message || "Unknown error",
+                status: 500,
+            });
+        }
     }
 }
-
