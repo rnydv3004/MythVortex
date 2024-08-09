@@ -1,7 +1,6 @@
 import React from "react";
 import Contact from "@/components/Contact";
 import { Metadata } from "next";
-import Whatsapp from "@/components/Whatsapp";
 
 export const metadata: Metadata = {
   title: "Contact",
